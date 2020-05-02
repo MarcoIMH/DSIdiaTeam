@@ -134,6 +134,7 @@
     <Content Include="Assets\Imagenes\botonGris.png" />
     <Content Include="Assets\Imagenes\eventoIcon.png" />
     <Content Include="Assets\Imagenes\fondo.jpg" />
+    <Content Include="Assets\Imagenes\GRIS.png" />
     <Content Include="Assets\Imagenes\infoIcon.png" />
     <Content Include="Assets\Imagenes\logroIcon.png" />
     <Content Include="Assets\Imagenes\misionIcon.png" />

@@ -8,6 +8,18 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <Page.Resources>
+        
+        <!--TemplateReward-->
+        <DataTemplate x:Key="RewardTemplate">
+            <StackPanel Height="100" Width="300" Background="#FF6C6B6B">
+                <TextBlock Text="Mision1" VerticalAlignment="Top" FontSize="40" HorizontalAlignment="Center"/>
+                <Image Source="misionIcon" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="70"/>
+            </StackPanel>
+        </DataTemplate>
+        
+    </Page.Resources>
+
     <Grid SizeChanged="gridSizeChanged" Name="mainGrid">
         <Grid.ColumnDefinitions>
         </Grid.ColumnDefinitions>
@@ -17,10 +29,10 @@
             <RowDefinition Height="1.25*"/>
         </Grid.RowDefinitions>
 
-        <Image Source="ms-appx:///Assets/Imagenes/fondo.jpg" Grid.RowSpan="3" Stretch="UniformToFill" />
+        <Image Source="ms-appx:///Assets/Imagenes/fondo.jpg" Grid.RowSpan="3" Stretch="UniformToFill"/>
 
         <StackPanel Orientation="Horizontal" Grid.Row="0">
-            
+
             <!--BotonSalir-->
             <StackPanel x:Name="Salir" Margin="0,5,0,0" VerticalAlignment="Top">
                 <StackPanel.Background>
@@ -88,10 +100,40 @@
         </StackPanel>
 
         <!--ZonaRewards-->
-        <StackPanel>
-            
-            
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1"  Orientation="Vertical" Width="200" Margin="5,50,0,0">
+            <Border Background="#FF6C6B6B">
+                <TextBlock Text="REWARDS" VerticalAlignment="Top" FontSize="40" HorizontalAlignment="Center"/>
+            </Border>
+
+            <ListView x:Name="ImageListView" Grid.Row="1" Grid.Column="1"
+                  Margin="0,0,0,8"
+                  IsItemClickEnabled="True"
+                  ItemTemplate="{StaticResource RewardTemplate}"
+                  RelativePanel.AlignLeftWithPanel="True"
+                  RelativePanel.AlignRightWithPanel="True"
+                  RelativePanel.Below="TitleTextBlock"
+                  IsEnabled="True" 
+                  IsTabStop="True"
+                  XYFocusKeyboardNavigation="Enabled"
+                  IsFocusEngagementEnabled="True">
+            </ListView>
         </StackPanel>
         
+        <!--Perfil-->
+        <StackPanel x:Name="Perfil" Margin="0,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Row="1">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/botonGris.png"/>
+            </StackPanel.Background>
+            <Button x:Name="botonPerfil" Width="150" Height="150">
+                <Button.Background >
+                    <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/perfilIcon.png" >
+                        <ImageBrush.RelativeTransform>
+                            <CompositeTransform CenterY="0.5" CenterX="0.5" ScaleX="0.70" ScaleY="0.70"/>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+
     </Grid>
 </Page>
