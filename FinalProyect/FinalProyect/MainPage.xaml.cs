@@ -26,5 +26,14 @@ namespace FinalProyect
         {
             this.InitializeComponent();
         }
+
+        private void gridSizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            botonSalir.Height = botonSalir.Width = mainGrid.RowDefinitions.ElementAt(0).ActualHeight;
+            botonInfo.Height = botonInfo.Width = mainGrid.RowDefinitions.ElementAt(0).ActualHeight * 0.5;
+            botonAjustes.Height = botonAjustes.Width = mainGrid.RowDefinitions.ElementAt(0).ActualHeight;
+
+            BarraGuerra.Width = ((Frame)Window.Current.Content).ActualWidth * 0.4;
+        }
     }
 }

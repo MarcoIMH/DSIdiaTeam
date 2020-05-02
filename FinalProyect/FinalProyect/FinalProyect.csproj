@@ -130,6 +130,18 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Imagenes\ajustesIcon.png" />
+    <Content Include="Assets\Imagenes\botonGris.png" />
+    <Content Include="Assets\Imagenes\eventoIcon.png" />
+    <Content Include="Assets\Imagenes\fondo.jpg" />
+    <Content Include="Assets\Imagenes\infoIcon.png" />
+    <Content Include="Assets\Imagenes\logroIcon.png" />
+    <Content Include="Assets\Imagenes\misionIcon.png" />
+    <Content Include="Assets\Imagenes\perfilIcon.png" />
+    <Content Include="Assets\Imagenes\ladronIcon.png" />
+    <Content Include="Assets\Imagenes\policeIcon.png" />
+    <Content Include="Assets\Imagenes\salirIcon.png" />
+    <Content Include="Assets\Imagenes\tallerIcon.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

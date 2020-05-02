@@ -8,7 +8,90 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid SizeChanged="gridSizeChanged" Name="mainGrid">
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1.25*"/>
+        </Grid.RowDefinitions>
 
+        <Image Source="ms-appx:///Assets/Imagenes/fondo.jpg" Grid.RowSpan="3" Stretch="UniformToFill" />
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            
+            <!--BotonSalir-->
+            <StackPanel x:Name="Salir" Margin="0,5,0,0" VerticalAlignment="Top">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/botonGris.png"/>
+                </StackPanel.Background>
+                <Button x:Name="botonSalir" Width="100" Height="100">
+                    <Button.Background >
+                        <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/salirIcon.png" >
+                            <ImageBrush.RelativeTransform>
+                                <CompositeTransform CenterY="0.5" CenterX="0.5" ScaleX="-0.70" ScaleY="0.70"/>
+                            </ImageBrush.RelativeTransform>
+                        </ImageBrush>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+
+            <!--IconoPolicia-->
+            <Image Name="policiaIcon"  Source="ms-appx:///Assets/Imagenes/policeIcon.png" Margin="10,0,0,0"/>
+
+            <!--BarraGuerra-->
+            <ProgressBar
+                Width="700" Height="40" Margin="10,0,0,0" RequestedTheme="Default" 
+                         Value="40" Background="MintCream" Foreground="Black" Name="BarraGuerra"
+             />
+
+            <!--IconoLadrones-->
+            <Image Name="ladronesIcon"  Source="ms-appx:///Assets/Imagenes/ladronIcon.png" Margin="10,0,0,0"/>
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Right">
+
+            <!--BotonInfo-->
+            <StackPanel x:Name="Info" Margin="0,5,20,0" VerticalAlignment="Top" HorizontalAlignment="Right">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/botonGris.png"/>
+                </StackPanel.Background>
+                <Button x:Name="botonInfo" Width="100" Height="100">
+                    <Button.Background >
+                        <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/infoIcon.png" >
+                            <ImageBrush.RelativeTransform>
+                                <CompositeTransform CenterY="0.5" CenterX="0.5" ScaleX="0.70" ScaleY="0.70"/>
+                            </ImageBrush.RelativeTransform>
+                        </ImageBrush>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+
+            <!--BotonAjustes-->
+            <StackPanel x:Name="Ajustes" Margin="0,5,0,0" VerticalAlignment="Top" HorizontalAlignment="Right">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/botonGris.png"/>
+                </StackPanel.Background>
+                <Button x:Name="botonAjustes" Width="100" Height="100">
+                    <Button.Background >
+                        <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/ajustesIcon.png" >
+                            <ImageBrush.RelativeTransform>
+                                <CompositeTransform CenterY="0.5" CenterX="0.5" ScaleX="0.70" ScaleY="0.70"/>
+                            </ImageBrush.RelativeTransform>
+                        </ImageBrush>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+
+        </StackPanel>
+
+        <!--ZonaRewards-->
+        <StackPanel>
+            
+            
+        </StackPanel>
+        
     </Grid>
 </Page>
