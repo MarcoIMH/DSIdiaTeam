@@ -131,11 +131,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Imagenes\ajustesIcon.png" />
-    <Content Include="Assets\Imagenes\botonGris.png" />
+    <Content Include="Assets\Imagenes\Botones\botonAjustes.png" />
+    <Content Include="Assets\Imagenes\Botones\botonGris.png" />
+    <Content Include="Assets\Imagenes\Botones\botonInfo.png" />
+    <Content Include="Assets\Imagenes\Botones\botonPerfil.png" />
+    <Content Include="Assets\Imagenes\Botones\botonSalir.png" />
+    <Content Include="Assets\Imagenes\Botones\botonTaller.png" />
     <Content Include="Assets\Imagenes\eventoIcon.png" />
     <Content Include="Assets\Imagenes\fondo.jpg" />
     <Content Include="Assets\Imagenes\GRIS.png" />
     <Content Include="Assets\Imagenes\infoIcon.png" />
+    <Content Include="Assets\Imagenes\flechaNegra.png" />
     <Content Include="Assets\Imagenes\logroIcon.png" />
     <Content Include="Assets\Imagenes\misionIcon.png" />
     <Content Include="Assets\Imagenes\perfilIcon.png" />

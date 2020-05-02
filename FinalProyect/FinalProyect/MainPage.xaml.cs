@@ -34,6 +34,12 @@ namespace FinalProyect
             botonAjustes.Height = botonAjustes.Width = mainGrid.RowDefinitions.ElementAt(0).ActualHeight;
 
             BarraGuerra.Width = ((Frame)Window.Current.Content).ActualWidth * 0.4;
+
+            botonTaller.Height = botonTaller.Width = mainGrid.RowDefinitions.ElementAt(1).ActualHeight * 0.3;
+            botonPerfil.Height = botonPerfil.Width = mainGrid.RowDefinitions.ElementAt(1).ActualHeight * 0.3;
+
+            botonJugar.Height = mainGrid.RowDefinitions.ElementAt(1).ActualHeight * 0.3;
+            botonJugar.Width = botonJugar.Height * 1.5;
         }
     }
 }

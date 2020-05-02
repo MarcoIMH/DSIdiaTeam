@@ -34,19 +34,11 @@
         <StackPanel Orientation="Horizontal" Grid.Row="0">
 
             <!--BotonSalir-->
-            <StackPanel x:Name="Salir" Margin="0,5,0,0" VerticalAlignment="Top">
+            <StackPanel x:Name="Salir" VerticalAlignment="Top">
                 <StackPanel.Background>
-                    <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/botonGris.png"/>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/Botones/botonSalir.png"/>
                 </StackPanel.Background>
-                <Button x:Name="botonSalir" Width="100" Height="100">
-                    <Button.Background >
-                        <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/salirIcon.png" >
-                            <ImageBrush.RelativeTransform>
-                                <CompositeTransform CenterY="0.5" CenterX="0.5" ScaleX="-0.70" ScaleY="0.70"/>
-                            </ImageBrush.RelativeTransform>
-                        </ImageBrush>
-                    </Button.Background>
-                </Button>
+                <Button x:Name="botonSalir" Width="150" Height="150" Background="#00000000"/>
             </StackPanel>
 
             <!--IconoPolicia-->
@@ -66,35 +58,19 @@
         <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Right">
 
             <!--BotonInfo-->
-            <StackPanel x:Name="Info" Margin="0,5,20,0" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <StackPanel x:Name="Info" Margin="0,0,20,0" VerticalAlignment="Top" HorizontalAlignment="Right">
                 <StackPanel.Background>
-                    <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/botonGris.png"/>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/Botones/botonInfo.png"/>
                 </StackPanel.Background>
-                <Button x:Name="botonInfo" Width="100" Height="100">
-                    <Button.Background >
-                        <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/infoIcon.png" >
-                            <ImageBrush.RelativeTransform>
-                                <CompositeTransform CenterY="0.5" CenterX="0.5" ScaleX="0.70" ScaleY="0.70"/>
-                            </ImageBrush.RelativeTransform>
-                        </ImageBrush>
-                    </Button.Background>
-                </Button>
+                <Button x:Name="botonInfo" Width="75" Height="75" Background="#00000000"/>
             </StackPanel>
 
             <!--BotonAjustes-->
-            <StackPanel x:Name="Ajustes" Margin="0,5,0,0" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <StackPanel x:Name="Ajustes" VerticalAlignment="Top" HorizontalAlignment="Right">
                 <StackPanel.Background>
-                    <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/botonGris.png"/>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/Botones/botonAjustes.png"/>
                 </StackPanel.Background>
-                <Button x:Name="botonAjustes" Width="100" Height="100">
-                    <Button.Background >
-                        <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/ajustesIcon.png" >
-                            <ImageBrush.RelativeTransform>
-                                <CompositeTransform CenterY="0.5" CenterX="0.5" ScaleX="0.70" ScaleY="0.70"/>
-                            </ImageBrush.RelativeTransform>
-                        </ImageBrush>
-                    </Button.Background>
-                </Button>
+                <Button x:Name="botonAjustes" Width="150" Height="150" Background="#00000000"/>
             </StackPanel>
 
         </StackPanel>
@@ -118,22 +94,40 @@
                   IsFocusEngagementEnabled="True">
             </ListView>
         </StackPanel>
-        
-        <!--Perfil-->
-        <StackPanel x:Name="Perfil" Margin="0,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Row="1">
+
+        <StackPanel Orientation="Vertical" Margin="0,50,0,0" Grid.Row="1">
+            
+            <!--BotonPerfil-->
+            <StackPanel x:Name="Perfil" VerticalAlignment="Top" HorizontalAlignment="Right">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/Botones/botonPerfil.png"/>
+                </StackPanel.Background>
+                <Button x:Name="botonPerfil" Width="150" Height="150" Background="#00000000"/>
+            </StackPanel>
+
+            <!--BotonTaller-->
+            <StackPanel x:Name="Taller" Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Row="1">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/Botones/botonTaller.png"/>
+                </StackPanel.Background>
+                <Button x:Name="botonTaller" Width="150" Height="150" Background="#00000000"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!--BotonJugar-->
+        <StackPanel x:Name="Jugar" Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Row="2">
             <StackPanel.Background>
-                <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/botonGris.png"/>
+                <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/Botones/botonGris.png"/>
             </StackPanel.Background>
-            <Button x:Name="botonPerfil" Width="150" Height="150">
-                <Button.Background >
-                    <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/perfilIcon.png" >
-                        <ImageBrush.RelativeTransform>
-                            <CompositeTransform CenterY="0.5" CenterX="0.5" ScaleX="0.70" ScaleY="0.70"/>
-                        </ImageBrush.RelativeTransform>
-                    </ImageBrush>
-                </Button.Background>
+            <Button x:Name="botonJugar" Width="250" Height="125" Background="#00000000">
+                <StackPanel Width="200" HorizontalAlignment="Center">
+                    <TextBlock x:Name="textoJugar" Text="JUGAR" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+                </StackPanel>
             </Button>
         </StackPanel>
+        
+
+
 
     </Grid>
 </Page>
