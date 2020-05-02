@@ -29,13 +29,19 @@ namespace FinalProyect
 
         private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            ladron.Width = ladron.Height = grid_.RowDefinitions.ElementAt(1).ActualHeight;
-            policia.Width = policia.Height = grid_.RowDefinitions.ElementAt(1).ActualHeight;
-            info.Width = grid_.ColumnDefinitions.ElementAt(1).ActualWidth;
-            info.Height = grid_.RowDefinitions.ElementAt(3).ActualHeight;
+            ladron.Width = ladron.Height = main_grid.RowDefinitions.ElementAt(1).ActualHeight;
+            policia.Width = policia.Height = main_grid.RowDefinitions.ElementAt(1).ActualHeight;
+            info.Width = main_grid.ColumnDefinitions.ElementAt(1).ActualWidth;
+            info.Height = main_grid.RowDefinitions.ElementAt(3).ActualHeight;
 
-            accept.Width = accept.Height = grid_.RowDefinitions.ElementAt(1).ActualHeight * 2/3;
-            check.Width = check.Height = grid_.RowDefinitions.ElementAt(1).ActualHeight * 1 / 3;
+            accept.Width = accept.Height = main_grid.RowDefinitions.ElementAt(1).ActualHeight * 2/3;
+            check.Width = check.Height = main_grid.RowDefinitions.ElementAt(1).ActualHeight / 3;
+        }
+
+        private void popUp_grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            stackPanel_checkButton.Width = stackPanel_checkButton.Height = popUp_grid.RowDefinitions.ElementAt(2).ActualHeight / 5;
+            stackPanel_acceptButton.Width = stackPanel_acceptButton.Height = popUp_grid.RowDefinitions.ElementAt(2).ActualHeight / 2.5;
         }
     }
 }

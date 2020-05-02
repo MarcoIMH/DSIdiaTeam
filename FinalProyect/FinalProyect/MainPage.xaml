@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid x:Name="grid_" SizeChanged="Grid_SizeChanged">
+    <Grid x:Name="main_grid" SizeChanged="Grid_SizeChanged">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="5*" />
@@ -36,45 +36,55 @@
             </StackPanel.Background>
             <Button Width="60" Height="60" x:Name="policia" Opacity="0.4" />
         </StackPanel>
-        
-        <StackPanel Grid.Column="1" Grid.Row="3" >
-            <Border x:Name="info" Height="300"  CornerRadius="50">
-                <Border.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF570C0C"/>
-                        <GradientStop Color="#FFEE5F5F" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
-                <StackPanel >
-                    <TextBlock TextWrapping="WrapWholeWords" Text="Hold on!" TextAlignment="Center" Margin="20"
-                           Foreground="White" FontFamily="Bahnschrift Light" FontSize="24" FontWeight="Bold" VerticalAlignment="Top" />
-                    <TextBlock TextWrapping="WrapWholeWords" Text="You are about to choose a band. This cannot be changed until the season ends, so be wise..." 
-                               TextAlignment="Justify" Margin="40, 20" Foreground="White" FontFamily="Bahnschrift Light" FontSize="20" VerticalAlignment="Top" />
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
-                        <StackPanel Orientation="Vertical">
-                            <StackPanel Margin="80, 20" HorizontalAlignment="Left" >
-                                <StackPanel.Background>
-                                    <ImageBrush ImageSource="Assets/policia.png"  />
-                                </StackPanel.Background>
-                                <ToggleButton Width="20" Height="20" x:Name="check" />
-                            </StackPanel>
-                            <TextBlock Margin="0, -10" TextWrapping="WrapWholeWords" Text="Do not show this again" HorizontalAlignment="Center"
-                                        Foreground="White" FontFamily="Bahnschrift Light" FontSize="14"  />
-                        </StackPanel>
-                        <StackPanel Orientation="Vertical"  >
-                            <StackPanel Margin="100, 0" HorizontalAlignment="Right" >
-                                <StackPanel.Background>
-                                    <ImageBrush ImageSource="Assets/policia.png"  />
-                                </StackPanel.Background>
-                                <Button Width="40" Height="40" x:Name="accept" />
-                            </StackPanel>
-                            <TextBlock Margin="0, 10" TextWrapping="WrapWholeWords" Text="Thanks!" HorizontalAlignment="Center"
-                                        Foreground="White" FontFamily="Bahnschrift Light" FontSize="20"  />
-                        </StackPanel>
+
+        <Border x:Name="info" CornerRadius="50" Grid.Column="1" Grid.Row="3" >
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF570C0C"/>
+                    <GradientStop Color="#FFEE5F5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            
+            <Grid x:Name="popUp_grid" SizeChanged="popUp_grid_SizeChanged">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="2.5*" />
+                    <RowDefinition Height="1.5*" />
+                </Grid.RowDefinitions>
+                
+                <TextBlock Grid.ColumnSpan="3" TextWrapping="WrapWholeWords" Text="Hold on!" TextAlignment="Center" Margin="20"
+                    Foreground="White" FontFamily="Bahnschrift Light" FontSize="24" FontWeight="Bold" VerticalAlignment="Top" />
+                <TextBlock Grid.ColumnSpan="3" Grid.Row="1" TextWrapping="WrapWholeWords" Text="You are about to choose a band. This cannot be changed until the season ends, so be wise..." 
+                        TextAlignment="Justify" Margin="40, 20" Foreground="White" FontFamily="Bahnschrift Light" FontSize="20" VerticalAlignment="Top" />
+
+                <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Right">
+                    <StackPanel x:Name="stackPanel_checkButton" Margin="0, 10" Width="20" Height="20" >
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="Assets/policia.png"  />
+                        </StackPanel.Background>
+                        <ToggleButton x:Name="check" />
+                    </StackPanel>
+                    <TextBlock TextWrapping="WrapWholeWords" Text="Do not show this again" HorizontalAlignment="Right"
+                            Foreground="White" FontFamily="Bahnschrift Light" FontSize="14"  />
+                </StackPanel>
+                
+                <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Left" >
+                    <StackPanel  x:Name="stackPanel_acceptButton" Width="40" Height="40" >
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="Assets/policia.png" />
+                        </StackPanel.Background>
+                        <Button  x:Name="accept" />
                     </StackPanel>
                     
+                    <TextBlock Margin="0, 10" TextWrapping="WrapWholeWords" Text="Thanks!" HorizontalAlignment="Center"
+                                Foreground="White" FontFamily="Bahnschrift Light" FontSize="20"  />
                 </StackPanel>
-            </Border>
-        </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
 </Page>
