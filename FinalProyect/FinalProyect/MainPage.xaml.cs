@@ -26,5 +26,16 @@ namespace FinalProyect
         {
             this.InitializeComponent();
         }
+
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            ladron.Width = ladron.Height = grid_.RowDefinitions.ElementAt(1).ActualHeight;
+            policia.Width = policia.Height = grid_.RowDefinitions.ElementAt(1).ActualHeight;
+            info.Width = grid_.ColumnDefinitions.ElementAt(1).ActualWidth;
+            info.Height = grid_.RowDefinitions.ElementAt(3).ActualHeight;
+
+            accept.Width = accept.Height = grid_.RowDefinitions.ElementAt(1).ActualHeight * 2/3;
+            check.Width = check.Height = grid_.RowDefinitions.ElementAt(1).ActualHeight * 1 / 3;
+        }
     }
 }
