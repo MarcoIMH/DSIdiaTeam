@@ -136,6 +136,9 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\iconPolice.png" />
+    <Content Include="Assets\iconRobber.png" />
+    <Content Include="Assets\LoadingMap.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

@@ -11,21 +11,21 @@
     <Grid Background="DarkViolet">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="15*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="25*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Border BorderThickness="1" BorderBrush="Black" Grid.Column="1" Grid.Row="1" Background="Violet"/>
         
-        <AppBarButton Icon="Back" Width="100" Height="100" Background="Violet"/>
+        <AppBarButton Icon="Back" Width="100" Height="100" Background="Violet" Click="AppBarButton_Click"/>
 
-        <ScrollViewer Grid.Column="1" Grid.Row="1" >
+        <ScrollViewer Grid.Column="1" Grid.Row="1" VerticalScrollBarVisibility="Visible">
             <Grid>
-                <StackPanel>
+                <StackPanel Margin="0,19,0,0">
                     <StackPanel Tag="Sonido" HorizontalAlignment="Center">
                         <TextBlock Text="Sonido" TextWrapping="Wrap" TextDecorations="Underline" FontWeight="Bold" FontSize="48" Width="300" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
@@ -81,8 +81,5 @@
                 </StackPanel>
             </Grid>
         </ScrollViewer>
-        
-
-
     </Grid>
 </Page>
