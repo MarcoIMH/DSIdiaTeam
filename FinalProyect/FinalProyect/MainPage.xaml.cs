@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,9 +24,17 @@ namespace FinalProyect
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public ObservableCollection<Mision> ListaMisiones { get; } = new ObservableCollection<Mision>();
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            //if (ListaMisiones != null)
+            //foreach (Mision m in Model.GetAllMisions())
+            //{
+            //    ListaMisiones.Add(m);
+            //}
         }
 
         private void gridSizeChanged(object sender, SizeChangedEventArgs e)
@@ -39,7 +49,11 @@ namespace FinalProyect
             botonPerfil.Height = botonPerfil.Width = mainGrid.RowDefinitions.ElementAt(1).ActualHeight * 0.3;
 
             botonJugar.Height = mainGrid.RowDefinitions.ElementAt(1).ActualHeight * 0.3;
-            botonJugar.Width = botonJugar.Height * 1.5;
+            botonJugar.Width = ((Frame)Window.Current.Content).ActualWidth * 0.15;
+            botonJugar.MinWidth = textoJugar.ActualWidth + 20;
+            botonJugar.MinHeight = textoJugar.ActualHeight + 20;
+
+            listaEventos.Width = ((Frame)Window.Current.Content).ActualWidth * 0.85;
         }
     }
 }
