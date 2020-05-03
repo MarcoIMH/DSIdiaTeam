@@ -69,7 +69,7 @@
                     <StackPanel.Background>
                         <ImageBrush ImageSource="Assets/policia.png" />
                     </StackPanel.Background>
-                    <Button x:Name="join_button" Width="60" Height="20" />
+                    <Button x:Name="join_button" Width="60" Height="20" Click="join_button_Click"/>
                 </StackPanel>
                 
             </Grid>

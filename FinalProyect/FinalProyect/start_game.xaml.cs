@@ -26,5 +26,10 @@ namespace FinalProyect
         {
             this.InitializeComponent();
         }
+
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            chat.MaxHeight = grid_.RowDefinitions.ElementAt(3).ActualHeight * 2 / 3;
+        }
     }
 }

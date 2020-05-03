@@ -63,5 +63,10 @@ namespace FinalProyect
             info_title.Text = "COP";
             info_resumen.Text = "Catch those thieves and bring them down to Hell. Work with your teammates, any help is needed against them . . .";
         }
+
+        private void join_button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(start_game));
+        }
     }
 }
