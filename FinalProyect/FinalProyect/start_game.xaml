@@ -17,7 +17,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
+            <RowDefinition Height="0.8*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="0.2*" />
             <RowDefinition Height="5*" />
@@ -28,7 +28,7 @@
 
         <StackPanel Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Left" VerticalAlignment="Top">
             <StackPanel.Background>
-                <ImageBrush ImageSource="Assets/ladron.png"/>
+                <ImageBrush ImageSource="Assets/exit.png"/>
             </StackPanel.Background>
             <Button Width="60" Height="56" x:Name="exit" Opacity="0.4" />
         </StackPanel>
@@ -37,25 +37,25 @@
             <StackPanel.Background>
                 <ImageBrush ImageSource="Assets/user.png"/>
             </StackPanel.Background>
-            <Button Width="80" Height="56" Opacity="0.4" x:Name="add1" />
+            <Button Width="80" Height="56" Opacity="0.4" x:Name="user1" />
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
             <StackPanel.Background>
                 <ImageBrush ImageSource="Assets/user.png"/>
             </StackPanel.Background>
-            <Button Width="80" Height="56" Opacity="0.4" x:Name="add2" />
+            <Button Width="80" Height="56" Opacity="0.4" x:Name="user2" />
         </StackPanel>
         <StackPanel Grid.Column="3" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
             <StackPanel.Background>
                 <ImageBrush ImageSource="Assets/user.png"/>
             </StackPanel.Background>
-            <Button Width="80" Height="56" Opacity="0.4" x:Name="add3" />
+            <Button Width="80" Height="56" Opacity="0.4" x:Name="user3" />
         </StackPanel>
         <StackPanel Grid.Column="4" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
             <StackPanel.Background>
                 <ImageBrush ImageSource="Assets/user.png"/>
             </StackPanel.Background>
-            <Button Width="80" Height="56" Opacity="0.4" x:Name="add4" />
+            <Button Width="80" Height="56" Opacity="0.4" x:Name="user4" />
         </StackPanel>
 
         <StackPanel Grid.Column="4"  Grid.Row="3"  HorizontalAlignment="Center" VerticalAlignment="Center">
