@@ -54,6 +54,18 @@ namespace FinalProyect
             botonJugar.MinHeight = textoJugar.ActualHeight + 20;
 
             listaEventos.Width = ((Frame)Window.Current.Content).ActualWidth * 0.85;
+
+            PerfilPopUp.Height = mainGrid.RowDefinitions.ElementAt(1).ActualHeight;
+            PerfilPopUp.Width = ((Frame)Window.Current.Content).ActualWidth * 0.5;
+        }
+
+        private void perfilClicked(object sender, RoutedEventArgs e)
+        {
+            if(PerfilPopUp.Visibility == Visibility.Collapsed)
+            {
+                PerfilPopUp.Visibility = Visibility.Visible;
+            }
+            else PerfilPopUp.Visibility = Visibility.Collapsed;
         }
     }
 }
