@@ -134,16 +134,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\+.png" />
-    <Content Include="Assets\exit.png" />
-    <Content Include="Assets\fondo.png" />
+    <Content Include="Assets\accept.png" />
     <Content Include="Assets\foto_garage.jpg" />
     <Content Include="Assets\foto_garage.png" />
     <Content Include="Assets\foto_inicio.jpg" />
     <Content Include="Assets\join.png" />
     <Content Include="Assets\ladron.png" />
-    <Content Include="Assets\logo_ladron.png" />
-    <Content Include="Assets\logo_policia.png" />
     <Content Include="Assets\policia.png" />
+    <Content Include="Assets\salirIcon.png" />
     <Content Include="Assets\user.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

@@ -35,7 +35,7 @@ namespace FinalProyect
 
         private void popUp_grid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            stackPanel_checkButton.Width = stackPanel_checkButton.Height = check.Width = check.Height = popUp_grid.RowDefinitions.ElementAt(2).ActualHeight / 5;
+            //stackPanel_checkButton.Width = stackPanel_checkButton.Height = check.Width = check.Height = popUp_grid.RowDefinitions.ElementAt(2).ActualHeight / 5;
             stackPanel_acceptButton.Width =  stackPanel_acceptButton.Height = accept.Width = accept.Height = popUp_grid.RowDefinitions.ElementAt(2).ActualHeight / 2.5; 
         }
 

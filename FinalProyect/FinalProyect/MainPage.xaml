@@ -10,9 +10,9 @@
 
     <Grid x:Name="main_grid" SizeChanged="Grid_SizeChanged">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="5*" />
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*" />
@@ -37,14 +37,8 @@
             <Button Width="60" Height="60" x:Name="policia" Opacity="0.4" IsEnabled="False" Click="policia_Click"/>
         </StackPanel>
 
-       
-        <Border Margin="10, 40, 10, 40" x:Name="info_border" CornerRadius="50" Grid.Column="1" Grid.Row="3" >
-            <Border.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#7F37AEC7"/>
-                    <GradientStop Color="#B22EC6F3" Offset="1"/>
-                </LinearGradientBrush>
-            </Border.Background>
+
+        <Border Margin="10, 40, 10, 40" x:Name="info_border" CornerRadius="50" Grid.Column="1" Grid.Row="3" Background="#DA5CB1C6" >
             <Grid x:Name="info_grid" SizeChanged="info_grid_SizeChanged" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*" />
@@ -54,34 +48,28 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.5*" />
                     <RowDefinition Height="2*" />
-                    <RowDefinition Height="0.5*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <Border Grid.Column="1" Background="#FFFF5A5A" CornerRadius="20" >
+                <Border x:Name="border_title" Grid.Column="1" Background="#FF21090d" CornerRadius="20" >
                     <TextBlock x:Name="info_title" Text="ROBBER" TextAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Bahnschrift Light" FontSize="20" FontWeight="Bold"/>
                 </Border>
-                
+
                 <TextBlock x:Name="info_resumen" Grid.ColumnSpan="3" Grid.Row="1" TextWrapping="WrapWholeWords" 
                            Text="Steal, escape, and dont let the cops take you. Run away in an epic display of talent. But look out, they've got some tricks . . ." 
                            TextAlignment="Justify" Margin="40, 20" Foreground="White" FontFamily="Bahnschrift Light" FontSize="20" VerticalAlignment="Center" />
-                
+
                 <StackPanel x:Name="stackpanel_joinButton" Margin="0, 0, 0, 10" Width="60" Height="20" Grid.Column="1" Grid.Row="2" >
                     <StackPanel.Background>
                         <ImageBrush ImageSource="Assets/join.png" />
                     </StackPanel.Background>
                     <Button x:Name="join_button" Width="60" Height="20" Click="join_button_Click"/>
                 </StackPanel>
-                
+
             </Grid>
         </Border>
-        
-        <Border x:Name="popUp_border" CornerRadius="50" Grid.Column="1" Grid.Row="3" Visibility="Visible">
-            <Border.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF570C0C"/>
-                    <GradientStop Color="#FFEE5F5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Border.Background>
+
+        <Border x:Name="popUp_border" CornerRadius="50" Grid.Column="1" Grid.Row="3" Visibility="Visible" Background="#FFF7FFF7">
 
             <Grid x:Name="popUp_grid" SizeChanged="popUp_grid_SizeChanged">
                 <Grid.ColumnDefinitions>
@@ -96,31 +84,25 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.ColumnSpan="3" TextWrapping="WrapWholeWords" Text="Hold on!" TextAlignment="Center" Margin="20"
-                    Foreground="White" FontFamily="Bahnschrift Light" FontSize="24" FontWeight="Bold" VerticalAlignment="Top" />
+                    FontFamily="Bahnschrift Light" FontSize="24" FontWeight="Bold" VerticalAlignment="Top" />
                 <TextBlock Grid.ColumnSpan="3" Grid.Row="1" TextWrapping="WrapWholeWords" Text="You are about to choose a band. This cannot be changed until the season ends, so be wise..." 
-                        TextAlignment="Justify" Margin="40, 20" Foreground="White" FontFamily="Bahnschrift Light" FontSize="20" VerticalAlignment="Top" />
+                        TextAlignment="Justify" Margin="40, 20" FontFamily="Bahnschrift Light" FontSize="20" VerticalAlignment="Top" />
 
                 <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Right">
-                    <StackPanel x:Name="stackPanel_checkButton" Margin="0, 10" Width="20" Height="20" >
-                        <StackPanel.Background>
-                            <ImageBrush ImageSource="Assets/policia.png"  />
-                        </StackPanel.Background>
-                        <ToggleButton x:Name="check" />
+                    <StackPanel x:Name="stackPanel_checkButton" Margin="0, -10" >
+                        <RadioButton x:Name="check" 
+                                     Content="Do not show this again"  FontFamily="Bahnschrift Light" FontSize="14" FontStyle="Italic" />
                     </StackPanel>
-                    <TextBlock TextWrapping="WrapWholeWords" Text="Do not show this again" HorizontalAlignment="Right"
-                            Foreground="White" FontFamily="Bahnschrift Light" FontSize="14"  />
+
                 </StackPanel>
 
                 <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Left" >
                     <StackPanel  x:Name="stackPanel_acceptButton" Width="40" Height="40" >
                         <StackPanel.Background>
-                            <ImageBrush ImageSource="Assets/policia.png" />
+                            <ImageBrush ImageSource="Assets/accept.png" />
                         </StackPanel.Background>
                         <Button  x:Name="accept" Click="accept_Click"/>
                     </StackPanel>
-
-                    <TextBlock Margin="0, 10" TextWrapping="WrapWholeWords" Text="Thanks!" HorizontalAlignment="Center"
-                                Foreground="White" FontFamily="Bahnschrift Light" FontSize="20"  />
                 </StackPanel>
             </Grid>
         </Border>

@@ -28,7 +28,7 @@
 
         <StackPanel Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Left" VerticalAlignment="Top">
             <StackPanel.Background>
-                <ImageBrush ImageSource="Assets/exit.png"/>
+                <ImageBrush ImageSource="Assets/salirIcon.png"/>
             </StackPanel.Background>
             <Button Width="60" Height="56" x:Name="exit" Opacity="0.4" />
         </StackPanel>
