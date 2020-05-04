@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="DarkViolet">
+    <Grid Background="#FF3F6B5E">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="15*"/>
@@ -20,10 +20,16 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Border BorderThickness="1" BorderBrush="Black" Grid.Column="1" Grid.Row="1" Background="Violet"/>
-        
-        <AppBarButton Icon="Back" Width="100" Height="100" Background="Violet" Click="AppBarButton_Click"/>
 
-        <ScrollViewer Grid.Column="1" Grid.Row="1" VerticalScrollBarVisibility="Visible">
+        <Button Background="#FF60CCB4" Click="AppBarButton_Click">
+            <Image Source="/Assets/salirIcon.png" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <CompositeTransform Rotation="-180"/>
+                </Image.RenderTransform>
+            </Image>
+        </Button>
+
+        <ScrollViewer Grid.Column="1" Grid.Row="1" VerticalScrollBarVisibility="Visible" Background="#FF60CCB4">
             <Grid>
                 <StackPanel Margin="0,19,0,0">
                     <StackPanel Tag="Sonido" HorizontalAlignment="Center">
@@ -31,15 +37,15 @@
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
                             <TextBlock Text="Volumen general" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                            <Slider Width="300" VerticalAlignment="Center" Value="70" HorizontalAlignment="Right" Margin="545,0,0,0"/>
+                            <Slider Width="300" VerticalAlignment="Center" Value="70" HorizontalAlignment="Right" Margin="545,0,0,0" Foreground="#FF21090D" Background="#FFF7FFF7"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Width="1115" Margin="0,0,0,20" HorizontalAlignment="Center">
                             <TextBlock Text="Volumen de efectos" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                            <Slider Width="300" VerticalAlignment="Center" Value="50" HorizontalAlignment="Right" Margin="500,0,0,0"/>
+                            <Slider Width="300" VerticalAlignment="Center" Value="50" HorizontalAlignment="Right" Margin="500,0,0,0" Foreground="#FF21090D" Background="#FFF7FFF7"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Width="1115" Margin="0,0,0,20" HorizontalAlignment="Center">
                             <TextBlock Text="Volumen de música" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                            <Slider Width="300" VerticalAlignment="Center" Value="30" HorizontalAlignment="Right" Margin="504,0,0,0"/>
+                            <Slider Width="300" VerticalAlignment="Center" Value="30" HorizontalAlignment="Right" Margin="504,0,0,0" Foreground="#FF21090D" RequestedTheme="Default" Background="#FFF7FFF7"/>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Tag="Gráficos" HorizontalAlignment="Center">
