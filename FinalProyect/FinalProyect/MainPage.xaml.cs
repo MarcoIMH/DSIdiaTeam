@@ -54,12 +54,16 @@ namespace FinalProyect
 
         private void ladron_Click(object sender, RoutedEventArgs e)
         {
+            ladron_image.Opacity = 1;
+            policia_image.Opacity = 0.6;
             info_title.Text = "ROBBER";
             info_resumen.Text = "Steal, escape, and dont let the cops take you. Run away in an epic display of talent. But look out, they've got some tricks . . .";
         }
 
         private void policia_Click(object sender, RoutedEventArgs e)
         {
+            policia_image.Opacity = 1;
+            ladron_image.Opacity = 0.6;
             info_title.Text = "COP";
             info_resumen.Text = "Catch those thieves and bring them down to Hell. Work with your teammates, any help is needed against them . . .";
         }

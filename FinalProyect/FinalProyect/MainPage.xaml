@@ -26,13 +26,13 @@
 
         <StackPanel Margin="40, 0" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1">
             <StackPanel.Background>
-                <ImageBrush ImageSource="Assets/ladron.png"/>
+                <ImageBrush x:Name="ladron_image" ImageSource="Assets/ladron.png"/>
             </StackPanel.Background>
             <Button Width="60" Height="60" x:Name="ladron" Opacity="0.4" IsEnabled="False" Click="ladron_Click"/>
         </StackPanel>
         <StackPanel  Margin="40, 0" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="1">
             <StackPanel.Background>
-                <ImageBrush ImageSource="Assets/policia.png" Opacity="0.6" />
+                <ImageBrush x:Name="policia_image" ImageSource="Assets/policia.png" Opacity="0.6" />
             </StackPanel.Background>
             <Button Width="60" Height="60" x:Name="policia" Opacity="0.4" IsEnabled="False" Click="policia_Click"/>
         </StackPanel>
@@ -67,7 +67,7 @@
                 
                 <StackPanel x:Name="stackpanel_joinButton" Margin="0, 0, 0, 10" Width="60" Height="20" Grid.Column="1" Grid.Row="2" >
                     <StackPanel.Background>
-                        <ImageBrush ImageSource="Assets/policia.png" />
+                        <ImageBrush ImageSource="Assets/join.png" />
                     </StackPanel.Background>
                     <Button x:Name="join_button" Width="60" Height="20" Click="join_button_Click"/>
                 </StackPanel>

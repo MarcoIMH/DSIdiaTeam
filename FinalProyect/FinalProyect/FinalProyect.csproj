@@ -139,6 +139,7 @@
     <Content Include="Assets\foto_garage.jpg" />
     <Content Include="Assets\foto_garage.png" />
     <Content Include="Assets\foto_inicio.jpg" />
+    <Content Include="Assets\join.png" />
     <Content Include="Assets\ladron.png" />
     <Content Include="Assets\logo_ladron.png" />
     <Content Include="Assets\logo_policia.png" />
