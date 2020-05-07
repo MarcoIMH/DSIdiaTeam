@@ -8,7 +8,45 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="#60CCB4">
+        <!-- Palette colors: #21090D #3F6B5E #60CCB4 #5CB1C6 #F9EEA3 #F7FFF7 -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="718*"/>
+            <ColumnDefinition Width="723*"/>
+            <ColumnDefinition Width="59*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="603*"/>
+            <RowDefinition Height="154*"/>
+            <RowDefinition Height="163"/>
+        </Grid.RowDefinitions>
+        
+        <!--ROW = 0...................................................................................................ROW = 0.-->
+        <Button Click="BackToMenu_Click" Grid.Column="0" Grid.Row="0" Background="#F9EEA3">
+            <Image Source="/Assets/salirIcon.png"/>
+        </Button>
+        
+        <!--ROW = 1...................................................................................................ROW = 1.-->
+        <Border BorderThickness="10" BorderBrush="Black" Grid.Column="1" Grid.Row="1" Background="#3F6B5E"/>
+
+        <!--ROW = 2...................................................................................................ROW = 2.-->
+        <Button Click="BuyItem_Click" Grid.Column="1" Grid.Row="2"
+                BorderThickness="10" BorderBrush="Black"
+                HorizontalAlignment="Center" Height="120" Width="730"
+                Background="#3F6B5E">
+            <TextBlock Text="B    U    Y" FontSize="70" 
+                       HorizontalAlignment="Center" />
+        </Button>
+
+        <!--ROW = 3...................................................................................................ROW = 3.-->
+        <Border BorderThickness="3" BorderBrush="Black" Grid.Column="0" Grid.Row="3" 
+                Background="#F9EEA3" 
+                HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="600" Height="130"/>
+        <TextBlock x:Name="UserGold" Grid.Column="0" Grid.Row="3" 
+                       HorizontalAlignment="Left"  VerticalAlignment="Bottom" Width="650"
+                       Text=" Gold: 1350$" FontSize="100" FocusVisualPrimaryBrush="Black"/>
+
 
     </Grid>
 </Page>
