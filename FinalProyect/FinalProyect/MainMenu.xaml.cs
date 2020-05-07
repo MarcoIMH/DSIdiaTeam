@@ -22,11 +22,11 @@ namespace FinalProyect
     /// <summary>
     /// Página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class MainMenu : Page
     {
         public ObservableCollection<Mision> ListaMisiones { get; } = new ObservableCollection<Mision>();
 
-        public MainPage()
+        public MainMenu()
         {
             this.InitializeComponent();
 
@@ -61,7 +61,7 @@ namespace FinalProyect
 
         private void perfilClicked(object sender, RoutedEventArgs e)
         {
-            if(PerfilPopUp.Visibility == Visibility.Collapsed)
+            if (PerfilPopUp.Visibility == Visibility.Collapsed)
             {
                 PerfilPopUp.Visibility = Visibility.Visible;
             }
