@@ -24,52 +24,109 @@
         <Image Source="ms-appx:///Assets/Page4/ws.jpg" Grid.ColumnSpan="2" Grid.RowSpan="4" Stretch="UniformToFill" Opacity="0.9"/>
         
         <!--ROW = 0...................................................................................................ROW = 0.-->
+        <!--Exit icon -->
         <Button Grid.Column="0" Grid.Row="0" Background="#F9EEA3">
             <Image Source="/Assets/salirIcon.png"/>
         </Button>
         
         <!--ROW = 1...................................................................................................ROW = 1.-->
-        <Image Source="ms-appx:///Assets/Page4/car.png" Grid.Column="0" Grid.Row="1" Stretch="Uniform"
-                Margin="20,160,20,20"/>
+        <!--Car image -->
+        <Image Source="ms-appx:///Assets/Page4/car.png" 
+               Grid.Column="0" Grid.Row="1" 
+               Stretch="Uniform"
+               Margin="20,160,20,20"/>
 
-        <Border BorderThickness="10" BorderBrush="Black"  Grid.Column="1" Grid.Row="1"
-                Background="#3F6B5E" Margin="15"/>
-
+        <!--Shop sections zone -->
+        <StackPanel Grid.Column="1" Grid.Row="1" 
+                    BorderThickness="10" BorderBrush="Black" 
+                    Background="#3F6B5E" 
+                    Margin="10">
+            <StackPanel x:Name="motorShopPanel" Visibility="Visible">
+                <StackPanel Orientation="Horizontal">
+                    <Button Margin="10">
+                        <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
+                    </Button>
+                    <Button Margin="10">
+                        <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
+                    </Button>
+                    <Button Margin="10">
+                        <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
+                    </Button>
+                    <Button Margin="10">
+                        <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
+                    </Button>
+                    <Button Margin="10">
+                        <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
+                    </Button>
+                </StackPanel>
+                            
+            </StackPanel>
+            
+            <StackPanel x:Name="bodyWorkShopPanel" Visibility="Collapsed">
+                <Button Margin="10">
+                    <Image Source="Assets/Page4/doorIcon.png" Width="100"/>
+                </Button>
+            </StackPanel>
+            
+            <StackPanel x:Name="wheelShopPanel" Visibility="Collapsed">
+                <Button Margin="10">
+                    <Image Source="Assets/Page4/wheelIcon.png" Width="100"/>
+                </Button>               
+            </StackPanel>
+            
+            <StackPanel x:Name="colorShopPanel" Visibility="Collapsed">
+                <Button Margin="10">
+                    <Image Source="Assets/Page4/brush icon.png" Width="100"/>
+                </Button>
+            </StackPanel>
+            
+            <StackPanel x:Name="lightShopPanel" Visibility="Collapsed">
+                <Button Margin="10">
+                    <Image Source="Assets/Page4/car light.png" Width="100"/>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        
         <!--ROW = 2...................................................................................................ROW = 2.-->     
         <Button Grid.Column="1" Grid.Row="2"
                 BorderThickness="10" BorderBrush="Black"
                 HorizontalAlignment="Center" VerticalAlignment="Top"
                 Height="120" Width="743"
                 Background="#3F6B5E" >
-            <TextBlock Text="B    U    Y" FontSize="70" 
+            <TextBlock Text="B    U    Y" 
+                       FontSize="70" 
                        HorizontalAlignment="Center" />
         </Button>
 
         <!--ROW = 3...................................................................................................ROW = 3.-->
+        <!--Gold -->
         <Border BorderThickness="3" BorderBrush="Black" Grid.Column="0" Grid.Row="3" 
                 Background="#F9EEA3" 
-                HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="600" Height="130"/>
+                HorizontalAlignment="Left" VerticalAlignment="Bottom" 
+                Width="600" Height="130"/>
+        
         <TextBlock x:Name="UserGold" Grid.Column="0" Grid.Row="3" 
                        HorizontalAlignment="Left"  VerticalAlignment="Bottom" Width="650"
                        Text=" Gold: 1350$" FontSize="100" FocusVisualPrimaryBrush="Black"/>
-
+        
+        <!--Shop sections icons bar -->
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="3" 
                      Background="#F9EEA3"
                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="130">
-            <Button Margin="10">
+            <Button Margin="10" Click="motorShop">
                 <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
             </Button>
-            <Button Margin="10">
+            <Button Margin="10" Click="bodyWorkShop">
                 <Image Source="Assets/Page4/doorIcon.png" Width="100"/>
             </Button>
-            <Button Margin="10">
+            <Button Margin="10" Click="wheelShop">
                 <Image Source="Assets/Page4/wheelIcon.png" Width="100"/>
             </Button>
-            <Button Margin="10">
-                <Image Source="Assets/Page4/brushIcon.png" Width="100"/>
+            <Button Margin="10" Click="colorShop" >
+                <Image Source="Assets/Page4/brush icon.png" Width="100"/>
             </Button>
-            <Button Margin="10">
-                <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
+            <Button Margin="10" Click="lightShop">
+                <Image Source="Assets/Page4/car light.png" Width="100"/>
             </Button>
         </StackPanel>
     </Grid>
