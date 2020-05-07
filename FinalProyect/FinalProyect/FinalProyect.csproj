@@ -129,6 +129,9 @@
       <DependentUpon>Page6.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="start_game.xaml.cs">
+      <DependentUpon>start_game.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -139,7 +142,16 @@
     <Content Include="Assets\ladronIcon.png" />
     <Content Include="Assets\LoadingMap.png" />
     <Content Include="Assets\policeIcon.png" />
+    <Content Include="Assets\+.png" />
+    <Content Include="Assets\accept.png" />
+    <Content Include="Assets\foto_garage.jpg" />
+    <Content Include="Assets\foto_garage.png" />
+    <Content Include="Assets\foto_inicio.jpg" />
+    <Content Include="Assets\join.png" />
+    <Content Include="Assets\ladron.png" />
+    <Content Include="Assets\policia.png" />
     <Content Include="Assets\salirIcon.png" />
+    <Content Include="Assets\user.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -166,6 +178,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="start_game.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
@@ -176,7 +192,7 @@
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
