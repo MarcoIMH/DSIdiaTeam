@@ -278,7 +278,7 @@
 
         <!--PerfilPopUp-->
         <StackPanel x:Name="PerfilPopUp" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#F7FFF7" 
-                        Width="542" Height="412" Visibility="Visible" Grid.Row="1" Orientation="Vertical" MinWidth="420" MinHeight="335">
+                        Width="542" Height="412" Visibility="Collapsed" Grid.Row="1" Orientation="Vertical" MinWidth="420" MinHeight="335">
 
             <!--BotonCerrar-->
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Row="1">
