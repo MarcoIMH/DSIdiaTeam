@@ -5,6 +5,7 @@
     xmlns:local="using:FinalProyect"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikInput="using:Telerik.UI.Xaml.Controls.Input"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -36,54 +37,390 @@
                Stretch="Uniform"
                Margin="20,160,20,20"/>
 
-        <!--Shop sections zone -->
+        <!--Shop sections zone-->
         <StackPanel Grid.Column="1" Grid.Row="1" 
                     BorderThickness="10" BorderBrush="Black" 
                     Background="#3F6B5E" 
-                    Margin="10">
+                    Margin="10"
+                    VerticalAlignment="Center">
+            <!--Shop sections zone: MOTOR SHOP-->
             <StackPanel x:Name="motorShopPanel" Visibility="Visible">
-                <StackPanel Orientation="Horizontal">
-                    <Button Margin="10">
-                        <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
-                    </Button>
-                    <Button Margin="10">
-                        <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
-                    </Button>
-                    <Button Margin="10">
-                        <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
-                    </Button>
-                    <Button Margin="10">
-                        <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
-                    </Button>
-                    <Button Margin="10">
-                        <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
-                    </Button>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
                 </StackPanel>
-                            
+                
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">                    
+                    <StackPanel  BorderThickness="10" BorderBrush="Black"                             
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/motorIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>    
             </StackPanel>
-            
+
+            <!--Shop sections zone: BODY WORK SHOP-->
             <StackPanel x:Name="bodyWorkShopPanel" Visibility="Collapsed">
-                <Button Margin="10">
-                    <Image Source="Assets/Page4/doorIcon.png" Width="100"/>
-                </Button>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/doorIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/doorIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/doorIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel  BorderThickness="10" BorderBrush="Black"                             
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/doorIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/doorIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/doorIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
             </StackPanel>
-            
+
+            <!--Shop sections zone: WHEEL SHOP-->
             <StackPanel x:Name="wheelShopPanel" Visibility="Collapsed">
-                <Button Margin="10">
-                    <Image Source="Assets/Page4/wheelIcon.png" Width="100"/>
-                </Button>               
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/wheelIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/wheelIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/wheelIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel  BorderThickness="10" BorderBrush="Black"                             
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/wheelIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/wheelIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/wheelIcon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
             </StackPanel>
             
+            <!--Shop sections zone: COLOR SHOP-->
             <StackPanel x:Name="colorShopPanel" Visibility="Collapsed">
-                <Button Margin="10">
-                    <Image Source="Assets/Page4/brush icon.png" Width="100"/>
-                </Button>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/brush icon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/brush icon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/brush icon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel  BorderThickness="10" BorderBrush="Black"                             
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/brush icon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/brush icon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/brush icon.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
             </StackPanel>
             
+            <!--Shop sections zone: LIGHT SHOP-->
             <StackPanel x:Name="lightShopPanel" Visibility="Collapsed">
-                <Button Margin="10">
-                    <Image Source="Assets/Page4/car light.png" Width="100"/>
-                </Button>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/car light.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/car light.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/car light.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel  BorderThickness="10" BorderBrush="Black"                             
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/car light.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/car light.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel  BorderThickness="10" BorderBrush="Black" 
+                        Background="#60CCB4"
+                        Margin="30">
+                        <TextBlock Text="Price: 120$" 
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"/>
+                        <Button>
+                            <Image Source="Assets/Page4/car light.png" Width="100"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
             </StackPanel>
         </StackPanel>
         
@@ -95,6 +432,7 @@
                 Background="#3F6B5E" >
             <TextBlock Text="B    U    Y" 
                        FontSize="70" 
+                       FontWeight="ExtraBold"
                        HorizontalAlignment="Center" />
         </Button>
 
