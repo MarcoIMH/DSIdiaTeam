@@ -70,7 +70,7 @@ namespace FinalProyect
 
         private void join_button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(start_game));
+            this.Frame.Navigate(typeof(MainMenu));
         }
     }
 }

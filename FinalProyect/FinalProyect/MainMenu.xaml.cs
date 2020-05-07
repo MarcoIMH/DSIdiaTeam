@@ -67,5 +67,25 @@ namespace FinalProyect
             }
             else PerfilPopUp.Visibility = Visibility.Collapsed;
         }
+
+        private void botonJugar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(start_game));
+        }
+
+        private void botonSalir_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Exit();
+        }
+
+        private void botonTaller_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Page4));
+        }
+
+        private void botonAjustes_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Page3));
+        }
     }
 }

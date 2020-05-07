@@ -23,7 +23,7 @@
         
         <!-- Row 0 -->
         <!--Exit icon -->
-        <Button Grid.Column="0" Grid.Row="0" Background="#F9EEA3"
+        <Button Grid.Column="0" Grid.Row="0" Background="#F9EEA3" Click="Button_Click"
                 VerticalAlignment="Top">
             <Image Source="/Assets/salirIcon.png" Width="100"/>
         </Button>

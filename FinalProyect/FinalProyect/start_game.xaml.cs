@@ -39,5 +39,15 @@ namespace FinalProyect
 
             chat.MaxHeight = grid_.RowDefinitions.ElementAt(3).ActualHeight * 2 / 3;
         }
+
+        private void play_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Page6));
+        }
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainMenu));
+        }
     }
 }

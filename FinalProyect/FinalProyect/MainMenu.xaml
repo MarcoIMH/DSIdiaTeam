@@ -47,7 +47,7 @@
                 <StackPanel.Background>
                     <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/Botones/botonSalir.png"/>
                 </StackPanel.Background>
-                <Button x:Name="botonSalir" Width="150" Height="150" Background="#00000000"/>
+                <Button x:Name="botonSalir" Width="150" Height="150" Background="#00000000" Click="botonSalir_Click"/>
             </StackPanel>
 
             <!--IconoPolicia-->
@@ -79,7 +79,7 @@
                 <StackPanel.Background>
                     <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/Botones/botonAjustes.png"/>
                 </StackPanel.Background>
-                <Button x:Name="botonAjustes" Width="150" Height="150" Background="#00000000"/>
+                <Button x:Name="botonAjustes" Width="150" Height="150" Background="#00000000" Click="botonAjustes_Click"/>
             </StackPanel>
 
         </StackPanel>
@@ -272,7 +272,7 @@
                 <StackPanel.Background>
                     <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/Botones/botonTaller.png"/>
                 </StackPanel.Background>
-                <Button x:Name="botonTaller" Width="150" Height="150" Background="#00000000"/>
+                <Button x:Name="botonTaller" Width="150" Height="150" Background="#00000000" Click="botonTaller_Click"/>
             </StackPanel>
         </StackPanel>
 
@@ -316,7 +316,7 @@
             <StackPanel.Background>
                 <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/Botones/botonGris.png"/>
             </StackPanel.Background>
-            <Button x:Name="botonJugar" Width="250" Height="125" Background="#00000000">
+            <Button x:Name="botonJugar" Width="250" Height="125" Background="#00000000" Click="botonJugar_Click">
                 <StackPanel Width="200" HorizontalAlignment="Center">
                     <TextBlock x:Name="textoJugar" Text="JUGAR" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
                 </StackPanel>

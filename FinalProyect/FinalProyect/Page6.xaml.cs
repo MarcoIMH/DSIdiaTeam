@@ -29,7 +29,12 @@ namespace FinalProyect
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Page3));
+            this.Frame.Navigate(typeof(start_game));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Page7));
         }
     }
 }

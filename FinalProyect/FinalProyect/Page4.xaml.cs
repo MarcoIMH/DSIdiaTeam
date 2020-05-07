@@ -71,5 +71,10 @@ namespace FinalProyect
             colorShopPanel.Visibility = Visibility.Collapsed;
             lightShopPanel.Visibility = Visibility.Visible;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainMenu));
+        }
     }
 }
