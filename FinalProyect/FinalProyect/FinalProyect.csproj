@@ -119,6 +119,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -128,7 +131,18 @@
     <Compile Include="Page7.xaml.cs">
       <DependentUpon>Page7.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page3.xaml.cs">
+      <DependentUpon>Page3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page6.xaml.cs">
+      <DependentUpon>Page6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel.cs" />
+    <Compile Include="start_game.xaml.cs">
+      <DependentUpon>start_game.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -160,6 +174,40 @@
     <Content Include="Assets\policeIcon.png" />
     <Content Include="Assets\salirIcon.png" />
     <Content Include="Assets\tallerIcon.png" />
+    <Content Include="Assets\ladronIcon.png" />
+    <Content Include="Assets\LoadingMap.png" />
+    <Content Include="Assets\policeIcon.png" />
+    <Content Include="Assets\Imagenes\ajustesIcon.png" />
+    <Content Include="Assets\Imagenes\Botones\botonAjustes.png" />
+    <Content Include="Assets\Imagenes\Botones\botonCerrar.png" />
+    <Content Include="Assets\Imagenes\Botones\botonGris.png" />
+    <Content Include="Assets\Imagenes\Botones\botonInfo.png" />
+    <Content Include="Assets\Imagenes\Botones\botonPerfil.png" />
+    <Content Include="Assets\Imagenes\Botones\botonSalir.png" />
+    <Content Include="Assets\Imagenes\Botones\botonTaller.png" />
+    <Content Include="Assets\Imagenes\cerrar.png" />
+    <Content Include="Assets\Imagenes\eventoIcon.png" />
+    <Content Include="Assets\Imagenes\fondo.jpg" />
+    <Content Include="Assets\Imagenes\GRIS.png" />
+    <Content Include="Assets\Imagenes\infoIcon.png" />
+    <Content Include="Assets\Imagenes\flechaNegra.png" />
+    <Content Include="Assets\Imagenes\logroIcon.png" />
+    <Content Include="Assets\Imagenes\misionIcon.png" />
+    <Content Include="Assets\Imagenes\perfilIcon.png" />
+    <Content Include="Assets\Imagenes\ladronIcon.png" />
+    <Content Include="Assets\Imagenes\policeIcon.png" />
+    <Content Include="Assets\Imagenes\salirIcon.png" />
+    <Content Include="Assets\Imagenes\tallerIcon.png" />
+    <Content Include="Assets\+.png" />
+    <Content Include="Assets\accept.png" />
+    <Content Include="Assets\foto_garage.jpg" />
+    <Content Include="Assets\foto_garage.png" />
+    <Content Include="Assets\foto_inicio.jpg" />
+    <Content Include="Assets\join.png" />
+    <Content Include="Assets\ladron.png" />
+    <Content Include="Assets\policia.png" />
+    <Content Include="Assets\salirIcon.png" />
+    <Content Include="Assets\user.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -174,6 +222,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -186,17 +238,32 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="start_game.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.9</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fuentes\ClassicRobotItalic.otf" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

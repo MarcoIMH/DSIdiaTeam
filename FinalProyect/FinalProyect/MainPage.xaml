@@ -8,7 +8,103 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid x:Name="main_grid" SizeChanged="Grid_SizeChanged">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="0.2*" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="0.5*" />
+        </Grid.RowDefinitions>
 
+        <Image Source="Assets/foto_inicio.jpg" Stretch="Fill" Grid.ColumnSpan="3" Grid.RowSpan="5" Opacity="0.9" />
+
+        <StackPanel Margin="40, 0" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1">
+            <StackPanel.Background>
+                <ImageBrush x:Name="ladron_image" ImageSource="Assets/ladron.png"/>
+            </StackPanel.Background>
+            <Button Width="60" Height="60" x:Name="ladron" Opacity="0.4" IsEnabled="False" Click="ladron_Click"/>
+        </StackPanel>
+        <StackPanel  Margin="40, 0" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="1">
+            <StackPanel.Background>
+                <ImageBrush x:Name="policia_image" ImageSource="Assets/policia.png" Opacity="0.6" />
+            </StackPanel.Background>
+            <Button Width="60" Height="60" x:Name="policia" Opacity="0.4" IsEnabled="False" Click="policia_Click"/>
+        </StackPanel>
+
+
+        <Border Margin="10, 40, 10, 40" x:Name="info_border" CornerRadius="50" Grid.Column="1" Grid.Row="3" Background="#DA5CB1C6" >
+            <Grid x:Name="info_grid" SizeChanged="info_grid_SizeChanged" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="1.5*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Border x:Name="border_title" Grid.Column="1" Background="#FF21090d" CornerRadius="20" >
+                    <TextBlock x:Name="info_title" Text="ROBBER" TextAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Bahnschrift Light" FontSize="20" FontWeight="Bold"/>
+                </Border>
+
+                <TextBlock x:Name="info_resumen" Grid.ColumnSpan="3" Grid.Row="1" TextWrapping="WrapWholeWords" 
+                           Text="Steal, escape, and dont let the cops take you. Run away in an epic display of talent. But look out, they've got some tricks . . ." 
+                           TextAlignment="Justify" Margin="40, 20" Foreground="White" FontFamily="Bahnschrift Light" FontSize="20" VerticalAlignment="Center" />
+
+                <StackPanel x:Name="stackpanel_joinButton" Margin="0, 0, 0, 10" Width="60" Height="20" Grid.Column="1" Grid.Row="2" >
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="Assets/join.png" />
+                    </StackPanel.Background>
+                    <Button x:Name="join_button" Width="60" Height="20" Click="join_button_Click"/>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+        <Border x:Name="popUp_border" CornerRadius="50" Grid.Column="1" Grid.Row="3" Visibility="Visible" Background="#FFF7FFF7">
+
+            <Grid x:Name="popUp_grid" SizeChanged="popUp_grid_SizeChanged">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="2.5*" />
+                    <RowDefinition Height="1.5*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.ColumnSpan="3" TextWrapping="WrapWholeWords" Text="Hold on!" TextAlignment="Center" Margin="20"
+                    FontFamily="Bahnschrift Light" FontSize="24" FontWeight="Bold" VerticalAlignment="Top" />
+                <TextBlock Grid.ColumnSpan="3" Grid.Row="1" TextWrapping="WrapWholeWords" Text="You are about to choose a band. This cannot be changed until the season ends, so be wise..." 
+                        TextAlignment="Justify" Margin="40, 20" FontFamily="Bahnschrift Light" FontSize="20" VerticalAlignment="Top" />
+
+                <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Right">
+                    <StackPanel x:Name="stackPanel_checkButton" Margin="0, -10" >
+                        <RadioButton x:Name="check" 
+                                     Content="Do not show this again"  FontFamily="Bahnschrift Light" FontSize="14" FontStyle="Italic" />
+                    </StackPanel>
+
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Left" >
+                    <StackPanel  x:Name="stackPanel_acceptButton" Width="40" Height="40" >
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="Assets/accept.png" />
+                        </StackPanel.Background>
+                        <Button  x:Name="accept" Click="accept_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
 </Page>
