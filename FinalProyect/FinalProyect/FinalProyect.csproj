@@ -125,6 +125,9 @@
     <Compile Include="Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel.cs" />
+    <Compile Include="start_game.xaml.cs">
+      <DependentUpon>start_game.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -153,6 +156,16 @@
     <Content Include="Assets\Imagenes\policeIcon.png" />
     <Content Include="Assets\Imagenes\salirIcon.png" />
     <Content Include="Assets\Imagenes\tallerIcon.png" />
+    <Content Include="Assets\+.png" />
+    <Content Include="Assets\accept.png" />
+    <Content Include="Assets\foto_garage.jpg" />
+    <Content Include="Assets\foto_garage.png" />
+    <Content Include="Assets\foto_inicio.jpg" />
+    <Content Include="Assets\join.png" />
+    <Content Include="Assets\ladron.png" />
+    <Content Include="Assets\policia.png" />
+    <Content Include="Assets\salirIcon.png" />
+    <Content Include="Assets\user.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -168,6 +181,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="start_game.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
