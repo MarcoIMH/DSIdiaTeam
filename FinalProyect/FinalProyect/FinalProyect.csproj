@@ -125,6 +125,12 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page4.xaml.cs">
+      <DependentUpon>Page4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page7.xaml.cs">
+      <DependentUpon>Page7.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page3.xaml.cs">
       <DependentUpon>Page3.xaml</DependentUpon>
     </Compile>
@@ -144,6 +150,30 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\ajustesIcon.png" />
+    <Content Include="Assets\eventoIcon.png" />
+    <Content Include="Assets\flechaNegra.png" />
+    <Content Include="Assets\infoIcon.png" />
+    <Content Include="Assets\ladronIcon.png" />
+    <Content Include="Assets\logroIcon.png" />
+    <Content Include="Assets\misionIcon.png" />
+    <Content Include="Assets\Page4\brush icon.png" />
+    <Content Include="Assets\Page4\car light.png" />
+    <Content Include="Assets\Page4\car.png" />
+    <Content Include="Assets\Page4\doorIcon.png" />
+    <Content Include="Assets\Page4\motorIcon.png" />
+    <Content Include="Assets\Page4\wheelIcon.png" />
+    <Content Include="Assets\Page4\workshop.jpg" />
+    <Content Include="Assets\Page4\ws.jpg" />
+    <Content Include="Assets\Page7\bg.jpg" />
+    <Content Include="Assets\Page7\map.png" />
+    <Content Include="Assets\Page7\pedals.png" />
+    <Content Include="Assets\Page7\pu.png" />
+    <Content Include="Assets\Page7\wheel.png" />
+    <Content Include="Assets\perfilIcon.png" />
+    <Content Include="Assets\policeIcon.png" />
+    <Content Include="Assets\salirIcon.png" />
+    <Content Include="Assets\tallerIcon.png" />
     <Content Include="Assets\ladronIcon.png" />
     <Content Include="Assets\LoadingMap.png" />
     <Content Include="Assets\policeIcon.png" />
@@ -197,8 +227,16 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page3.xaml">
       <SubType>Designer</SubType>
