@@ -65,14 +65,8 @@
             <Button Width="150" Height="100" Opacity="0.2" x:Name="play" />
         </StackPanel>
 
-        <Border Margin="20, 20, 20, 0" Grid.ColumnSpan="2" Grid.Row="3" Opacity="0.9" Background="#FF192C1E" >
-            <Border Margin="10" Opacity="0.9">
-                <Border.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF486443"/>
-                        <GradientStop Color="#FFA9DAA2" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
+        <Border Margin="20, 20, 20, 0" Grid.ColumnSpan="2" Grid.Row="3" Opacity="0.9" Background="#FF3D675A" >
+            <Border Margin="10" Opacity="0.9" Background="#FFF7FFF7">
                 <ListView ScrollViewer.VerticalScrollBarVisibility="Visible" IsItemClickEnabled="False" >
                     <ListViewItem>
                         <StackPanel Orientation="Horizontal">
@@ -128,12 +122,12 @@
 
         <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Bottom" >
             <StackPanel Orientation="Horizontal" x:Name="chat_buttons">
-                <Button Margin="10, 0, 10, 0" Content="Chat general" Background="#FF3EA45A" />
-                <Button Margin="10, 0" Content="Chat de amigos" Background="#953EA45A" />
+                <Button Margin="10, 0, 10, 0" Content="Chat general" Background="#FF60CCB4" />
+                <Button Margin="10, 0" Content="Chat de amigos" Background="#FF3D675A" />
             </StackPanel>
             <Border >
                 <Border.Background>
-                    <SolidColorBrush Color="White" Opacity="0.7"/>
+                    <SolidColorBrush Color="#FFF7FFF7" Opacity="0.8"/>
                 </Border.Background>
                 <ListView x:Name="chat">
                     <ListViewItem>
