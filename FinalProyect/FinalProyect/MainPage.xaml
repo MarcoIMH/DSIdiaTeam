@@ -13,28 +13,35 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="718*"/>
             <ColumnDefinition Width="723*"/>
-            <ColumnDefinition Width="59*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
             <RowDefinition Height="603*"/>
             <RowDefinition Height="154*"/>
             <RowDefinition Height="163"/>
-        </Grid.RowDefinitions>    
+        </Grid.RowDefinitions>
+        
+        <Image Source="ms-appx:///Assets/Page4/workshop.jpg" Grid.ColumnSpan="2" Grid.RowSpan="4" Stretch="UniformToFill"/>
         
         <!--ROW = 0...................................................................................................ROW = 0.-->
-        <Button Click="BackToMenu_Click" Grid.Column="0" Grid.Row="0" Background="#F9EEA3">
+        <Button Grid.Column="0" Grid.Row="0" Background="#F9EEA3">
             <Image Source="/Assets/salirIcon.png"/>
         </Button>
         
         <!--ROW = 1...................................................................................................ROW = 1.-->
-        <Border BorderThickness="10" BorderBrush="Black" Grid.Column="1" Grid.Row="1" Background="#3F6B5E"/>
+        <Image Source="ms-appx:///Assets/Page4/car.png" Grid.Column="0" Grid.Row="1" Stretch="Uniform"
+                Margin="20,160,20,20"/>
+
+        <Border BorderThickness="10" BorderBrush="Black"  Grid.Column="1" Grid.Row="1"
+                Background="#3F6B5E" Margin="15"/>
 
         <!--ROW = 2...................................................................................................ROW = 2.-->
         
-        <Button Click="BuyItem_Click" Grid.Column="1" Grid.Row="2"
+        
+        <Button Grid.Column="1" Grid.Row="2"
                 BorderThickness="10" BorderBrush="Black"
-                HorizontalAlignment="Center" Height="120" Width="730"
+                HorizontalAlignment="Center" VerticalAlignment="Top"
+                Height="120" Width="730"
                 Background="#3F6B5E">
             <TextBlock Text="B    U    Y" FontSize="70" 
                        HorizontalAlignment="Center" />
