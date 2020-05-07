@@ -150,6 +150,7 @@
     <Content Include="Assets\Page4\motorIcon.png" />
     <Content Include="Assets\Page4\wheelIcon.png" />
     <Content Include="Assets\Page4\workshop.jpg" />
+    <Content Include="Assets\Page4\ws.jpg" />
     <Content Include="Assets\perfilIcon.png" />
     <Content Include="Assets\policeIcon.png" />
     <Content Include="Assets\salirIcon.png" />
