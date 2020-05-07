@@ -20,7 +20,7 @@
             <RowDefinition Height="603*"/>
             <RowDefinition Height="154*"/>
             <RowDefinition Height="163"/>
-        </Grid.RowDefinitions>
+        </Grid.RowDefinitions>    
         
         <!--ROW = 0...................................................................................................ROW = 0.-->
         <Button Click="BackToMenu_Click" Grid.Column="0" Grid.Row="0" Background="#F9EEA3">
@@ -31,6 +31,7 @@
         <Border BorderThickness="10" BorderBrush="Black" Grid.Column="1" Grid.Row="1" Background="#3F6B5E"/>
 
         <!--ROW = 2...................................................................................................ROW = 2.-->
+        
         <Button Click="BuyItem_Click" Grid.Column="1" Grid.Row="2"
                 BorderThickness="10" BorderBrush="Black"
                 HorizontalAlignment="Center" Height="120" Width="730"

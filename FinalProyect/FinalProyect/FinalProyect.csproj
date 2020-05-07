@@ -122,6 +122,12 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page4.xaml.cs">
+      <DependentUpon>Page4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page7.xaml.cs">
+      <DependentUpon>Page7.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +136,24 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\ajustesIcon.png" />
+    <Content Include="Assets\eventoIcon.png" />
+    <Content Include="Assets\flechaNegra.png" />
+    <Content Include="Assets\infoIcon.png" />
+    <Content Include="Assets\ladronIcon.png" />
+    <Content Include="Assets\logroIcon.png" />
+    <Content Include="Assets\misionIcon.png" />
+    <Content Include="Assets\Page4\brushIcon.png" />
+    <Content Include="Assets\Page4\car light.png" />
+    <Content Include="Assets\Page4\car.png" />
+    <Content Include="Assets\Page4\doorIcon.png" />
+    <Content Include="Assets\Page4\motorIcon.png" />
+    <Content Include="Assets\Page4\wheelIcon.png" />
+    <Content Include="Assets\Page4\workshop.jpg" />
+    <Content Include="Assets\perfilIcon.png" />
+    <Content Include="Assets\policeIcon.png" />
+    <Content Include="Assets\salirIcon.png" />
+    <Content Include="Assets\tallerIcon.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -147,6 +171,14 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
