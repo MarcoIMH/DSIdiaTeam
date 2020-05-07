@@ -26,5 +26,50 @@ namespace FinalProyect
         {
             this.InitializeComponent();
         }
+
+        private void motorShop(object sender, RoutedEventArgs e)
+        {
+            motorShopPanel.Visibility = Visibility.Visible;
+            bodyWorkShopPanel.Visibility = Visibility.Collapsed;
+            wheelShopPanel.Visibility = Visibility.Collapsed;
+            colorShopPanel.Visibility = Visibility.Collapsed;
+            lightShopPanel.Visibility = Visibility.Collapsed;
+        }
+
+        private void bodyWorkShop(object sender, RoutedEventArgs e)
+        {
+            motorShopPanel.Visibility = Visibility.Collapsed;
+            bodyWorkShopPanel.Visibility = Visibility.Visible;
+            wheelShopPanel.Visibility = Visibility.Collapsed;
+            colorShopPanel.Visibility = Visibility.Collapsed;
+            lightShopPanel.Visibility = Visibility.Collapsed;
+        }
+
+        private void wheelShop(object sender, RoutedEventArgs e)
+        {
+            motorShopPanel.Visibility = Visibility.Collapsed;
+            bodyWorkShopPanel.Visibility = Visibility.Collapsed;
+            wheelShopPanel.Visibility = Visibility.Visible;
+            colorShopPanel.Visibility = Visibility.Collapsed;
+            lightShopPanel.Visibility = Visibility.Collapsed;
+        }
+
+        private void colorShop(object sender, RoutedEventArgs e)
+        {
+            motorShopPanel.Visibility = Visibility.Collapsed;
+            bodyWorkShopPanel.Visibility = Visibility.Collapsed;
+            wheelShopPanel.Visibility = Visibility.Collapsed;
+            colorShopPanel.Visibility = Visibility.Visible;
+            lightShopPanel.Visibility = Visibility.Collapsed;
+        }
+
+        private void lightShop(object sender, RoutedEventArgs e)
+        {
+            motorShopPanel.Visibility = Visibility.Collapsed;
+            bodyWorkShopPanel.Visibility = Visibility.Collapsed;
+            wheelShopPanel.Visibility = Visibility.Collapsed;
+            colorShopPanel.Visibility = Visibility.Collapsed;
+            lightShopPanel.Visibility = Visibility.Visible;
+        }
     }
 }
