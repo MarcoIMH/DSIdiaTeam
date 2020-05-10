@@ -28,34 +28,22 @@
 
         <StackPanel Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Left" VerticalAlignment="Top">
             <StackPanel.Background>
-                <ImageBrush ImageSource="Assets/salirIcon.png"/>
+                <ImageBrush ImageSource="Assets/Imagenes/Botones/botonSalir.png"/>
             </StackPanel.Background>
             <Button Width="60" Height="56" x:Name="exit" Opacity="0.4" Click="exit_Click" />
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
-            <StackPanel.Background>
-                <ImageBrush ImageSource="Assets/user.png"/>
-            </StackPanel.Background>
-            <Button Width="80" Height="56" Opacity="0.4" x:Name="user1" />
+            <Image Width="56" Height="56" x:Name="user1" Source="Assets/user.png" />
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
-            <StackPanel.Background>
-                <ImageBrush ImageSource="Assets/user.png"/>
-            </StackPanel.Background>
-            <Button Width="80" Height="56" Opacity="0.4" x:Name="user2" />
+            <Image Width="56" Height="56" x:Name="user2" Source="Assets/user.png" />
         </StackPanel>
         <StackPanel Grid.Column="3" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
-            <StackPanel.Background>
-                <ImageBrush ImageSource="Assets/user.png"/>
-            </StackPanel.Background>
-            <Button Width="80" Height="56" Opacity="0.4" x:Name="user3" />
+            <Image Width="56" Height="56" x:Name="user3" Source="Assets/user.png" />
         </StackPanel>
         <StackPanel Grid.Column="4" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
-            <StackPanel.Background>
-                <ImageBrush ImageSource="Assets/user.png"/>
-            </StackPanel.Background>
-            <Button Width="80" Height="56" Opacity="0.4" x:Name="user4" />
+            <Image Width="56" Height="56" x:Name="user4" Source="Assets/user.png" />
         </StackPanel>
 
         <StackPanel Grid.Column="4"  Grid.Row="3"  HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -74,7 +62,9 @@
                                 <StackPanel.Background>
                                     <ImageBrush ImageSource="Assets/+.png"/>
                                 </StackPanel.Background>
-                                <Button Width="20" Height="20" Opacity="0.2" />
+                                <Button Width="20" Height="20" Opacity="0.2" Click="Button_Click">
+                                    <Image Source="Assets/ladron.png" Visibility="Collapsed"/>
+                                </Button>
                             </StackPanel>
                             <TextBlock Margin="20, 0" Text="Amigo 1" FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold" />
                             <TextBlock Text="online" Foreground="#FF23AC48" FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold"/>
@@ -86,7 +76,9 @@
                                 <StackPanel.Background>
                                     <ImageBrush ImageSource="Assets/+.png"/>
                                 </StackPanel.Background>
-                                <Button Width="20" Height="20" Opacity="0.2" />
+                                <Button Width="20" Height="20" Opacity="0.2" Click="Button_Click">
+                                    <Image Source="Assets/ladron.png" Visibility="Collapsed"/>
+                                </Button>
                             </StackPanel>
                             <TextBlock Margin="20, 0" Text="Amigo 4" FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold" />
                             <TextBlock Text="online" Foreground="#FF23AC48" FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold"/>

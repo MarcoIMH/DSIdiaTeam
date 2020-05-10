@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\ajustesIcon.png" />
+    <Content Include="Assets\doubleArrow.png" />
     <Content Include="Assets\eventoIcon.png" />
     <Content Include="Assets\flechaNegra.png" />
     <Content Include="Assets\infoIcon.png" />
