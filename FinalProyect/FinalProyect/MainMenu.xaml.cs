@@ -30,11 +30,11 @@ namespace FinalProyect
         {
             this.InitializeComponent();
 
-            //if (ListaMisiones != null)
-            //foreach (Mision m in Model.GetAllMisions())
-            //{
-            //    ListaMisiones.Add(m);
-            //}
+            if (ListaMisiones != null)
+                foreach (Mision m in Model.GetAllMisions())
+                {
+                    ListaMisiones.Add(m);
+                }
         }
 
         private void gridSizeChanged(object sender, SizeChangedEventArgs e)
