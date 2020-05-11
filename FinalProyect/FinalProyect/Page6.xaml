@@ -20,14 +20,10 @@
             <RowDefinition Height="134*"/>
             <RowDefinition Height="36*"/>
         </Grid.RowDefinitions>
-        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="1" Grid.Row="1" Background="#FF60CCB4" Grid.RowSpan="2"/>
+        <Border CornerRadius="50" BorderThickness="1" BorderBrush="Black" Grid.Column="1" Grid.Row="1" Background="#FF60CCB4" Grid.RowSpan="2"/>
 
-        <Button Background="#FF60CCB4" Click="AppBarButton_Click">
-            <Image Source="/Assets/salirIcon.png" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <CompositeTransform Rotation="-180"/>
-                </Image.RenderTransform>
-            </Image>
+        <Button Background="#F9EEA3" Click="Button_Click">
+            <Image Source="/Assets/salirIcon.png"/>
         </Button>
         <TextBlock Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" Text="Nueva York" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" FontWeight="Bold"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" Text="Robo a banco" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontWeight="Normal" Margin="0,96,0,0"/>
