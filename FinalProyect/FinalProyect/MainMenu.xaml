@@ -12,11 +12,14 @@
 
         <!--TemplateReward-->
         <DataTemplate x:Key="MisionTemplate" x:DataType="local:Mision">
-            <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-                <TextBlock x:Name="TextoMision" Text="{x:Bind TextoDeMision, Mode=OneWay}" FontSize="12"/>
-                <Image x:Name="ImagenMision" Width="50" Height="50" Source="{x:Bind Imagen, Mode=OneWay}"/>
-                <ProgressBar x:Name="BarraMision" Maximum="{x:Bind Objetivo, Mode=OneWay}" Value="{x:Bind Progreso, Mode=OneWay}" 
-                             Width="200" Height="20" Background="MintCream" Foreground="Black"/>
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
+                <Image x:Name="ImagenMision" Width="25" Height="25" Source="{x:Bind Imagen, Mode=OneWay}"
+                       HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
+                    <TextBlock x:Name="TextoMision" Text="{x:Bind TextoDeMision, Mode=OneWay}" FontSize="12"/>
+                    <ProgressBar x:Name="BarraMision" Maximum="{x:Bind Objetivo, Mode=OneWay}" Value="{x:Bind Progreso, Mode=OneWay}" 
+                                  Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
+                </StackPanel>
             </StackPanel>
         </DataTemplate>
 
@@ -96,165 +99,15 @@
                         IsItemClickEnabled="False"
                         RelativePanel.Below="TitleTextBlock"
                         SelectionMode="None"
-                        HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Width="200">
-
-            <!--ItemsSource="{x:Bind ListaMisiones}"-->
-            <!--ItemTemplate="{StaticResource MisionTemplate}"-->
-
-            <ListViewItem Background="#60CCB4" Margin="0,7,0,0">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
-                    <Image Width="25" Height="25" Source="ms-appx:///Assets/Imagenes/misionIcon.png"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                        <TextBlock Text="Texto de mision  3/5" FontSize="12"/>
-                        <ProgressBar Maximum="5" Value="3" Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem Background="#60CCB4" Margin="0,7,0,0">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
-                    <Image Width="25" Height="25" Source="ms-appx:///Assets/Imagenes/misionIcon.png"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                        <TextBlock Text="Texto de mision  3/5" FontSize="12"/>
-                        <ProgressBar Maximum="5" Value="3" Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem Background="#60CCB4" Margin="0,7,0,0">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
-                    <Image Width="25" Height="25" Source="ms-appx:///Assets/Imagenes/misionIcon.png"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                        <TextBlock Text="Texto de mision  3/5" FontSize="12"/>
-                        <ProgressBar Maximum="5" Value="3" Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem Background="#60CCB4" Margin="0,7,0,0">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
-                    <Image Width="25" Height="25" Source="ms-appx:///Assets/Imagenes/misionIcon.png"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                        <TextBlock Text="Texto de mision  3/5" FontSize="12"/>
-                        <ProgressBar Maximum="5" Value="3" Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem Background="#60CCB4" Margin="0,7,0,0">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
-                    <Image Width="25" Height="25" Source="ms-appx:///Assets/Imagenes/misionIcon.png"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                        <TextBlock Text="Texto de mision  3/5" FontSize="12"/>
-                        <ProgressBar Maximum="5" Value="3" Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem Background="#60CCB4" Margin="0,7,0,0">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
-                    <Image Width="25" Height="25" Source="ms-appx:///Assets/Imagenes/misionIcon.png"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                        <TextBlock Text="Texto de mision  3/5" FontSize="12"/>
-                        <ProgressBar Maximum="5" Value="3" Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem Background="#60CCB4" Margin="0,7,0,0">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
-                    <Image Width="25" Height="25" Source="ms-appx:///Assets/Imagenes/misionIcon.png"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                        <TextBlock Text="Texto de mision  3/5" FontSize="12"/>
-                        <ProgressBar Maximum="5" Value="3" Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem Background="#60CCB4" Margin="0,7,0,0">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
-                    <Image Width="25" Height="25" Source="ms-appx:///Assets/Imagenes/misionIcon.png"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                        <TextBlock Text="Texto de mision  3/5" FontSize="12"/>
-                        <ProgressBar Maximum="5" Value="3" Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem Background="#60CCB4" Margin="0,7,0,0">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
-                    <Image Width="25" Height="25" Source="ms-appx:///Assets/Imagenes/misionIcon.png"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                        <TextBlock Text="Texto de mision  3/5" FontSize="12"/>
-                        <ProgressBar Maximum="5" Value="3" Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem Background="#60CCB4" Margin="0,7,0,0">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
-                    <Image Width="25" Height="25" Source="ms-appx:///Assets/Imagenes/misionIcon.png"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                        <TextBlock Text="Texto de mision  3/5" FontSize="12"/>
-                        <ProgressBar Maximum="5" Value="3" Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem Background="#60CCB4" Margin="0,7,0,0">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
-                    <Image Width="25" Height="25" Source="ms-appx:///Assets/Imagenes/misionIcon.png"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                        <TextBlock Text="Texto de mision  3/5" FontSize="12"/>
-                        <ProgressBar Maximum="5" Value="3" Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem Background="#60CCB4" Margin="0,7,0,0">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
-                    <Image Width="25" Height="25" Source="ms-appx:///Assets/Imagenes/misionIcon.png"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                        <TextBlock Text="Texto de mision  3/5" FontSize="12"/>
-                        <ProgressBar Maximum="5" Value="3" Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem Background="#60CCB4" Margin="0,7,0,0">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
-                    <Image Width="25" Height="25" Source="ms-appx:///Assets/Imagenes/misionIcon.png"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                        <TextBlock Text="Texto de mision  3/5" FontSize="12"/>
-                        <ProgressBar Maximum="5" Value="3" Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem Background="#60CCB4" Margin="0,7,0,0">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
-                    <Image Width="25" Height="25" Source="ms-appx:///Assets/Imagenes/misionIcon.png"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                        <TextBlock Text="Texto de mision  3/5" FontSize="12"/>
-                        <ProgressBar Maximum="5" Value="3" Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
-                    </StackPanel>
-                </StackPanel>
-            </ListViewItem>
-
+                        HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Width="200"
+                  ItemsSource="{x:Bind ListaMisiones}"
+                  ItemTemplate="{StaticResource MisionTemplate}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Background" Value="#60CCB4"/>
+                    <Setter Property="Margin" Value="0,5,0,0"/>
+                </Style>
+            </ListView.ItemContainerStyle>
         </ListView>
 
         <StackPanel Orientation="Vertical" Margin="0,50,0,0" Grid.Row="1">
@@ -278,7 +131,7 @@
 
         <!--PerfilPopUp-->
         <StackPanel x:Name="PerfilPopUp" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#F7FFF7" 
-                        Width="542" Height="412" Visibility="Visible" Grid.Row="1" Orientation="Vertical" MinWidth="420" MinHeight="335">
+                        Width="542" Height="412" Visibility="Collapsed" Grid.Row="1" Orientation="Vertical" MinWidth="420" MinHeight="335">
 
             <!--BotonCerrar-->
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Row="1">
@@ -312,7 +165,7 @@
         </StackPanel>
 
         <!--BotonJugar-->
-        <StackPanel x:Name="Jugar" Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Row="2">
+        <StackPanel x:Name="Jugar" Margin="0,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="2">
             <StackPanel.Background>
                 <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/Botones/botonGris.png"/>
             </StackPanel.Background>
@@ -324,15 +177,17 @@
         </StackPanel>
 
         <!--ListaEventos-->
-        <ListView Grid.Row="2" x:Name="listaEventos" Width="1230" HorizontalAlignment="Left" SelectionMode="None">
+        <ListView Grid.Row="2" x:Name="listaEventos" Width="1230" HorizontalAlignment="Left" SelectionMode="None"
+                  ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                  ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.VerticalScrollMode="Disabled">
             <ListView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel Orientation="Horizontal"/>
+                <ItemsPanelTemplate >
+                    <StackPanel Orientation="Horizontal" />
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal" />
+                    <StackPanel Orientation="Horizontal"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
 
