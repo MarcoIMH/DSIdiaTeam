@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 
 namespace FinalProyect
 {
@@ -120,5 +121,94 @@ namespace FinalProyect
             }
 
         }
+    }
+
+    public class Amigo
+    {
+        public string profileImageSource { get; set; }
+        public ImageSource addImageSource { get; set; }
+        public string contectedState { get; set; }
+        public string color { get; set; }
+        public string name { get; set; }
+        public string active { get; set; }
+
+        public Amigo()
+        {
+            addImageSource = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri("ms-appx:///Assets/+.png"));
+        }
+    }
+
+    public class AmigoModel
+    {
+        public static List<Amigo> Amigos = new List<Amigo>()
+        {
+            new Amigo()
+            {
+                profileImageSource = "Assets/Imagenes/1.jpg",
+                active = "Visible",
+                contectedState = "online",
+                color = "#ff22dd55",
+                name = "Ana bogüeles"
+            },
+            new Amigo()
+            {
+                profileImageSource = "Assets/Imagenes/2.jpg",
+                active = "Visible",
+                contectedState = "online",
+                color = "#ff22dd55",
+                name = "Tommy Mírabo"
+            },
+            new Amigo()
+            {
+                profileImageSource = "Assets/Imagenes/3.jpg",
+                active = "Visible",
+                contectedState = "online",
+                color = "#ff22dd55",
+                name = "Tomás Turbado"
+            },
+            new Amigo()
+            {
+                profileImageSource = "Assets/Imagenes/4.jpg",
+                active = "Visible",
+                contectedState = "online",
+                color = "#ff22dd55",
+                name = "Paco Guerte"
+            },
+            new Amigo()
+            {
+                profileImageSource = "Assets/Imagenes/5.jpg",
+                active = "Collapsed",
+                contectedState = "offline",
+                color = "#ffdd2255",
+                name = "Memo Hérdes"
+            },
+            new Amigo()
+            {
+                profileImageSource = "Assets/Imagenes/6.jpg",
+                active = "Collapsed",
+                contectedState = "offline",
+                color = "#ffdd2255",
+                name = "Pepe Lotaso"
+            },
+            new Amigo()
+            {
+                profileImageSource = "Assets/Imagenes/7.jpg",
+                active = "Collapsed",
+                contectedState = "offline",
+                color = "#ffdd2255",
+                name = "Aitor Tilla"
+            },
+        };
+
+        public static IList<Amigo> GetAllAmigos()
+        {
+            return Amigos;
+        }
+
+        public static Amigo GetAmigoById(int id)
+        {
+            return Amigos[id];
+        }
+
     }
 }

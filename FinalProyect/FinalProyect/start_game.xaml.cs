@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -24,9 +25,18 @@ namespace FinalProyect
     /// </summary>
     public sealed partial class start_game : Page
     {
+        public ObservableCollection<Amigo> ListaAmigos { get; } = new ObservableCollection<Amigo>();
+
         public start_game()
         {
             this.InitializeComponent();
+            if (ListaAmigos != null)
+            {
+                foreach (Amigo m in AmigoModel.GetAllAmigos())
+                {
+                    ListaAmigos.Add(m);
+                }
+            }
         }
 
         private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
