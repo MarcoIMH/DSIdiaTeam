@@ -79,6 +79,9 @@ namespace FinalProyect
 
         private void gridSizeChanged(object sender, SizeChangedEventArgs e)
         {
+            botonSalir.Width = botonSalir.Height = ((Frame)Window.Current.Content).ActualWidth * 0.05;
+            botonSalir.Height = botonSalir.Width * 0.8;
+
             policeRect.Width = ((Frame)Window.Current.Content).ActualWidth * 0.13;
             policeText.FontSize = (policeRect.Width / 10) + 12;
             policeList.Width = policeRect.Width;

@@ -20,7 +20,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button Click="Button_Click" VerticalAlignment="Top" Height="65" Width="78">
+        <Button x:Name="botonSalir" Click="Button_Click" VerticalAlignment="Top" Height="65" Width="78">
             <Button.Background>
                 <ImageBrush ImageSource="/Assets/Imagenes/Botones/botonSalir.png" ></ImageBrush>
             </Button.Background>
@@ -28,40 +28,40 @@
 
         <ScrollViewer Grid.Column="1" Grid.Row="1" VerticalScrollBarVisibility="Visible"  CornerRadius="50" Background="#FF60CCB4">
             <Grid>
-                <TextBlock Text="Sonido" TextWrapping="Wrap" TextDecorations="Underline" FontWeight="Bold" FontSize="48" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="56,0,0,0"/>
+                <TextBlock x:Name="SonidoText" Text="Sonido" TextWrapping="Wrap" TextDecorations="Underline" FontWeight="Bold" FontSize="48" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="52,46,0,0"/>
 
-                <TextBlock Text="Volumen general" TextWrapping="Wrap" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="66,85,0,0"/>
-                <Slider Width="300" VerticalAlignment="Top" Value="70" HorizontalAlignment="Right" Foreground="#FF21090D" Background="#FFF7FFF7" Margin="0,93,68,0"/>
+                <TextBlock x:Name="text0" Text="Volumen general" TextWrapping="Wrap" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="62,131,0,0"/>
+                <Slider x:Name="control0" Width="300" VerticalAlignment="Top" Value="70" HorizontalAlignment="Right" Foreground="#FF21090D" Background="#FFF7FFF7" Margin="0,139,72,0"/>
 
-                <TextBlock Text="Volumen de efectos" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="66,141,0,0"/>
-                <Slider Width="300" VerticalAlignment="Top" Value="50" HorizontalAlignment="Right" Margin="0,149,68,0" Foreground="#FF21090D" Background="#FFF7FFF7"/>
+                <TextBlock x:Name="text1" Text="Volumen de efectos" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="62,187,0,0"/>
+                <Slider x:Name="control1" Width="300" VerticalAlignment="Top" Value="50" HorizontalAlignment="Right" Margin="0,195,72,0" Foreground="#FF21090D" Background="#FFF7FFF7"/>
 
-                <TextBlock Text="Volumen de música" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="66,201,0,0"/>
-                <Slider Width="300" VerticalAlignment="Top" Value="30" HorizontalAlignment="Right" Margin="0,209,68,0" Foreground="#FF21090D" RequestedTheme="Default" Background="#FFF7FFF7"/>
+                <TextBlock x:Name="text2" Text="Volumen de música" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="62,247,0,0"/>
+                <Slider x:Name="control2" Width="300" VerticalAlignment="Top" Value="30" HorizontalAlignment="Right" Margin="0,255,72,0" Foreground="#FF21090D" RequestedTheme="Default" Background="#FFF7FFF7"/>
 
-                <TextBlock Text="Gráficos" TextWrapping="Wrap" TextDecorations="Underline" FontWeight="Bold" FontSize="48" Margin="56,266,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock x:Name="GraficosText" Text="Gráficos" TextWrapping="Wrap" TextDecorations="Underline" FontWeight="Bold" FontSize="48" Margin="52,312,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-                <TextBlock Text="Sombras" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="66,349,0,0"/>
-                <ToggleSwitch HorizontalAlignment="Right" FontSize="36" OnContent="Activadas" OffContent="Desactivadas" IsOn="True" Margin="0,340,49,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="text3" Text="Sombras" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="62,395,0,0"/>
+                <ToggleSwitch x:Name="control3" HorizontalAlignment="Right" FontSize="36" OnContent="Activadas" OffContent="Desactivadas" IsOn="True" Margin="0,386,53,0" VerticalAlignment="Top" Width="300"/>
 
-                <TextBlock Text="Calidad de mapa" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="66,409,0,0"/>
-                <ComboBox Width="300" FontSize="36" Margin="0,399,49,0" SelectedIndex="1" HorizontalAlignment="Right" Height="55">
+                <TextBlock x:Name="text4" Text="Calidad de mapa" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="62,455,0,0"/>
+                <ComboBox x:Name="control4" Width="300" FontSize="36" Margin="0,450,53,0" SelectedIndex="1" HorizontalAlignment="Right" Height="55">
                     <TextBlock Text="Baja" TextWrapping="Wrap"/>
                     <TextBlock Text="Media" TextWrapping="Wrap"/>
                     <TextBlock Text="Alta" TextWrapping="Wrap"/>
                 </ComboBox>
 
-                <TextBlock Text="Calidad de vehículos" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="66,472,0,0"/>
-                <ComboBox HorizontalAlignment="Right" FontSize="36" Margin="0,472,49,0" Width="300" SelectedIndex="1" Height="55">
+                <TextBlock x:Name="text5" Text="Calidad de vehículos" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="62,518,0,0"/>
+                <ComboBox x:Name="control5" HorizontalAlignment="Right" FontSize="36" Margin="0,514,53,0" Width="300" SelectedIndex="1" Height="55">
                     <TextBlock Text="Baja" TextWrapping="Wrap"/>
                     <TextBlock Text="Media" TextWrapping="Wrap"/>
                     <TextBlock Text="Alta" TextWrapping="Wrap"/>
                 </ComboBox>
 
-                <TextBlock Text="Controles" TextWrapping="Wrap" TextDecorations="Underline" FontWeight="Bold" FontSize="48" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="56,528,0,0"/>
+                <TextBlock x:Name="ControlesText" Text="Controles" TextWrapping="Wrap" TextDecorations="Underline" FontWeight="Bold" FontSize="48" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="52,574,0,0"/>
 
-                <TextBlock Text="Control de giro" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="66,614,0,0"/>
-                <ComboBox Width="300" HorizontalAlignment="Right" FontSize="36" Margin="0,604,49,0" SelectedIndex="1" Height="55">
+                <TextBlock x:Name="text6"  Text="Control de giro" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="62,660,0,0"/>
+                <ComboBox x:Name="control6" Width="300" HorizontalAlignment="Right" FontSize="36" Margin="0,654,53,0" SelectedIndex="1" Height="55">
                     <TextBlock Text="Giroscopio" TextWrapping="Wrap"/>
                     <TextBlock Text="Volante" TextWrapping="Wrap"/>
                     <TextBlock Text="Flechas" TextWrapping="Wrap"/>
