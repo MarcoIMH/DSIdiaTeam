@@ -33,7 +33,7 @@
         <ProgressBar x:Name="LoadingBar" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="100" Margin="0,0,0,15" FontSize="36" HorizontalContentAlignment="Stretch" Foreground="#FF21090D" Width="1400"/>
         <TextBlock x:Name="LoadingText" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" Text="Cargando..." TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="48" FontWeight="Bold" Foreground="#FFF7FFF7" Margin="0,0,0,35"/>
         <Image x:Name="Map" HorizontalAlignment="Center" Height="414"  VerticalAlignment="Top" Source="Assets//LoadingMap.png" Width="599" Margin="0,215,0,0" Grid.Row="1" Grid.Column="1"/>
-        <Button x:Name="PlayBtn" Width="202" Height="104" HorizontalAlignment="Center" BorderBrush="#FFF7FFF7" Background="#FF21090D" Grid.Row="1" Grid.Column="1" Margin="0,651,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Foreground="#FFF7FFF7" IsEnabled="False" >
+        <Button x:Name="PlayBtn" Width="202" Height="104" HorizontalAlignment="Center" BorderBrush="#FFF7FFF7" Background="#FF21090D" Grid.Row="1" Grid.Column="1" Margin="0,651,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Foreground="#FFF7FFF7" IsEnabled="False" Click="PlayBtn_Click" >
             <TextBlock x:Name="textoJugar" Text="JUGAR" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="50" FontWeight="Bold"/>
         </Button>
 

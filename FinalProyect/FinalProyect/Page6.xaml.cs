@@ -108,5 +108,10 @@ namespace FinalProyect
             LoadingText.FontSize = MapName.FontSize;
 
         }
+
+        private void PlayBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Page7));
+        }
     }
 }

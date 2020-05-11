@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="#FF3F6B5E">
+    <Grid x:Name="mainGrid" Background="#FF3F6B5E" SizeChanged="gridSizeChanged">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="15*"/>
