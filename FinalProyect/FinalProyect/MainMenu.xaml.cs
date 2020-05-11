@@ -25,6 +25,7 @@ namespace FinalProyect
     public sealed partial class MainMenu : Page
     {
         public ObservableCollection<Mision> ListaMisiones { get; } = new ObservableCollection<Mision>();
+        public ObservableCollection<Evento> ListaEventos { get; } = new ObservableCollection<Evento>();
 
         public MainMenu()
         {
@@ -35,20 +36,34 @@ namespace FinalProyect
                 {
                     ListaMisiones.Add(m);
                 }
+
+            if (ListaEventos != null)
+                foreach (Evento e in EventModel.GetAllEvents())
+                {
+                    ListaEventos.Add(e);
+                }
+
+            Jugador player = new Jugador("Nico", bando.policia, 50, 35);
+            PlayerName.Text = player.Nombre;
+            PlayerBand.Text = player.Bando;
+            playerPlayed.Text = player.PartidasJugadas.ToString();
+            playerWined.Text = player.PartidasGanadas.ToString();
         }
 
         private void gridSizeChanged(object sender, SizeChangedEventArgs e)
         {
-            botonSalir.Height = botonSalir.Width = mainGrid.RowDefinitions.ElementAt(0).ActualHeight;
+            botonSalir.Height = mainGrid.RowDefinitions.ElementAt(0).ActualHeight;
+            botonSalir.Width = botonSalir.Height * 2;
             botonInfo.Height = botonInfo.Width = mainGrid.RowDefinitions.ElementAt(0).ActualHeight * 0.5;
             botonAjustes.Height = botonAjustes.Width = mainGrid.RowDefinitions.ElementAt(0).ActualHeight;
 
             BarraGuerra.Width = ((Frame)Window.Current.Content).ActualWidth * 0.4;
+            BarraGuerra.Height = botonSalir.Width = mainGrid.RowDefinitions.ElementAt(0).ActualHeight * 0.5;
 
             botonTaller.Height = botonTaller.Width = mainGrid.RowDefinitions.ElementAt(1).ActualHeight * 0.3;
             botonPerfil.Height = botonPerfil.Width = mainGrid.RowDefinitions.ElementAt(1).ActualHeight * 0.3;
 
-            botonJugar.Height = mainGrid.RowDefinitions.ElementAt(1).ActualHeight * 0.3;
+            botonJugar.Height = mainGrid.RowDefinitions.ElementAt(1).ActualHeight * 0.25;
             botonJugar.Width = ((Frame)Window.Current.Content).ActualWidth * 0.15;
             botonJugar.MinWidth = textoJugar.ActualWidth + 20;
             botonJugar.MinHeight = textoJugar.ActualHeight + 20;
@@ -57,6 +72,14 @@ namespace FinalProyect
 
             PerfilPopUp.Height = mainGrid.RowDefinitions.ElementAt(1).ActualHeight;
             PerfilPopUp.Width = ((Frame)Window.Current.Content).ActualWidth * 0.5;
+
+            policiaIcon.Height = mainGrid.RowDefinitions.ElementAt(0).ActualHeight * 0.7;
+            policiaIcon.Width = ((Frame)Window.Current.Content).ActualWidth * 0.15;
+            policiaPoints.FontSize = mainGrid.RowDefinitions.ElementAt(0).ActualHeight * 0.2;
+
+            ladronIcon.Height = mainGrid.RowDefinitions.ElementAt(0).ActualHeight * 0.7;
+            ladronIcon.Width = ((Frame)Window.Current.Content).ActualWidth * 0.15;
+            ladronPoints.FontSize = mainGrid.RowDefinitions.ElementAt(0).ActualHeight * 0.2;
         }
 
         private void perfilClicked(object sender, RoutedEventArgs e)
