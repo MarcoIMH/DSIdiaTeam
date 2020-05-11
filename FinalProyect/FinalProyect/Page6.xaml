@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
 
-    <Grid Background="#FF3F6B5E">
+    <Grid x:Name="mainGrid" Background="#FF3F6B5E" SizeChanged="gridSizeChanged">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="15*"/>
@@ -20,7 +20,7 @@
             <RowDefinition Height="134*"/>
             <RowDefinition Height="36*"/>
         </Grid.RowDefinitions>
-        <Border CornerRadius="50" BorderThickness="1" BorderBrush="Black" Grid.Column="1" Grid.Row="1" Background="#FF60CCB4" Grid.RowSpan="2"/>
+        <Border x:Name="BackgroundBorder" CornerRadius="50" BorderThickness="1" BorderBrush="Black" Grid.Column="1" Grid.Row="1" Background="#FF60CCB4" Grid.RowSpan="2"/>
 
         <Button Click="Button_Click" VerticalAlignment="Top" Height="65" Width="78">
             <Button.Background>
@@ -28,22 +28,18 @@
             </Button.Background>
         </Button>
 
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" Text="Nueva York" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" FontWeight="Bold"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" Text="Robo a banco" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontWeight="Normal" Margin="0,96,0,0"/>
+        <TextBlock x:Name="MapName" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" Text="Nueva York" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" FontWeight="Bold"/>
+        <TextBlock x:Name="EventName" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" Text="Robo a banco" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontWeight="Normal" Margin="0,96,0,0"/>
         <ProgressBar x:Name="LoadingBar" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="100" Margin="0,0,0,15" FontSize="36" HorizontalContentAlignment="Stretch" Foreground="#FF21090D" Width="1400"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" Text="Cargando..." TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" Foreground="#FFF7FFF7" Margin="0,37,0,0"/>
-        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical">
-            <Image HorizontalAlignment="Center" Height="414"  VerticalAlignment="Top" Source="Assets//LoadingMap.png" Width="599" Margin="0,238,0,0"/>
-            <Button x:Name="botonJugar" Width="250" Height="125" Background="#00000000" Click="botonJugar_Click">
-                <StackPanel Width="200" HorizontalAlignment="Center">
-                    <TextBlock x:Name="textoJugar" Text="JUGAR" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-                </StackPanel>
-            </Button>
-        </StackPanel>
+        <TextBlock x:Name="LoadingText" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" Text="Cargando..." TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="48" FontWeight="Bold" Foreground="#FFF7FFF7" Margin="0,0,0,35"/>
+        <Image x:Name="Map" HorizontalAlignment="Center" Height="414"  VerticalAlignment="Top" Source="Assets//LoadingMap.png" Width="599" Margin="0,215,0,0" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="PlayBtn" Width="202" Height="104" HorizontalAlignment="Center" BorderBrush="#FFF7FFF7" Background="#FF21090D" Grid.Row="1" Grid.Column="1" Margin="0,651,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Foreground="#FFF7FFF7" IsEnabled="False" >
+            <TextBlock x:Name="textoJugar" Text="JUGAR" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="50" FontWeight="Bold"/>
+        </Button>
 
-        <Image Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Top" Source="Assets//ladronIcon.png" Width="80" Margin="0,405,270,0"/>
-        <Image Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Source="Assets//policeIcon.png" Width="80" Margin="270,405,0,0"/>
-        <ListBox Grid.Row="1" Grid.Column="1" Width="250" HorizontalAlignment="Left" Height="685" VerticalAlignment="Top" Margin="15,80,0,0" Background="#FFF7FFF7" Grid.RowSpan="2">
+        <Image x:Name="RobberIcon" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Center" Source="Assets//ladronIcon.png" Width="80" Margin="0,0,270,0"/>
+        <Image x:Name="PoliceIcon" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Source="Assets//policeIcon.png" Width="80" Margin="270,0,0,0"/>
+        <ListBox x:Name="policeList" Grid.Row="1" Grid.Column="1" Width="250" HorizontalAlignment="Left" Height="685" VerticalAlignment="Top" Margin="15,101,0,0" Background="#FFF7FFF7" Grid.RowSpan="2">
             <TextBlock Text="User1" TextWrapping="Wrap" FontSize="36"/>
             <TextBlock Text="User2" TextWrapping="Wrap" FontSize="36"/>
             <TextBlock Text="User3" TextWrapping="Wrap" FontSize="36"/>
@@ -55,7 +51,7 @@
             <TextBlock Text="User9" TextWrapping="Wrap" FontSize="36"/>
             <TextBlock Text="User10" TextWrapping="Wrap" FontSize="36"/>
         </ListBox>
-        <ListBox Grid.Row="1" Grid.Column="1" Width="250" HorizontalAlignment="Right" Height="685" VerticalAlignment="Top" Margin="0,80,15,0" Background="#FFF7FFF7" Grid.RowSpan="2">
+        <ListBox x:Name="robberList" Grid.Row="1" Grid.Column="1" Width="250" HorizontalAlignment="Right" Height="685" VerticalAlignment="Top" Margin="0,101,15,0" Background="#FFF7FFF7" Grid.RowSpan="2">
             <TextBlock Text="User1" TextWrapping="Wrap" FontSize="36"/>
             <TextBlock Text="User2" TextWrapping="Wrap" FontSize="36"/>
             <TextBlock Text="User3" TextWrapping="Wrap" FontSize="36"/>
@@ -67,9 +63,9 @@
             <TextBlock Text="User9" TextWrapping="Wrap" FontSize="36"/>
             <TextBlock Text="User10" TextWrapping="Wrap" FontSize="36"/>
         </ListBox>
-        <Rectangle Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Height="80" Margin="15,0,0,0" Fill="#FF5CB1C6"></Rectangle>
-        <Rectangle Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Width="250" Height="80" Margin="0,0,15,0" Fill="#FFF9EEA3"></Rectangle>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="31,8,0,0" Grid.Row="1" Text="Policia" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Right" Margin="0,8,51,0" Grid.Row="1" Text="Ladrones" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
+        <Rectangle x:Name="policeRect" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Height="80" Margin="15,16,0,0" Fill="#FF5CB1C6"></Rectangle>
+        <Rectangle x:Name="robberRect" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Width="250" Height="80" Margin="0,16,15,0" Fill="#FFF9EEA3"></Rectangle>
+        <TextBlock x:Name="policeText" Grid.Column="1" HorizontalAlignment="Left" Margin="36,20,0,0" Grid.Row="1" Text="Policia" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
+        <TextBlock x:Name="robberText" Grid.Column="1" HorizontalAlignment="Right" Margin="0,24,36,0" Grid.Row="1" Text="Ladrones" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
     </Grid>
 </Page>
