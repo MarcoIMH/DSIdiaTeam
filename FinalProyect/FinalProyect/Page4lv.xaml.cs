@@ -24,25 +24,39 @@ namespace FinalProyect
     public sealed partial class Page4lv : Page
     {
         public ObservableCollection<ShopItem> MotorShopItems { get; } = new ObservableCollection<ShopItem>();
+        public ObservableCollection<ShopItem> BodyWorkShopItems { get; } = new ObservableCollection<ShopItem>();
         public ObservableCollection<ShopItem> WheelShopItems { get; } = new ObservableCollection<ShopItem>();
-
+        public ObservableCollection<ShopItem> ColorShopItems { get; } = new ObservableCollection<ShopItem>();
+        public ObservableCollection<ShopItem> LightShopItems { get; } = new ObservableCollection<ShopItem>();
 
         public Page4lv()
         {
             this.InitializeComponent();
 
+            chargeListItems();
+        }
+
+        private void chargeListItems()
+        {
             if (MotorShopItems != null)
                 foreach (ShopItem ms in ShopModel.GetAllMotorItems())
-                {
                     MotorShopItems.Add(ms);
-                }
+
+            if (BodyWorkShopItems != null)
+                foreach (ShopItem bs in ShopModel.GetAllBodyWorkItems())
+                    BodyWorkShopItems.Add(bs);
 
             if (WheelShopItems != null)
                 foreach (ShopItem ws in ShopModel.GetAllWheelItems())
-                {
                     WheelShopItems.Add(ws);
-                }
 
+            if (ColorShopItems != null)
+                foreach (ShopItem cs in ShopModel.GetAllColorItems())
+                    ColorShopItems.Add(cs);
+
+            if (LightShopItems != null)
+                foreach (ShopItem ls in ShopModel.GetAllLightItems())
+                    LightShopItems.Add(ls);
         }
 
         private void motorShop(object sender, RoutedEventArgs e)
@@ -52,7 +66,7 @@ namespace FinalProyect
 
         private void bodyWorkShop(object sender, RoutedEventArgs e)
         {
-            
+            ShopGrid.ItemsSource = BodyWorkShopItems;
         }
 
         private void wheelShop(object sender, RoutedEventArgs e)
@@ -62,12 +76,12 @@ namespace FinalProyect
 
         private void colorShop(object sender, RoutedEventArgs e)
         {
-            
+            ShopGrid.ItemsSource = ColorShopItems;
         }
 
         private void lightShop(object sender, RoutedEventArgs e)
         {
-            
+            ShopGrid.ItemsSource = LightShopItems;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
