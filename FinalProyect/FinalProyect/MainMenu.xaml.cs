@@ -80,7 +80,7 @@ namespace FinalProyect
 
         private void botonTaller_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Page4));
+            this.Frame.Navigate(typeof(Page4lv));
         }
 
         private void botonAjustes_Click(object sender, RoutedEventArgs e)
