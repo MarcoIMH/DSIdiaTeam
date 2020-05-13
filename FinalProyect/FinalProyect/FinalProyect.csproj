@@ -160,6 +160,7 @@
     <Content Include="Assets\Imagenes\5.jpg" />
     <Content Include="Assets\Imagenes\6.jpg" />
     <Content Include="Assets\Imagenes\7.jpg" />
+    <Content Include="Assets\Imagenes\fondo2.jpg" />
     <Content Include="Assets\infoIcon.png" />
     <Content Include="Assets\ladronIcon.png" />
     <Content Include="Assets\logroIcon.png" />

@@ -52,7 +52,7 @@
             <RowDefinition Height="125"/>
         </Grid.RowDefinitions>
 
-        <Image Source="ms-appx:///Assets/Imagenes/fondo.jpg" Grid.RowSpan="3" Stretch="UniformToFill"/>
+        <Image x:Name="Fondo" Source="ms-appx:///Assets/Imagenes/fondo.jpg" Grid.RowSpan="3" Stretch="UniformToFill"/>
 
         <StackPanel Orientation="Horizontal" Grid.Row="0">
 

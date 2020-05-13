@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
@@ -26,6 +27,8 @@ namespace FinalProyect
     {
         public ObservableCollection<Mision> ListaMisiones { get; } = new ObservableCollection<Mision>();
         public ObservableCollection<Evento> ListaEventos { get; } = new ObservableCollection<Evento>();
+
+        public Jugador player;
 
         public MainMenu()
         {
@@ -43,7 +46,7 @@ namespace FinalProyect
                     ListaEventos.Add(e);
                 }
 
-            Jugador player = new Jugador("Nico", bando.policia, 50, 35);
+            player = new Jugador("Nico", bando.policia, 50, 35);
             PlayerName.Text = player.Nombre;
             PlayerBand.Text = player.Bando;
             playerPlayed.Text = player.PartidasJugadas.ToString();
@@ -109,6 +112,20 @@ namespace FinalProyect
         private void botonAjustes_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Page3));
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if ((bando)e.Parameter == bando.policia)
+            {
+                PlayerBand.Text = "Policía";
+                player.Bando = "Policía";
+            }
+            else
+            {
+                PlayerBand.Text = "Ladrones";
+                player.Bando = "Ladrones";
+                Fondo.Source = new BitmapImage(new Uri("ms-appx:///Assets/Imagenes/fondo2.jpg"));
+            }
         }
     }
 }
