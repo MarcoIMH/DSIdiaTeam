@@ -61,27 +61,27 @@ namespace FinalProyect
 
         private void motorShop(object sender, RoutedEventArgs e)
         {
-            ShopGrid.ItemsSource = MotorShopItems;
+            ShopSectionsGrid.ItemsSource = MotorShopItems;
         }
 
         private void bodyWorkShop(object sender, RoutedEventArgs e)
         {
-            ShopGrid.ItemsSource = BodyWorkShopItems;
+            ShopSectionsGrid.ItemsSource = BodyWorkShopItems;
         }
 
         private void wheelShop(object sender, RoutedEventArgs e)
         {
-            ShopGrid.ItemsSource = WheelShopItems;
+            ShopSectionsGrid.ItemsSource = WheelShopItems;
         }
 
         private void colorShop(object sender, RoutedEventArgs e)
         {
-            ShopGrid.ItemsSource = ColorShopItems;
+            ShopSectionsGrid.ItemsSource = ColorShopItems;
         }
 
         private void lightShop(object sender, RoutedEventArgs e)
         {
-            ShopGrid.ItemsSource = LightShopItems;
+            ShopSectionsGrid.ItemsSource = LightShopItems;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -90,13 +90,40 @@ namespace FinalProyect
         }
 
         private void ShopSizeChanged(object sender, SizeChangedEventArgs e)
-        {
+        {  
+            //Row 0
+            ExitButton.Height = Shop.RowDefinitions.ElementAt(0).ActualHeight;
 
+            //Row 1
+            ShopSectionsGrid.Height = Shop.RowDefinitions.ElementAt(1).ActualHeight * 0.9;
+            CarImage.Height = Shop.RowDefinitions.ElementAt(1).ActualHeight;
+
+            //Row 2
+            BuyButton.Height = Shop.RowDefinitions.ElementAt(2).ActualHeight;
+
+            //Row3
+            GoldStackPanel.Width = Shop.ColumnDefinitions.ElementAt(0).ActualWidth;
+            Gold.Width = Shop.RowDefinitions.ElementAt(3).ActualHeight * 0.15;
+            UserGold.Width = Shop.RowDefinitions.ElementAt(3).ActualHeight * 0.17;
+
+            IconStackPanel.Width = Shop.ColumnDefinitions.ElementAt(2).ActualWidth * 0.9;
+            IconStackPanel.Height = Shop.RowDefinitions.ElementAt(3).ActualHeight * 0.9;
+
+            MotorIcon.Width = MotorIcon.Height = IconStackPanel.Width / 6;
+            BodyWorkIcon.Width = MotorIcon.Height = IconStackPanel.Width / 6;
+            WheelIcon.Width = MotorIcon.Height = IconStackPanel.Width / 6;
+            ColorIcon.Width = MotorIcon.Height = IconStackPanel.Width / 6;
+            LightIcon.Width = MotorIcon.Height = IconStackPanel.Width / 6;
         }
 
-        private void probando(object sender, ItemClickEventArgs e)
+        private void ShopSelectedItem(object sender, ItemClickEventArgs e)
         {
             //(e.OriginalSource as StackPanel).Background = Windows.UI.Xaml.Media.Brush.OpacityProperty           
+        }
+
+        private void Gold_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
