@@ -7,12 +7,21 @@ using Windows.UI.Xaml.Controls;
 
 namespace FinalProyect
 {
+    public class Gold
+    {
+        public int TotalUserGold { get; set; }
+
+        public Gold() { TotalUserGold = 1350; }
+    }
+
     public class ShopItem
     {
         public int Price { get; set; }
         public string Imagen {get;set;}
 
-        public ShopItem() { }
+        public int Type { get; set; }
+
+        public ShopItem() { Type = 0; }
     }
 
     public class ShopModel
@@ -25,47 +34,47 @@ namespace FinalProyect
             new ShopItem()
             {
                 Price = 120,
-                Imagen = "Assets/Page4/motorIcon.png",  
+                Imagen = "Assets/Page4/m1.png",  
             },
             new ShopItem()
             {
                 Price = 130,
-                Imagen = "Assets/Page4/motorIcon.png",
+                Imagen = "Assets/Page4/m2.png",
             },
             new ShopItem()
             {
                 Price = 140,
-                Imagen = "Assets/Page4/motorIcon.png",
+                Imagen = "Assets/Page4/m3.png",
             },
             new ShopItem()
             {
                 Price = 150,
-                Imagen = "Assets/Page4/motorIcon.png",
+                Imagen = "Assets/Page4/m4.png",
             },
             new ShopItem()
             {
                 Price = 160,
-                Imagen = "Assets/Page4/motorIcon.png",
+                Imagen = "Assets/Page4/m5.png",
             },
             new ShopItem()
             {
                 Price = 170,
-                Imagen = "Assets/Page4/motorIcon.png",
+                Imagen = "Assets/Page4/m6.png",
             },
             new ShopItem()
             {
                 Price = 180,
-                Imagen = "Assets/Page4/motorIcon.png",
+                Imagen = "Assets/Page4/m7.png",
             },
             new ShopItem()
             {
                 Price = 190,
-                Imagen = "Assets/Page4/motorIcon.png",
+                Imagen = "Assets/Page4/m8.png",
             },
             new ShopItem()
             {
                 Price = 200,
-                Imagen = "Assets/Page4/motorIcon.png",
+                Imagen = "Assets/Page4/m1.png",
             }
         };
 
@@ -82,47 +91,27 @@ namespace FinalProyect
             new ShopItem()
             {
                 Price = 120,
-                Imagen = "Assets/Page4/doorIcon.png",
+                Imagen = "Assets/Page4/b1.png",
             },
             new ShopItem()
             {
                 Price = 130,
-                Imagen = "Assets/Page4/doorIcon.png",
+                Imagen = "Assets/Page4/b2.png",
             },
             new ShopItem()
             {
                 Price = 140,
-                Imagen = "Assets/Page4/doorIcon.png",
+                Imagen = "Assets/Page4/b3.png",
             },
             new ShopItem()
             {
                 Price = 150,
-                Imagen = "Assets/Page4/doorIcon.png",
+                Imagen = "Assets/Page4/b4.png",
             },
             new ShopItem()
             {
                 Price = 160,
-                Imagen = "Assets/Page4/doorIcon.png",
-            },
-            new ShopItem()
-            {
-                Price = 170,
-                Imagen = "Assets/Page4/doorIcon.png",
-            },
-            new ShopItem()
-            {
-                Price = 180,
-                Imagen = "Assets/Page4/doorIcon.png",
-            },
-            new ShopItem()
-            {
-                Price = 190,
-                Imagen = "Assets/Page4/doorIcon.png",
-            },
-            new ShopItem()
-            {
-                Price = 200,
-                Imagen = "Assets/Page4/doorIcon.png",
+                Imagen = "Assets/Page4/b5.png",
             }
         };
 
@@ -139,47 +128,47 @@ namespace FinalProyect
             new ShopItem()
             {
                 Price = 120,
-                Imagen = "Assets/Page4/wheelIcon.png",
+                Imagen = "Assets/Page4/r1.png",
             },
             new ShopItem()
             {
                 Price = 130,
-                Imagen = "Assets/Page4/wheelIcon.png",
+                Imagen = "Assets/Page4/r2.png",
             },
             new ShopItem()
             {
                 Price = 140,
-                Imagen = "Assets/Page4/wheelIcon.png",
+                Imagen = "Assets/Page4/r3.png",
             },
             new ShopItem()
             {
                 Price = 150,
-                Imagen = "Assets/Page4/wheelIcon.png",
+                Imagen = "Assets/Page4/r4.png",
             },
             new ShopItem()
             {
                 Price = 160,
-                Imagen = "Assets/Page4/wheelIcon.png",
+                Imagen = "Assets/Page4/r5.png",
             },
             new ShopItem()
             {
                 Price = 170,
-                Imagen = "Assets/Page4/wheelIcon.png",
+                Imagen = "Assets/Page4/r2.png",
             },
             new ShopItem()
             {
                 Price = 180,
-                Imagen = "Assets/Page4/wheelIcon.png",
+                Imagen = "Assets/Page4/r3.png",
             },
             new ShopItem()
             {
                 Price = 190,
-                Imagen = "Assets/Page4/wheelIcon.png",
+                Imagen = "Assets/Page4/r4.png",
             },
             new ShopItem()
             {
                 Price = 200,
-                Imagen = "Assets/Page4/wheelIcon.png",
+                Imagen = "Assets/Page4/r5.png",
             }
         };
         public static IList<ShopItem> GetAllWheelItems()
@@ -195,47 +184,56 @@ namespace FinalProyect
             new ShopItem()
             {
                 Price = 120,
-                Imagen = "Assets/Page4/brush icon.png",
+                Imagen = "Assets/Page4/c1.png",
+                Type = 0
             },
             new ShopItem()
             {
                 Price = 130,
-                Imagen = "Assets/Page4/brush icon.png",
+                Imagen = "Assets/Page4/c2.png",
+                Type = 1
             },
             new ShopItem()
             {
                 Price = 140,
-                Imagen = "Assets/Page4/brush icon.png",
+                Imagen = "Assets/Page4/c3.png",
+                Type = 2
             },
             new ShopItem()
             {
                 Price = 150,
-                Imagen = "Assets/Page4/brush icon.png",
+                Imagen = "Assets/Page4/c4.png",
+                Type = 3
             },
             new ShopItem()
             {
                 Price = 160,
-                Imagen = "Assets/Page4/brush icon.png",
+                Imagen = "Assets/Page4/c5.png",
+                Type = 4
             },
             new ShopItem()
             {
                 Price = 170,
-                Imagen = "Assets/Page4/brush icon.png",
+                Imagen = "Assets/Page4/c6.png",
+                Type = 5
             },
             new ShopItem()
             {
                 Price = 180,
-                Imagen = "Assets/Page4/brush icon.png",
+                Imagen = "Assets/Page4/c7.png",
+                Type = 6
             },
             new ShopItem()
             {
                 Price = 190,
-                Imagen = "Assets/Page4/brush icon.png",
+                Imagen = "Assets/Page4/c8.png",
+                Type = 7
             },
             new ShopItem()
             {
                 Price = 200,
-                Imagen = "Assets/Page4/brush icon.png",
+                Imagen = "Assets/Page4/c9.png",
+                Type = 8
             }
         };
 
@@ -252,47 +250,47 @@ namespace FinalProyect
             new ShopItem()
             {
                 Price = 120,
-                Imagen = "Assets/Page4/car light.png",
+                Imagen = "Assets/Page4/f1.png",
             },
             new ShopItem()
             {
                 Price = 130,
-                Imagen = "Assets/Page4/car light.png",
+                Imagen = "Assets/Page4/f2.png",
             },
             new ShopItem()
             {
                 Price = 140,
-                Imagen = "Assets/Page4/car light.png",
+                Imagen = "Assets/Page4/f6.png",
             },
             new ShopItem()
             {
                 Price = 150,
-                Imagen = "Assets/Page4/car light.png",
+                Imagen = "Assets/Page4/f4.png",
             },
             new ShopItem()
             {
                 Price = 160,
-                Imagen = "Assets/Page4/car light.png",
+                Imagen = "Assets/Page4/f5.png",
             },
             new ShopItem()
             {
                 Price = 170,
-                Imagen = "Assets/Page4/car light.png",
+                Imagen = "Assets/Page4/f6.png",
             },
             new ShopItem()
             {
                 Price = 180,
-                Imagen = "Assets/Page4/car light.png",
+                Imagen = "Assets/Page4/f1.png",
             },
             new ShopItem()
             {
                 Price = 190,
-                Imagen = "Assets/Page4/car light.png",
+                Imagen = "Assets/Page4/f2.png",
             },
             new ShopItem()
             {
                 Price = 200,
-                Imagen = "Assets/Page4/car light.png",
+                Imagen = "Assets/Page4/f5.png",
             }
         };
 

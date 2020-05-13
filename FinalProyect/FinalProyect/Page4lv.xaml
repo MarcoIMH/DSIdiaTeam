@@ -14,18 +14,21 @@
 
             <StackPanel  BorderThickness="10" BorderBrush="Black" 
                          Background="#60CCB4"                        
-                         Margin="30">
+                         Margin="15">
                 <StackPanel Orientation="Horizontal" 
                             HorizontalAlignment="Center">
-                    <TextBlock Text="Price: " 
+                    <TextBlock Text=" Price: " 
                                FontSize="20"
-                               FontWeight="Bold"/>
+                               FontWeight="Bold" Padding="0,0,0,10"/>
                     <TextBlock Text="{x:Bind Price, Mode=OneTime}" 
                                FontSize="20"
                                FontWeight="Bold"/>
+                    <TextBlock Text="$" 
+                               FontSize="20"
+                               FontWeight="Bold" Padding="0,0,0,10"/>
                 </StackPanel>
 
-                <Image Source="{x:Bind Imagen, Mode=OneTime}" Width="100"/>
+                <Image Source="{x:Bind Imagen, Mode=OneTime}" Width="80" MaxWidth="80" MinWidth="80" MinHeight="80" MaxHeight="80"/>
             </StackPanel>
         </DataTemplate>
     </Page.Resources>
@@ -35,41 +38,43 @@
         <!-- Palette colors: #21090D #3F6B5E #60CCB4 #5CB1C6 #F9EEA3 #F7FFF7 -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="114*"/>
-            <ColumnDefinition Width="11*"/>
             <ColumnDefinition Width="125*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="80*"/>
             <RowDefinition Height="603*"/>
             <RowDefinition Height="154*"/>
-            <RowDefinition Height="163"/>
+            <RowDefinition Height="163*"/>
         </Grid.RowDefinitions>
 
-        <Image Source="/Assets/Page4/ws.jpg" Grid.ColumnSpan="3" Grid.RowSpan="4" Stretch="UniformToFill" Opacity="0.9"/>
+        <Image Source="/Assets/Page4/ws.jpg" Grid.ColumnSpan="2" Grid.RowSpan="4" Stretch="UniformToFill" Opacity="0.9"/>
 
         <!--ROW = 0...................................................................................................ROW = 0.-->
         <!--Exit icon -->
         <Button Grid.Column="0" 
                 Background="#F9EEA3" 
-                x:Name="ExitButton"
-                Click="Button_Click" Height="80" Width="87">
-            <Image Source="/Assets/salirIcon.png"/>
+                Width="87"
+                Height="80"
+                Click="Button_Click"                 
+                x:Name="ExitButton">
+            <Image Source="/Assets/salirIcon.png" Stretch="Uniform"/>
         </Button>
 
         <!--ROW = 1...................................................................................................ROW = 1.-->
         <!--Car image -->
-        <Image Source="/Assets/Page4/car.png" 
-               Grid.Column="0" Grid.Row="1" 
-               Stretch="Uniform"
-               Margin="20,160,20,20"
+        <StackPanel  Grid.Column="0" Grid.Row="1"  Grid.RowSpan="2" VerticalAlignment="Center" x:Name="CarStackPanel" Width="715">
+            <Image Source="/Assets/Page4/car.png"                
+               Stretch="Uniform"  
+               Margin="10"
                x:Name="CarImage"/>
+        </StackPanel>
+        
 
         <!--Shop sections zone-->
         <GridView   x:Name="ShopSectionsGrid"
                     Grid.Column="2" Grid.Row="1"
                     BorderThickness="10" BorderBrush="Black" 
                     Background="#60CCB4"
-                    Margin="30,30,30,30"  
                     ItemsSource="{x:Bind MotorShopItems}"
                     ItemTemplate="{StaticResource ShopItemTemplate}"
                     
@@ -81,28 +86,29 @@
                     <Setter Property="Margin" Value="17,0,17,0"/>
                 </Style>
             </GridView.ItemContainerStyle>
-        </GridView>
-        <Button Grid.Column="2" Grid.Row="2"
-                BorderThickness="10" BorderBrush="Black"
-                HorizontalAlignment="Center" VerticalAlignment="Top"
-                Height="120" Width="743"
-                Background="#3F6B5E"
-                x:Name="BuyButton">
-            <TextBlock Text="B    U    Y" 
-                       FontSize="70" 
-                       FontWeight="ExtraBold"
-                       HorizontalAlignment="Center" />
-        </Button>
+        </GridView>       
         <!--ROW = 2...................................................................................................ROW = 2.-->
         <!--Buy Button-->
-        
+        <Button Grid.Column="2" Grid.Row="2"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                Width="725"
+                Height="100"                
+                x:Name="BuyButton" Click="BuyButton_Click">
+            <Image Source="Assets/Page4/buybutton.png"
+                      Stretch="Fill"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"/>
+        </Button>
 
         <!--ROW = 3...................................................................................................ROW = 3.-->
         <!--Gold -->
         <StackPanel Grid.Column="0" Grid.Row="3" 
                     Background="#F9EEA3" 
                     HorizontalAlignment="Left" VerticalAlignment="Bottom" 
+                    Margin="0,33,0,0" 
                     Width="680" 
+                    Height="130"
                     Orientation="Horizontal"
                     x:Name="GoldStackPanel">
             <TextBlock HorizontalAlignment="Left"  
@@ -110,42 +116,44 @@
                        Text=" Gold: " 
                        FontSize="100" 
                        FocusVisualPrimaryBrush="Black"
-                       x:Name="Gold" SelectionChanged="Gold_SelectionChanged"/>
+                       x:Name="Gold"/>
             <TextBlock HorizontalAlignment="Left"  
                        VerticalAlignment="Bottom" 
-                       Text="1350$" 
                        FontSize="100" 
                        FocusVisualPrimaryBrush="Black"
                        x:Name="UserGold"/>
+            <TextBlock HorizontalAlignment="Left"  
+                       VerticalAlignment="Bottom" 
+                       Text="$" 
+                       FontSize="100" 
+                       FocusVisualPrimaryBrush="Black"
+                       x:Name="Dolar"/>
         </StackPanel>
 
         <!--Shop sections icons bar -->
         <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="3" 
                     Background="#F9EEA3"
                     HorizontalAlignment="Center" 
-                    VerticalAlignment="Top"
+                    VerticalAlignment="Bottom"
+                    Width="685"
                     Margin="0,33,0,0" 
                     x:Name="IconStackPanel">
 
-            <Button Margin="10" Click="motorShop">
-                <Image Source="Assets/Page4/motorIcon.png" 
-                       x:Name="MotorIcon"/>
+            <Button Margin="5" Click="motorShop" x:Name="MotorIcon" >
+                <Image Source="Assets/Page4/motorbutton.png"/>
             </Button>
-            <Button Margin="10" Click="bodyWorkShop">
-                <Image Source="Assets/Page4/doorIcon.png" 
-                       x:Name="BodyWorkIcon"/>
+            
+            <Button Margin="5" Click="bodyWorkShop"  x:Name="BodyWorkIcon">
+                <Image Source="Assets/Page4/bodyworkbutton.png" />
             </Button>
-            <Button Margin="10" Click="wheelShop">
-                <Image Source="Assets/Page4/wheelIcon.png" 
-                       x:Name="WheelIcon"/>
+            <Button Margin="5" Click="wheelShop" x:Name="WheelIcon">
+                <Image Source="Assets/Page4/wheelbutton.png"/>
             </Button>
-            <Button Margin="10" Click="colorShop" >
-                <Image Source="Assets/Page4/brush icon.png" 
-                       x:Name="ColorIcon"/>
+            <Button Margin="5" Click="colorShop" x:Name="ColorIcon">
+                <Image Source="Assets/Page4/brushbutton.png"/>
             </Button>
-            <Button Margin="10" Click="lightShop">
-                <Image Source="Assets/Page4/car light.png" 
-                       x:Name="LightIcon"/>
+            <Button Margin="5" Click="lightShop" x:Name="LightIcon">
+                <Image Source="Assets/Page4/lightbutton.png"/>
             </Button>
         </StackPanel>
     </Grid>
