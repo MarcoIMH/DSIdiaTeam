@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 
@@ -130,7 +131,7 @@ namespace FinalProyect
         public string contectedState { get; set; }
         public string color { get; set; }
         public string name { get; set; }
-        public string active { get; set; }
+        public Visibility active { get; set; }
 
         public Amigo()
         {
@@ -140,75 +141,144 @@ namespace FinalProyect
 
     public class AmigoModel
     {
-        public static List<Amigo> Amigos = new List<Amigo>()
+        public static List<Amigo> AmigosConectados = new List<Amigo>()
         {
             new Amigo()
             {
-                profileImageSource = "Assets/Imagenes/1.jpg",
-                active = "Visible",
-                contectedState = "online",
-                color = "#ff22dd55",
-                name = "Ana bogüeles"
-            },
-            new Amigo()
-            {
-                profileImageSource = "Assets/Imagenes/2.jpg",
-                active = "Visible",
-                contectedState = "online",
-                color = "#ff22dd55",
-                name = "Tommy Mírabo"
-            },
-            new Amigo()
-            {
-                profileImageSource = "Assets/Imagenes/3.jpg",
-                active = "Visible",
-                contectedState = "online",
-                color = "#ff22dd55",
-                name = "Tomás Turbado"
-            },
-            new Amigo()
-            {
-                profileImageSource = "Assets/Imagenes/4.jpg",
-                active = "Visible",
-                contectedState = "online",
-                color = "#ff22dd55",
-                name = "Paco Guerte"
-            },
-            new Amigo()
-            {
                 profileImageSource = "Assets/Imagenes/5.jpg",
-                active = "Collapsed",
-                contectedState = "offline",
-                color = "#ffdd2255",
-                name = "Memo Hérdes"
+                contectedState = "Online",
+                color = "#ff22dd55",
+                name = "Pepe"
             },
             new Amigo()
             {
                 profileImageSource = "Assets/Imagenes/6.jpg",
-                active = "Collapsed",
-                contectedState = "offline",
-                color = "#ffdd2255",
-                name = "Pepe Lotaso"
+                contectedState = "Online",
+                color = "#ff22dd55",
+                name = "Jorge"
             },
             new Amigo()
             {
                 profileImageSource = "Assets/Imagenes/7.jpg",
-                active = "Collapsed",
+                contectedState = "Online",
+                color = "#ff22dd55",
+                name = "Aitor"
+            },
+        };
+
+        public static List<Amigo> AmigosDesconectados = new List<Amigo>()
+        {
+            new Amigo()
+            {
+                profileImageSource = "Assets/Imagenes/5.jpg",
                 contectedState = "offline",
                 color = "#ffdd2255",
-                name = "Aitor Tilla"
+                name = "Lola"
+            },
+            new Amigo()
+            {
+                profileImageSource = "Assets/Imagenes/6.jpg",
+                contectedState = "offline",
+                color = "#ffdd2255",
+                name = "Ana"
+            },
+            new Amigo()
+            {
+                profileImageSource = "Assets/Imagenes/7.jpg",
+                contectedState = "offline",
+                color = "#ffdd2255",
+                name = "Rodrigo"
             },
         };
 
         public static IList<Amigo> GetAllAmigos()
         {
-            return Amigos;
+            return AmigosConectados;
         }
 
-        public static Amigo GetAmigoById(int id)
+        public static IList<Amigo> GetAllAmigosDesc()
         {
-            return Amigos[id];
+            return AmigosDesconectados;
+        }
+    }
+    public class Chat
+    {
+        public string name { get; set; }
+        public string text { get; set; }
+
+        public Chat()
+        {
+        }
+        public Chat(string Name, string Text)
+        {
+            name = Name;
+            text = Text;
+        }
+    }
+
+    public class ChatModel
+    {
+        public static List<Chat> ChatGeneral = new List<Chat>()
+        {
+            new Chat()
+            {
+                name = "Pepe",
+                text = "Pepe: Hello there"
+            },
+            new Chat()
+            {
+                name = "Pepe",
+                text = "Pepe: ?????",
+            },
+            new Chat()
+            {
+                name = "Pepe",
+                text = "Pepe: Hello there"
+            },
+            new Chat()
+            {
+                name = "Pepe",
+                text = "Pepe: Hello there"
+            },
+            new Chat()
+            {
+                name = "Roberto",
+                text = "Roberto: spammer"
+            },
+            new Chat()
+            {
+                name = "Pepe",
+                text = "Pepe: dude, no one was answering back..."
+            }
+        };
+
+        public static List<Chat> ChatAmigos = new List<Chat>()
+        {
+            new Chat()
+            {
+                name = "Jorge",
+                text = "Jorge: inviten inviten :)"
+            },
+            new Chat()
+            {
+                name = "Aitor",
+                text = "Aitor: Venga bro invita",
+            },
+            new Chat()
+            {
+                name = "You",
+                text = "You: un momento"
+            },
+        };
+
+        public static IList<Chat> GetChatGeneral()
+        {
+            return ChatGeneral;
         }
 
+        public static IList<Chat> GetChatAmigos()
+        {
+            return ChatAmigos;
+        }
     }
 }
