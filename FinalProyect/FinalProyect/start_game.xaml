@@ -8,6 +8,27 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <Page.Resources>
+
+        <DataTemplate x:Name="amigoTemplate" x:DataType="local:Amigo" >
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Width="20" Height="20">
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="{x:Bind addImageSource, Mode=OneWay}"/>
+                    </StackPanel.Background>
+                    <Button Width="20" Height="20" Opacity="0.2" Click="Button_Click" Visibility="{x:Bind active, Mode=OneWay}">
+                        <Image Source="{x:Bind profileImageSource, Mode=OneWay}" Visibility="Collapsed"/>
+                    </Button>
+                </StackPanel>
+                <TextBlock Margin="20, 0" Text="{x:Bind name, Mode=OneWay}"
+                           FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold" />
+                <TextBlock Text="{x:Bind contectedState, Mode=OneWay}" Foreground="{x:Bind color, Mode=OneWay}" 
+                           FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold"/>
+            </StackPanel>
+        </DataTemplate>
+
+    </Page.Resources>
+
     <Grid x:Name="grid_" SizeChanged="Grid_SizeChanged">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.6*" />
@@ -28,34 +49,22 @@
 
         <StackPanel Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Left" VerticalAlignment="Top">
             <StackPanel.Background>
-                <ImageBrush ImageSource="Assets/salirIcon.png"/>
+                <ImageBrush ImageSource="Assets/Imagenes/Botones/botonSalir.png"/>
             </StackPanel.Background>
             <Button Width="60" Height="56" x:Name="exit" Opacity="0.4" Click="exit_Click" />
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
-            <StackPanel.Background>
-                <ImageBrush ImageSource="Assets/user.png"/>
-            </StackPanel.Background>
-            <Button Width="80" Height="56" Opacity="0.4" x:Name="user1" />
+            <Image Width="56" Height="56" x:Name="user1" Source="Assets/user.png" />
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
-            <StackPanel.Background>
-                <ImageBrush ImageSource="Assets/user.png"/>
-            </StackPanel.Background>
-            <Button Width="80" Height="56" Opacity="0.4" x:Name="user2" />
+            <Image Width="56" Height="56" x:Name="user2" Source="Assets/user.png" />
         </StackPanel>
         <StackPanel Grid.Column="3" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
-            <StackPanel.Background>
-                <ImageBrush ImageSource="Assets/user.png"/>
-            </StackPanel.Background>
-            <Button Width="80" Height="56" Opacity="0.4" x:Name="user3" />
+            <Image Width="56" Height="56" x:Name="user3" Source="Assets/user.png" />
         </StackPanel>
         <StackPanel Grid.Column="4" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
-            <StackPanel.Background>
-                <ImageBrush ImageSource="Assets/user.png"/>
-            </StackPanel.Background>
-            <Button Width="80" Height="56" Opacity="0.4" x:Name="user4" />
+            <Image Width="56" Height="56" x:Name="user4" Source="Assets/user.png" />
         </StackPanel>
 
         <StackPanel Grid.Column="4"  Grid.Row="3"  HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -67,55 +76,11 @@
 
         <Border Margin="20, 20, 20, 0" Grid.ColumnSpan="2" Grid.Row="3" Opacity="0.9" Background="#FF3D675A" >
             <Border Margin="10" Opacity="0.9" Background="#FFF7FFF7">
-                <ListView ScrollViewer.VerticalScrollBarVisibility="Visible" IsItemClickEnabled="False" >
-                    <ListViewItem>
-                        <StackPanel Orientation="Horizontal">
-                            <StackPanel Width="20" Height="20">
-                                <StackPanel.Background>
-                                    <ImageBrush ImageSource="Assets/+.png"/>
-                                </StackPanel.Background>
-                                <Button Width="20" Height="20" Opacity="0.2" />
-                            </StackPanel>
-                            <TextBlock Margin="20, 0" Text="Amigo 1" FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold" />
-                            <TextBlock Text="online" Foreground="#FF23AC48" FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem>
-                        <StackPanel Orientation="Horizontal">
-                            <StackPanel Width="20" Height="20">
-                                <StackPanel.Background>
-                                    <ImageBrush ImageSource="Assets/+.png"/>
-                                </StackPanel.Background>
-                                <Button Width="20" Height="20" Opacity="0.2" />
-                            </StackPanel>
-                            <TextBlock Margin="20, 0" Text="Amigo 4" FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold" />
-                            <TextBlock Text="online" Foreground="#FF23AC48" FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem>
-                        <StackPanel Orientation="Horizontal">
-                            <StackPanel Width="20" Height="20">
-                            </StackPanel>
-                            <TextBlock Margin="20, 0" Text="Amigo 2" FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold" Opacity="0.5" />
-                            <TextBlock Text="offline" Foreground="#FFC31A1A" FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold" />
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem>
-                        <StackPanel Orientation="Horizontal">
-                            <StackPanel Width="20" Height="20">
-                            </StackPanel>
-                            <TextBlock Margin="20, 0" Text="Amigo 3" FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold" Opacity="0.5" />
-                            <TextBlock Text="offline" Foreground="#FFC31A1A" FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem>
-                        <StackPanel Orientation="Horizontal">
-                            <StackPanel Width="20" Height="20">
-                            </StackPanel>
-                            <TextBlock Margin="20, 0" Text="Amigo 5" FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold" Opacity="0.5" />
-                            <TextBlock Text="offline" Foreground="#FFC31A1A" FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold"/>
-                        </StackPanel>
-                    </ListViewItem>
+                <ListView ScrollViewer.VerticalScrollBarVisibility="Visible"
+                          IsItemClickEnabled="False"
+                          ItemsSource="{x:Bind ListaAmigos}"
+                          ItemTemplate="{StaticResource amigoTemplate}">
+                    
                 </ListView>
             </Border>
         </Border>

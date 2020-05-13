@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Graphics.Imaging;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
@@ -22,9 +25,18 @@ namespace FinalProyect
     /// </summary>
     public sealed partial class start_game : Page
     {
+        public ObservableCollection<Amigo> ListaAmigos { get; } = new ObservableCollection<Amigo>();
+
         public start_game()
         {
             this.InitializeComponent();
+            if (ListaAmigos != null)
+            {
+                foreach (Amigo m in AmigoModel.GetAllAmigos())
+                {
+                    ListaAmigos.Add(m);
+                }
+            }
         }
 
         private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -48,6 +60,20 @@ namespace FinalProyect
         private void exit_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainMenu));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if ((user1.Source as BitmapImage).UriSource.ToString() == "ms-appx:///Assets/user.png")
+                user1.Source = ((sender as Button).Content as Image).Source;
+            else if ((user2.Source as BitmapImage).UriSource.ToString() == "ms-appx:///Assets/user.png")
+                user2.Source = ((sender as Button).Content as Image).Source;
+            else if ((user3.Source as BitmapImage).UriSource.ToString() == "ms-appx:///Assets/user.png")
+                user3.Source = ((sender as Button).Content as Image).Source;
+            else if ((user4.Source as BitmapImage).UriSource.ToString() == "ms-appx:///Assets/user.png")
+                user4.Source = ((sender as Button).Content as Image).Source;
+
+            (sender as Button).Visibility = Visibility.Collapsed;
         }
     }
 }
