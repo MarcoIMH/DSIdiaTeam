@@ -22,6 +22,8 @@ namespace FinalProyect
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public int mode;
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -54,6 +56,7 @@ namespace FinalProyect
 
         private void ladron_Click(object sender, RoutedEventArgs e)
         {
+            mode = 1;
             ladron_image.Opacity = 1;
             policia_image.Opacity = 0.8;
             info_title.Text = "ROBBER";
@@ -62,6 +65,7 @@ namespace FinalProyect
 
         private void policia_Click(object sender, RoutedEventArgs e)
         {
+            mode = 0;
             policia_image.Opacity = 1;
             ladron_image.Opacity = 0.8;
             info_title.Text = "COP";
@@ -70,7 +74,7 @@ namespace FinalProyect
 
         private void join_button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainMenu));
+            this.Frame.Navigate(typeof(MainMenu), mode);
         }
     }
 }
