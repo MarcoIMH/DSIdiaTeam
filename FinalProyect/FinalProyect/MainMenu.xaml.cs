@@ -52,8 +52,8 @@ namespace FinalProyect
 
         private void gridSizeChanged(object sender, SizeChangedEventArgs e)
         {
-            botonSalir.Height = mainGrid.RowDefinitions.ElementAt(0).ActualHeight;
-            botonSalir.Width = botonSalir.Height * 2;
+            Salir.Width = Salir.Height = mainGrid.RowDefinitions.ElementAt(0).ActualHeight;
+            botonSalir.Width = botonSalir.Height = mainGrid.RowDefinitions.ElementAt(0).ActualHeight;
             botonInfo.Height = botonInfo.Width = mainGrid.RowDefinitions.ElementAt(0).ActualHeight * 0.5;
             botonAjustes.Height = botonAjustes.Width = mainGrid.RowDefinitions.ElementAt(0).ActualHeight;
 

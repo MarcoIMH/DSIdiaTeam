@@ -57,7 +57,7 @@
         <StackPanel Orientation="Horizontal" Grid.Row="0">
 
             <!--BotonSalir-->
-            <StackPanel x:Name="Salir" VerticalAlignment="Top">
+            <StackPanel x:Name="Salir" VerticalAlignment="Top" Width="150" Height="150">
                 <StackPanel.Background>
                     <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/Botones/botonSalir.png"/>
                 </StackPanel.Background>
