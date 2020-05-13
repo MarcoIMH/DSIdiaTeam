@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Collections.ObjectModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,6 +23,8 @@ namespace FinalProyect
     /// </summary>
     public sealed partial class Page6 : Page
     {
+        public ObservableCollection<Ladron> ListaLadrones { get; } = new ObservableCollection<Ladron>();
+        public ObservableCollection<Policia> ListaPolicias { get; } = new ObservableCollection<Policia>();
         DispatcherTimer dispatcherTimer;
         DateTimeOffset startTime;
         DateTimeOffset lastTime;
@@ -31,6 +34,16 @@ namespace FinalProyect
         public Page6()
         {
             this.InitializeComponent();
+            if (ListaLadrones != null)
+                foreach (Ladron m in Model.GetAllRobbers())
+                {
+                    ListaLadrones.Add(m);
+                }
+            if (ListaPolicias != null)
+                foreach (Policia m in Model.GetAllPolices())
+                {
+                    ListaPolicias.Add(m);
+                }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -7,7 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
-
+    <Page.Resources>
+        <DataTemplate x:Key="PoliceTemplate" x:DataType="local:Policia">
+            <TextBlock Text="{x:Bind Nombre, Mode=OneWay}" TextWrapping="Wrap" FontSize="36"/>
+        </DataTemplate>
+        <DataTemplate x:Key="RobberTemplate" x:DataType="local:Ladron">
+            <TextBlock Text="{x:Bind Nombre, Mode=OneWay}" TextWrapping="Wrap" FontSize="36"/>
+        </DataTemplate>
+    </Page.Resources>
+    
     <Grid x:Name="mainGrid" Background="#FF3F6B5E" SizeChanged="gridSizeChanged">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -39,30 +47,8 @@
 
         <Image x:Name="RobberIcon" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Center" Source="Assets//ladronIcon.png" Width="80" Margin="0,0,270,0"/>
         <Image x:Name="PoliceIcon" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Source="Assets//policeIcon.png" Width="80" Margin="270,0,0,0"/>
-        <ListBox x:Name="policeList" Grid.Row="1" Grid.Column="1" Width="250" HorizontalAlignment="Left" Height="685" VerticalAlignment="Top" Margin="15,101,0,0" Background="#FFF7FFF7" Grid.RowSpan="2">
-            <TextBlock Text="User1" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User2" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User3" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User4" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User5" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User6" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User7" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User8" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User9" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User10" TextWrapping="Wrap" FontSize="36"/>
-        </ListBox>
-        <ListBox x:Name="robberList" Grid.Row="1" Grid.Column="1" Width="250" HorizontalAlignment="Right" Height="685" VerticalAlignment="Top" Margin="0,101,15,0" Background="#FFF7FFF7" Grid.RowSpan="2">
-            <TextBlock Text="User1" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User2" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User3" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User4" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User5" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User6" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User7" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User8" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User9" TextWrapping="Wrap" FontSize="36"/>
-            <TextBlock Text="User10" TextWrapping="Wrap" FontSize="36"/>
-        </ListBox>
+        <ListBox x:Name="policeList" ItemTemplate="{StaticResource PoliceTemplate}" ItemsSource="{x:Bind ListaPolicias}" Grid.Row="1" Grid.Column="1" Width="250" HorizontalAlignment="Left" Height="685" VerticalAlignment="Top" Margin="15,101,0,0" Background="#FFF7FFF7" Grid.RowSpan="2"/>
+        <ListBox x:Name="robberList" ItemTemplate="{StaticResource RobberTemplate}" ItemsSource="{x:Bind ListaLadrones}" Grid.Row="1" Grid.Column="1" Width="250" HorizontalAlignment="Right" Height="685" VerticalAlignment="Top" Margin="0,101,15,0" Background="#FFF7FFF7" Grid.RowSpan="2"/>
         <Rectangle x:Name="policeRect" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Height="80" Margin="15,16,0,0" Fill="#FF5CB1C6"></Rectangle>
         <Rectangle x:Name="robberRect" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Width="250" Height="80" Margin="0,16,15,0" Fill="#FFF9EEA3"></Rectangle>
         <TextBlock x:Name="policeText" Grid.Column="1" HorizontalAlignment="Left" Margin="36,20,0,0" Grid.Row="1" Text="Policia" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
