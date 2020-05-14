@@ -143,7 +143,6 @@
     <Compile Include="Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShopModel.cs" />
-    <Compile Include="ViewModel.cs" />
     <Compile Include="start_game.xaml.cs">
       <DependentUpon>start_game.xaml</DependentUpon>
     </Compile>
@@ -155,8 +154,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\ajustesIcon.png" />
+    <Content Include="Assets\doubleArrow.png" />
     <Content Include="Assets\eventoIcon.png" />
     <Content Include="Assets\flechaNegra.png" />
+    <Content Include="Assets\Imagenes\1.jpg" />
+    <Content Include="Assets\Imagenes\2.jpg" />
+    <Content Include="Assets\Imagenes\3.jpg" />
+    <Content Include="Assets\Imagenes\4.jpg" />
+    <Content Include="Assets\Imagenes\5.jpg" />
+    <Content Include="Assets\Imagenes\6.jpg" />
+    <Content Include="Assets\Imagenes\7.jpg" />
+    <Content Include="Assets\Imagenes\fondo2.jpg" />
     <Content Include="Assets\infoIcon.png" />
     <Content Include="Assets\ladronIcon.png" />
     <Content Include="Assets\logroIcon.png" />

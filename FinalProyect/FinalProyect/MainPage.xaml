@@ -23,16 +23,16 @@
         </Grid.RowDefinitions>
 
         <Image Source="Assets/foto_inicio.jpg" Stretch="Fill" Grid.ColumnSpan="3" Grid.RowSpan="5" Opacity="0.9" />
-
-        <StackPanel Margin="40, 0" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1">
+        <Image Source="Assets/doubleArrow.png" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" />
+        <StackPanel Margin="40, 0" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="1">
             <StackPanel.Background>
                 <ImageBrush x:Name="ladron_image" ImageSource="Assets/ladron.png"/>
             </StackPanel.Background>
             <Button Width="60" Height="60" x:Name="ladron" Opacity="0.4" IsEnabled="False" Click="ladron_Click"/>
         </StackPanel>
-        <StackPanel  Margin="40, 0" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="1">
+        <StackPanel  Margin="40, 0" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1">
             <StackPanel.Background>
-                <ImageBrush x:Name="policia_image" ImageSource="Assets/policia.png" Opacity="0.6" />
+                <ImageBrush x:Name="policia_image" ImageSource="Assets/policia.png" Opacity="0.8" />
             </StackPanel.Background>
             <Button Width="60" Height="60" x:Name="policia" Opacity="0.4" IsEnabled="False" Click="policia_Click"/>
         </StackPanel>
@@ -89,13 +89,14 @@
                         TextAlignment="Justify" Margin="40, 20" FontFamily="Bahnschrift Light" FontSize="20" VerticalAlignment="Top" />
 
                 <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Right">
-                    <StackPanel x:Name="stackPanel_checkButton" Margin="0, -10" >
-                        <RadioButton x:Name="check" 
-                                     Content="Do not show this again"  FontFamily="Bahnschrift Light" FontSize="14" FontStyle="Italic" />
+                    <StackPanel x:Name="stackPanel_checkButton" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <ToggleButton Width="40" Height="40" x:Name="check" >
+                            <Image Source="Assets/accept.png" Stretch="Fill" />
+                        </ToggleButton>
+                        <TextBlock Margin="10" Text="Do not show this again"  FontFamily="Bahnschrift Light" FontSize="14" FontStyle="Italic" />
                     </StackPanel>
-
                 </StackPanel>
-
+                
                 <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Left" >
                     <StackPanel  x:Name="stackPanel_acceptButton" Width="40" Height="40" >
                         <StackPanel.Background>
