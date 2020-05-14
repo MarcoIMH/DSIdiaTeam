@@ -53,6 +53,26 @@ namespace FinalProyect
         }
         
     }
+    public class Policia
+    {
+        public string Nombre { get; set; }
+
+        public Policia()
+        {
+            Nombre = "";
+        }
+
+    }
+    public class Ladron
+    {
+        public string Nombre { get; set; }
+
+        public Ladron()
+        {
+            Nombre = "";
+        }
+
+    }
 
     public class Model
     {
@@ -125,10 +145,104 @@ namespace FinalProyect
                     Progreso = 0,
                 },
             };
+        public static List<Policia> Policias = new List<Policia>()
+        {
+            new Policia()
+            {
+                Nombre = "Chad"
+            },
+            new Policia()
+            {
+                Nombre = "Arwa"
+            },
+            new Policia()
+            {
+                Nombre = "Humphrey"
+            },
+            new Policia()
+            {
+                Nombre = "Livingston"
+            },
+            new Policia()
+            {
+                Nombre = "Zohaib"
+            },
+            new Policia()
+            {
+                Nombre = "Yosef"
+            },
+            new Policia()
+            {
+                Nombre = "Thornton"
+            },
+            new Policia()
+            {
+                Nombre = "Mariya"
+            },
+            new Policia()
+            {
+                Nombre = "Eesha"
+            },
+            new Policia()
+            {
+                Nombre = "Barnard"
+            }
+        };
+        public static List<Ladron> Ladrones = new List<Ladron>()
+        {
+            new Ladron()
+            {
+                Nombre = "Eugene"
+            },
+            new Ladron()
+            {
+                Nombre = "Lucas"
+            },
+            new Ladron()
+            {
+                Nombre = "Donovan"
+            },
+            new Ladron()
+            {
+                Nombre = "Theodor"
+            },
+            new Ladron()
+            {
+                Nombre = "Marshall"
+            },
+            new Ladron()
+            {
+                Nombre = "Elaine"
+            },
+            new Ladron()
+            {
+                Nombre = "Garrison"
+            },
+            new Ladron()
+            {
+                Nombre = "Bryan"
+            },
+            new Ladron()
+            {
+                Nombre = "Dotson"
+            },
+            new Ladron()
+            {
+                Nombre = "Keller"
+            }
+        };
 
         public static IList<Mision> GetAllMisions()
         {
             return Misiones;
+        }
+        public static IList<Policia> GetAllPolices()
+        {
+            return Policias;
+        }
+        public static IList<Ladron> GetAllRobbers()
+        {
+            return Ladrones;
         }
 
         public static Mision GetMisionById(int id)
