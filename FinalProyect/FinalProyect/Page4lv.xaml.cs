@@ -109,7 +109,8 @@ namespace FinalProyect
         private void ShopSizeChanged(object sender, SizeChangedEventArgs e)
         {
             //----------------------------------------------------------------------------------------------> Row 0
-            ExitButton.Height = ExitButton.Width = Shop.RowDefinitions.ElementAt(0).ActualHeight;
+            //Exit Button
+            ExitButton.Height = ExitButton.Width = 
 
             //----------------------------------------------------------------------------------------------> Row 1  
             //Car

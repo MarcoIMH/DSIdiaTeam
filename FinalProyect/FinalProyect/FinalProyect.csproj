@@ -219,7 +219,9 @@
     <Content Include="Assets\Page4\wheelIcon.png" />
     <Content Include="Assets\Page4\workshop.jpg" />
     <Content Include="Assets\Page4\ws.jpg" />
+    <Content Include="Assets\Page7\acelerador.png" />
     <Content Include="Assets\Page7\bg.jpg" />
+    <Content Include="Assets\Page7\freno.png" />
     <Content Include="Assets\Page7\map.png" />
     <Content Include="Assets\Page7\pedals.png" />
     <Content Include="Assets\Page7\pu.png" />
