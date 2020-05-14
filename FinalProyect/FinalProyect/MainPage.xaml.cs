@@ -22,6 +22,8 @@ namespace FinalProyect
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public int mode;
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -54,23 +56,25 @@ namespace FinalProyect
 
         private void ladron_Click(object sender, RoutedEventArgs e)
         {
+            mode = 1;
             ladron_image.Opacity = 1;
-            policia_image.Opacity = 0.6;
+            policia_image.Opacity = 0.8;
             info_title.Text = "ROBBER";
             info_resumen.Text = "Steal, escape, and dont let the cops take you. Run away in an epic display of talent. But look out, they've got some tricks . . .";
         }
 
         private void policia_Click(object sender, RoutedEventArgs e)
         {
+            mode = 0;
             policia_image.Opacity = 1;
-            ladron_image.Opacity = 0.6;
+            ladron_image.Opacity = 0.8;
             info_title.Text = "COP";
             info_resumen.Text = "Catch those thieves and bring them down to Hell. Work with your teammates, any help is needed against them . . .";
         }
 
         private void join_button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainMenu));
+            this.Frame.Navigate(typeof(MainMenu), mode);
         }
     }
 }
