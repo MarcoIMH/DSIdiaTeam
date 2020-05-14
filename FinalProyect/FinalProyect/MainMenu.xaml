@@ -53,19 +53,13 @@
         </Grid.RowDefinitions>
 
         <Image x:Name="Fondo" Source="ms-appx:///Assets/Imagenes/fondo.jpg" Grid.RowSpan="3" Stretch="UniformToFill"/>
+        
+        <!--BotonSalir-->
+            <Button x:Name="Salir" Background="#00000000" Click="botonSalir_Click" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150">
+                <Image Source="ms-appx:///Assets/Imagenes/Botones/botonSalir.png" Stretch="Fill" Margin="-10"/>
+            </Button>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="0">
-
-            <!--BotonSalir-->
-            <StackPanel x:Name="Salir" VerticalAlignment="Top" Width="150" Height="150">
-                <StackPanel.Background>
-                    <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/Botones/botonSalir.png"/>
-                </StackPanel.Background>
-                <Button x:Name="botonSalir" Width="150" Height="150" Background="#00000000" Click="botonSalir_Click"/>
-            </StackPanel>
-        </StackPanel>
-
-        <StackPanel Grid.Row="0" HorizontalAlignment="Center" Orientation="Horizontal">
+            <StackPanel Grid.Row="0" HorizontalAlignment="Center" Orientation="Horizontal">
             <!--IconoPolicia-->
             <StackPanel Orientation="Vertical">
                 <Image Name="policiaIcon"  Source="ms-appx:///Assets/Imagenes/policeIcon.png" Margin="10,0,0,0" HorizontalAlignment="Center" Width="100"/>

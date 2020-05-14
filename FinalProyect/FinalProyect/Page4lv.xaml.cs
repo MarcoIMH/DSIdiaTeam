@@ -42,6 +42,7 @@ namespace FinalProyect
         public Page4lv()
         {
             this.InitializeComponent();
+            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
 
             UserGold.Text =  goldRemaining.ToString();
 
@@ -262,7 +263,30 @@ namespace FinalProyect
                 goldRemaining = goldRemaining - itemClicked.Price;
                 itemClicked.Price = 0;
                 if (section == Section.color) itemColorBuyed = true;
-                this.Frame.Navigate(typeof(Page4lv)); //-> Hacer que se le mande el dinero cuando se vuelva a cargar
+
+                switch (section)
+                {
+                    case Section.motor:
+                        bodyWorkShop(sender, e);
+                        motorShop(sender, e);
+                        break;
+                    case Section.bodywork:
+                        wheelShop(sender, e);
+                        bodyWorkShop(sender, e);
+                        break;
+                    case Section.wheel:
+                        colorShop(sender, e);
+                        wheelShop(sender, e);
+                        break;
+                    case Section.color:
+                        lightShop(sender, e);
+                        colorShop(sender, e);
+                        break;
+                    case Section.light:
+                        colorShop(sender, e);
+                        lightShop(sender, e);
+                        break;
+                }
             }
         }
 

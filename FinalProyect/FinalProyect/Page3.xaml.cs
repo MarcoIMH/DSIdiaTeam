@@ -78,7 +78,7 @@ namespace FinalProyect
                 {
                     ComboBox c = control as ComboBox;
                     c.Height = font;
-                    c.FontSize = font - 17;
+                    c.FontSize = font * 0.5;
                 }
                 else
                 {

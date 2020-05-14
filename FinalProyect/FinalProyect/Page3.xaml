@@ -20,10 +20,8 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="botonSalir" Click="Button_Click" VerticalAlignment="Top" Height="65" Width="78">
-            <Button.Background>
-                <ImageBrush ImageSource="/Assets/Imagenes/Botones/botonSalir.png" ></ImageBrush>
-            </Button.Background>
+        <Button x:Name="botonSalir" Click="Button_Click" VerticalAlignment="Top" Height="65" Width="78" Background="#00000000">
+            <Image Source="/Assets/Imagenes/Botones/botonSalir.png" Margin="-13,-6,-7,-14"/>
         </Button>
 
         <ScrollViewer Grid.Column="1" Grid.Row="1" VerticalScrollBarVisibility="Visible"  CornerRadius="50" Background="#FF60CCB4">

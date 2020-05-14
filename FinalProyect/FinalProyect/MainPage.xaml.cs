@@ -22,7 +22,7 @@ namespace FinalProyect
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public int mode;
+        public int mode = 1;
 
         public MainPage()
         {

@@ -56,12 +56,14 @@
         <!--ROW = 0...................................................................................................ROW = 0.-->
         <!--Exit icon -->
         <Button Grid.Column="0" 
-                Background="#F9EEA3" 
+                Background="#00000000" 
                 Width="87"
                 Height="80"
                 Click="Button_Click"                 
-                x:Name="ExitButton">
-            <Image Source="/Assets/salirIcon.png" Stretch="Uniform"/>
+                x:Name="ExitButton"
+                Grid.RowSpan="2"
+                VerticalAlignment="Top">
+            <Image Source="ms-appx:///Assets/Imagenes/Botones/botonSalir.png" Stretch="Fill" Margin="-9"/>
         </Button>
 
         <!--ROW = 1...................................................................................................ROW = 1.-->
@@ -98,7 +100,8 @@
                 VerticalAlignment="Center"
                 Width="725"
                 Height="100"                
-                x:Name="BuyButton" Click="BuyButton_Click">
+                x:Name="BuyButton" Click="BuyButton_Click"
+                Background="#00000000">
             <Image Source="Assets/Page4/buybutton.png"
                       Stretch="Fill"
                       HorizontalAlignment="Center"

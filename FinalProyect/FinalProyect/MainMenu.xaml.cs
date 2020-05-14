@@ -33,6 +33,7 @@ namespace FinalProyect
         public MainMenu()
         {
             this.InitializeComponent();
+            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
 
             if (ListaMisiones != null)
                 foreach (Mision m in Model.GetAllMisions())
@@ -56,12 +57,11 @@ namespace FinalProyect
         private void gridSizeChanged(object sender, SizeChangedEventArgs e)
         {
             Salir.Width = Salir.Height = mainGrid.RowDefinitions.ElementAt(0).ActualHeight;
-            botonSalir.Width = botonSalir.Height = mainGrid.RowDefinitions.ElementAt(0).ActualHeight;
             botonInfo.Height = botonInfo.Width = mainGrid.RowDefinitions.ElementAt(0).ActualHeight * 0.5;
             botonAjustes.Height = botonAjustes.Width = mainGrid.RowDefinitions.ElementAt(0).ActualHeight;
 
             BarraGuerra.Width = ((Frame)Window.Current.Content).ActualWidth * 0.4;
-            BarraGuerra.Height = botonSalir.Width = mainGrid.RowDefinitions.ElementAt(0).ActualHeight * 0.5;
+            BarraGuerra.Height = mainGrid.RowDefinitions.ElementAt(0).ActualHeight * 0.5;
 
             botonTaller.Height = botonTaller.Width = mainGrid.RowDefinitions.ElementAt(1).ActualHeight * 0.3;
             botonPerfil.Height = botonPerfil.Width = mainGrid.RowDefinitions.ElementAt(1).ActualHeight * 0.3;
