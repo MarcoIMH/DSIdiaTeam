@@ -7,6 +7,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Maps;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
@@ -20,8 +21,12 @@ namespace FinalProyect
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
+    /// 
+   
     public sealed partial class Page7 : Page
     {
+        public bool mapAtMaxSize = false;
+
         public Page7()
         {
             this.InitializeComponent();
@@ -30,6 +35,26 @@ namespace FinalProyect
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainMenu));
+        }
+
+        private void PlaySizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            //Exit Button
+            ExitButton.Height = ExitButton.Width = Play.RowDefinitions.ElementAt(0).ActualHeight / 2;
+        }
+
+        private void MapActivation(object sender, RoutedEventArgs e)
+        {
+            mapAtMaxSize = !mapAtMaxSize;
+            if (mapAtMaxSize)
+            {
+                MapButton.Width = Play.RowDefinitions.ElementAt(0).ActualHeight * 2.5;
+            }
+            else
+            {
+                MapButton.Width = Play.RowDefinitions.ElementAt(0).ActualHeight * 1.7;
+            }
+            
         }
     }
 }

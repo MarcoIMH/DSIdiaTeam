@@ -128,6 +128,9 @@
     <Compile Include="Page4.xaml.cs">
       <DependentUpon>Page4.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page4lv.xaml.cs">
+      <DependentUpon>Page4lv.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page7.xaml.cs">
       <DependentUpon>Page7.xaml</DependentUpon>
     </Compile>
@@ -139,6 +142,8 @@
     </Compile>
     <Compile Include="Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShopModel.cs" />
+    <Compile Include="ViewModel.cs" />
     <Compile Include="start_game.xaml.cs">
       <DependentUpon>start_game.xaml</DependentUpon>
     </Compile>
@@ -165,15 +170,67 @@
     <Content Include="Assets\ladronIcon.png" />
     <Content Include="Assets\logroIcon.png" />
     <Content Include="Assets\misionIcon.png" />
+    <Content Include="Assets\Page4\b1.png" />
+    <Content Include="Assets\Page4\b2.png" />
+    <Content Include="Assets\Page4\b3.png" />
+    <Content Include="Assets\Page4\b4.png" />
+    <Content Include="Assets\Page4\b5.png" />
+    <Content Include="Assets\Page4\b6.png" />
+    <Content Include="Assets\Page4\bodyworkbutton.png" />
     <Content Include="Assets\Page4\brush icon.png" />
+    <Content Include="Assets\Page4\brushbutton.png" />
+    <Content Include="Assets\Page4\buy button.png" />
+    <Content Include="Assets\Page4\buybutton.png" />
+    <Content Include="Assets\Page4\c1.png" />
+    <Content Include="Assets\Page4\c2.png" />
+    <Content Include="Assets\Page4\c3.png" />
+    <Content Include="Assets\Page4\c4.png" />
+    <Content Include="Assets\Page4\c5.png" />
+    <Content Include="Assets\Page4\c6.png" />
+    <Content Include="Assets\Page4\c7.png" />
+    <Content Include="Assets\Page4\c8.png" />
+    <Content Include="Assets\Page4\c9.png" />
     <Content Include="Assets\Page4\car light.png" />
     <Content Include="Assets\Page4\car.png" />
+    <Content Include="Assets\Page4\carblack.png" />
+    <Content Include="Assets\Page4\carblue.png" />
+    <Content Include="Assets\Page4\carbrown.png" />
+    <Content Include="Assets\Page4\cargreen.png" />
+    <Content Include="Assets\Page4\carorange.png" />
+    <Content Include="Assets\Page4\carred.png" />
+    <Content Include="Assets\Page4\carwhite.png" />
+    <Content Include="Assets\Page4\caryellow.png" />
     <Content Include="Assets\Page4\doorIcon.png" />
+    <Content Include="Assets\Page4\f1.png" />
+    <Content Include="Assets\Page4\f2.png" />
+    <Content Include="Assets\Page4\f3.png" />
+    <Content Include="Assets\Page4\f4.png" />
+    <Content Include="Assets\Page4\f5.png" />
+    <Content Include="Assets\Page4\f6.png" />
+    <Content Include="Assets\Page4\lightbutton.png" />
+    <Content Include="Assets\Page4\m1.png" />
+    <Content Include="Assets\Page4\m2.png" />
+    <Content Include="Assets\Page4\m3.png" />
+    <Content Include="Assets\Page4\m4.png" />
+    <Content Include="Assets\Page4\m5.png" />
+    <Content Include="Assets\Page4\m6.png" />
+    <Content Include="Assets\Page4\m7.png" />
+    <Content Include="Assets\Page4\m8.png" />
+    <Content Include="Assets\Page4\motorbutton.png" />
     <Content Include="Assets\Page4\motorIcon.png" />
+    <Content Include="Assets\Page4\purplecar.png" />
+    <Content Include="Assets\Page4\r1.png" />
+    <Content Include="Assets\Page4\r2.png" />
+    <Content Include="Assets\Page4\r3.png" />
+    <Content Include="Assets\Page4\r4.png" />
+    <Content Include="Assets\Page4\r5.png" />
+    <Content Include="Assets\Page4\wheelbutton.png" />
     <Content Include="Assets\Page4\wheelIcon.png" />
     <Content Include="Assets\Page4\workshop.jpg" />
     <Content Include="Assets\Page4\ws.jpg" />
+    <Content Include="Assets\Page7\acelerador.png" />
     <Content Include="Assets\Page7\bg.jpg" />
+    <Content Include="Assets\Page7\freno.png" />
     <Content Include="Assets\Page7\map.png" />
     <Content Include="Assets\Page7\pedals.png" />
     <Content Include="Assets\Page7\pu.png" />
@@ -239,6 +296,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page4lv.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
