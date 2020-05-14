@@ -115,16 +115,19 @@ namespace FinalProyect
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if ((bando)e.Parameter == bando.policia)
+            if(e.Parameter != null)
             {
-                PlayerBand.Text = "Policía";
-                player.Bando = "Policía";
-            }
-            else
-            {
-                PlayerBand.Text = "Ladrones";
-                player.Bando = "Ladrones";
-                Fondo.Source = new BitmapImage(new Uri("ms-appx:///Assets/Imagenes/fondo2.jpg"));
+                if ((bando)e.Parameter == bando.policia)
+                {
+                    PlayerBand.Text = "Policía";
+                    player.Bando = "Policía";
+                }
+                else
+                {
+                    PlayerBand.Text = "Ladrones";
+                    player.Bando = "Ladrones";
+                    Fondo.Source = new BitmapImage(new Uri("ms-appx:///Assets/Imagenes/fondo2.jpg"));
+                }
             }
         }
     }
