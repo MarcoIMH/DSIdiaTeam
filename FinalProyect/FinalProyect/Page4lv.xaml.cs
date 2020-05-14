@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -94,19 +95,21 @@ namespace FinalProyect
 
         private void setItemState(ShopItem item)
         {
-            if (item.State != ItemStates.purchased)
+            if (item.State == ItemStates.purchased)
             {
-                item.State = ItemStates.canBePurchased;
                 //Poner color verde de fondo aquí
+                //item.BackgroundColor = Color.Red;
 
             }else if(item.Price <= goldRemaining)
             {
                 item.State = ItemStates.canBePurchased;
                 //Poner color amarillo de fondo aquí
+                //item.BackgroundColor = Color.Yellow;
             }
             else
             {
                 item.State = ItemStates.cantBePurchased;
+                //item.BackgroundColor = Color.Red;
                 //Poner color rojo de fondo aquí
             }
         }

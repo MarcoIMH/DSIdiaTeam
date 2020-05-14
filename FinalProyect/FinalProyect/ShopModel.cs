@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,16 +20,16 @@ namespace FinalProyect
 
     public class ShopItem
     {
-        //public string BackgroundColor { get; set; }
-        // Panel BackgroundColor { get; set; }
+        //public Color BackgroundColor { get; set; }
+        //public Windows.UI.Xaml.Media.Brush BackgroundColor { get; set; }
+        //Panel BackgroundColor { get; set; }
         public int Price { get; set; }
         public string Imagen {get;set;}
         public int Type { get; set; }
         public ItemStates State { get; set; }
 
         public ShopItem() {
-            //BackgroundColor = "#60CCB4";
-            //BackgroundColor = ColorPicker;
+            //BackgroundColor = Windows.UI.Xaml.Media.Brush;
             Type = 0;
             State = ItemStates.uncheked;
         }
