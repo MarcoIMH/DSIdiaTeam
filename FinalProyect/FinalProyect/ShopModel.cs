@@ -5,8 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 
+
 namespace FinalProyect
 {
+    public enum ItemStates { canBePurchased, cantBePurchased, purchased, uncheked };
+
     public class Gold
     {
         public int TotalUserGold { get; set; }
@@ -16,12 +19,19 @@ namespace FinalProyect
 
     public class ShopItem
     {
+        //public string BackgroundColor { get; set; }
+        // Panel BackgroundColor { get; set; }
         public int Price { get; set; }
         public string Imagen {get;set;}
-
         public int Type { get; set; }
+        public ItemStates State { get; set; }
 
-        public ShopItem() { Type = 0; }
+        public ShopItem() {
+            //BackgroundColor = "#60CCB4";
+            //BackgroundColor = ColorPicker;
+            Type = 0;
+            State = ItemStates.uncheked;
+        }
     }
 
     public class ShopModel

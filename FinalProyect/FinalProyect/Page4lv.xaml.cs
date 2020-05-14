@@ -35,9 +35,9 @@ namespace FinalProyect
         public ObservableCollection<ShopItem> LightShopItems { get; } = new ObservableCollection<ShopItem>();
 
         ShopItem itemClicked;
-        bool inColorSectionShop = false;
-        int goldRemaining = 1350;
+        int goldRemaining = 1230;
         Section section = Section.motor;
+        bool itemColorBuyed = false;
 
         public Page4lv()
         {
@@ -52,53 +52,97 @@ namespace FinalProyect
         {
             if (MotorShopItems != null)
                 foreach (ShopItem ms in ShopModel.GetAllMotorItems())
+                {
+                    setItemState(ms);  
                     MotorShopItems.Add(ms);
+                }
+                    
 
             if (BodyWorkShopItems != null)
                 foreach (ShopItem bs in ShopModel.GetAllBodyWorkItems())
+                {
+                    setItemState(bs);
                     BodyWorkShopItems.Add(bs);
+                }
+                    
 
             if (WheelShopItems != null)
                 foreach (ShopItem ws in ShopModel.GetAllWheelItems())
+                {
+                    setItemState(ws);
                     WheelShopItems.Add(ws);
+                }
+                    
 
             if (ColorShopItems != null)
                 foreach (ShopItem cs in ShopModel.GetAllColorItems())
+                {
+                    setItemState(cs);
                     ColorShopItems.Add(cs);
+                }
+                    
 
             if (LightShopItems != null)
                 foreach (ShopItem ls in ShopModel.GetAllLightItems())
+                {
+                    setItemState(ls);
                     LightShopItems.Add(ls);
+                }
+                    
+        }
+
+        private void setItemState(ShopItem item)
+        {
+            if (item.State != ItemStates.purchased)
+            {
+                item.State = ItemStates.canBePurchased;
+                //Poner color verde de fondo aquí
+
+            }else if(item.Price <= goldRemaining)
+            {
+                item.State = ItemStates.canBePurchased;
+                //Poner color amarillo de fondo aquí
+            }
+            else
+            {
+                item.State = ItemStates.cantBePurchased;
+                //Poner color rojo de fondo aquí
+            }
         }
 
         private void motorShop(object sender, RoutedEventArgs e)
         {
             ShopSectionsGrid.ItemsSource = MotorShopItems;
             section = Section.motor;
+            ResetCar();
         }
 
         private void bodyWorkShop(object sender, RoutedEventArgs e)
         {
             ShopSectionsGrid.ItemsSource = BodyWorkShopItems;
             section = Section.bodywork;
+            ResetCar();
         }
 
         private void wheelShop(object sender, RoutedEventArgs e)
         {
             ShopSectionsGrid.ItemsSource = WheelShopItems;
             section = Section.wheel;
+            ResetCar();
         }
 
         private void colorShop(object sender, RoutedEventArgs e)
         {
             ShopSectionsGrid.ItemsSource = ColorShopItems;
             section = Section.color;
+            ResetCar();
         }
 
         private void lightShop(object sender, RoutedEventArgs e)
         {
             ShopSectionsGrid.ItemsSource = LightShopItems;
             section = Section.light;
+            ResetCar();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -110,7 +154,7 @@ namespace FinalProyect
         {
             //----------------------------------------------------------------------------------------------> Row 0
             //Exit Button
-            ExitButton.Height = ExitButton.Width = 
+            ExitButton.Height = ExitButton.Width = Shop.RowDefinitions.ElementAt(0).ActualHeight;
 
             //----------------------------------------------------------------------------------------------> Row 1  
             //Car
@@ -212,11 +256,20 @@ namespace FinalProyect
 
         private void BuyButton_Click(object sender, RoutedEventArgs e)
         {
-            if(itemClicked.Price <= goldRemaining)
+            if(itemClicked.State != ItemStates.purchased &&  itemClicked.Price <= goldRemaining)
             {
                 UserGold.Text = (goldRemaining - itemClicked.Price).ToString();
                 goldRemaining = goldRemaining - itemClicked.Price;
+                itemClicked.Price = 0;
+                if (section == Section.color) itemColorBuyed = true;
+                this.Frame.Navigate(typeof(Page4lv)); //-> Hacer que se le mande el dinero cuando se vuelva a cargar
             }
+        }
+
+        private void ResetCar()
+        {
+            if (!itemColorBuyed)
+                CarImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/Page4/car.png"));
         }
     }
 }
