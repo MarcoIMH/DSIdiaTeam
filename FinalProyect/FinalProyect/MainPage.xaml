@@ -90,10 +90,9 @@
 
                 <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Right">
                     <StackPanel x:Name="stackPanel_checkButton" Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Width="40" Height="40" x:Name="check" >
-                            <Image Source="Assets/accept.png" Stretch="Fill" />
-                        </ToggleButton>
-                        <TextBlock Margin="10" Text="Do not show this again"  FontFamily="Bahnschrift Light" FontSize="14" FontStyle="Italic" />
+                        <CheckBox x:Name="check" >
+                            <TextBlock Text="Do not show this again" FontFamily="Bahnschrift Light" FontSize="14" FontStyle="Italic" TextWrapping="WrapWholeWords"/>
+                        </CheckBox>
                     </StackPanel>
                 </StackPanel>
                 
