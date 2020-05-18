@@ -4,10 +4,12 @@ using System.Collections.ObjectModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Gaming.Input.ForceFeedback;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -39,6 +41,7 @@ namespace FinalProyect
         int goldRemaining = 1230;
         Section section = Section.motor;
         bool itemColorBuyed = false;
+        SolidColorBrush lastColorBuyed;
 
         public Page4lv()
         {
@@ -97,20 +100,17 @@ namespace FinalProyect
         {
             if (item.State == ItemStates.purchased)
             {
-                //Poner color verde de fondo aquí
-                //item.BackgroundColor = Color.Red;
-
+                item.BackgroundColor = new SolidColorBrush(Colors.Green);
+                item.ItemOpacity = 0.5;
             }else if(item.Price <= goldRemaining)
             {
                 item.State = ItemStates.canBePurchased;
-                //Poner color amarillo de fondo aquí
-                //item.BackgroundColor = Color.Yellow;
+                item.BackgroundColor = new SolidColorBrush(Colors.Yellow);
             }
             else
             {
                 item.State = ItemStates.cantBePurchased;
-                //item.BackgroundColor = Color.Red;
-                //Poner color rojo de fondo aquí
+                item.BackgroundColor = new SolidColorBrush(Colors.Gray);
             }
         }
 
@@ -265,12 +265,18 @@ namespace FinalProyect
                 UserGold.Text = (goldRemaining - itemClicked.Price).ToString();
                 goldRemaining = goldRemaining - itemClicked.Price;
                 itemClicked.Price = 0;
-                if (section == Section.color) itemColorBuyed = true;
+                itemClicked.BackgroundColor = new SolidColorBrush(Colors.Green);
+                itemClicked.ItemOpacity = 0.5;
+
+                if (section == Section.color)
+                {
+                    itemColorBuyed = true;
+                }
 
                 switch (section)
                 {
                     case Section.motor:
-                        bodyWorkShop(sender, e);
+                        wheelShop(sender, e);
                         motorShop(sender, e);
                         break;
                     case Section.bodywork:
@@ -282,11 +288,11 @@ namespace FinalProyect
                         wheelShop(sender, e);
                         break;
                     case Section.color:
-                        lightShop(sender, e);
+                        wheelShop(sender, e);
                         colorShop(sender, e);
                         break;
                     case Section.light:
-                        colorShop(sender, e);
+                        wheelShop(sender, e);
                         lightShop(sender, e);
                         break;
                 }

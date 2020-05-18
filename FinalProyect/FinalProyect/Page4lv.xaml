@@ -6,14 +6,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot">
+    
+    <!--#60CCB4-->
     <Page.Resources>
         <DataTemplate x:Key="ShopItemTemplate"
                       x:DataType="local:ShopItem">
 
             <StackPanel  BorderThickness="10" BorderBrush="Black" 
-                         Background="#60CCB4"
+                         Background="{x:Bind BackgroundColor, Mode=TwoWay}"
                          MaxWidth="140"
                          MinWidth="140"
                          MaxHeight="150"
@@ -23,16 +25,19 @@
                             HorizontalAlignment="Center">
                     <TextBlock Text=" Price: " 
                                FontSize="20"
-                               FontWeight="Bold" Padding="0,0,0,10"/>
+                               FontWeight="Bold" Padding="0,0,0,10"
+                               FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot"/>
                     <TextBlock Text="{x:Bind Price, Mode=TwoWay}" 
                                FontSize="20"
-                               FontWeight="Bold"/>
+                               FontWeight="Bold"
+                               FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot"/>
                     <TextBlock Text="$" 
                                FontSize="20"
-                               FontWeight="Bold" Padding="0,0,0,10"/>
+                               FontWeight="Bold" Padding="0,0,0,10"
+                               FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot"/>
                 </StackPanel>
 
-                <Image Source="{x:Bind Imagen, Mode=OneWay}" Width="80" MaxWidth="80" MinWidth="80" MinHeight="80" MaxHeight="80"/>
+                <Image Source="{x:Bind Imagen, Mode=OneWay}" Width="80" MaxWidth="80" MinWidth="80" MinHeight="80" MaxHeight="80" Opacity="{x:Bind ItemOpacity, Mode=TwoWay}"/>
             </StackPanel>
         </DataTemplate>
     </Page.Resources>

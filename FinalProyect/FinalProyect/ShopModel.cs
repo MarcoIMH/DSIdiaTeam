@@ -4,8 +4,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI;
 using Windows.UI.Xaml.Controls;
-
+using Windows.UI.Xaml.Media;
 
 namespace FinalProyect
 {
@@ -23,15 +24,18 @@ namespace FinalProyect
         //public Color BackgroundColor { get; set; }
         //public Windows.UI.Xaml.Media.Brush BackgroundColor { get; set; }
         //Panel BackgroundColor { get; set; }
+        public SolidColorBrush BackgroundColor { get; set; }
         public int Price { get; set; }
         public string Imagen {get;set;}
         public int Type { get; set; }
         public ItemStates State { get; set; }
+        public double ItemOpacity { get; set; }
 
         public ShopItem() {
-            //BackgroundColor = Windows.UI.Xaml.Media.Brush;
+            BackgroundColor = new SolidColorBrush(Colors.Black);
             Type = 0;
             State = ItemStates.uncheked;
+            ItemOpacity = 1;
         }
     }
 
@@ -224,7 +228,7 @@ namespace FinalProyect
             },
             new ShopItem()
             {
-                Price = 170,
+                Price = 1700,
                 Imagen = "Assets/Page4/c6.png",
                 Type = 5
             },
