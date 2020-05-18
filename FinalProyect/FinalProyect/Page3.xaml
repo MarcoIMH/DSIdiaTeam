@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot">
 
     <Grid x:Name="mainGrid" Background="#FF3F6B5E" SizeChanged="gridSizeChanged">
         <Grid.ColumnDefinitions>
@@ -40,17 +41,17 @@
                 <TextBlock x:Name="GraficosText" Text="Gráficos" TextWrapping="Wrap" TextDecorations="Underline" FontWeight="Bold" FontSize="48" Margin="52,312,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
                 <TextBlock x:Name="text3" Text="Sombras" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="62,395,0,0"/>
-                <ToggleSwitch x:Name="control3" HorizontalAlignment="Right" FontSize="36" OnContent="Activadas" OffContent="Desactivadas" IsOn="True" Margin="0,386,53,0" VerticalAlignment="Top" Width="300"/>
+                <ToggleSwitch x:Name="control3" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" HorizontalAlignment="Right" FontSize="36" OnContent="Activadas" OffContent="Desactivadas" IsOn="True" Margin="0,386,53,0" VerticalAlignment="Top" Width="300"/>
 
                 <TextBlock x:Name="text4" Text="Calidad de mapa" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="62,455,0,0"/>
-                <ComboBox x:Name="control4" Width="300" FontSize="36" Margin="0,450,53,0" SelectedIndex="1" HorizontalAlignment="Right" Height="55">
+                <ComboBox x:Name="control4" Width="300" FontSize="36" Margin="0,450,53,0" SelectedIndex="1" HorizontalAlignment="Right" Height="55" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot">
                     <TextBlock Text="Baja" TextWrapping="Wrap"/>
                     <TextBlock Text="Media" TextWrapping="Wrap"/>
                     <TextBlock Text="Alta" TextWrapping="Wrap"/>
                 </ComboBox>
 
                 <TextBlock x:Name="text5" Text="Calidad de vehículos" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="62,518,0,0"/>
-                <ComboBox x:Name="control5" HorizontalAlignment="Right" FontSize="36" Margin="0,514,53,0" Width="300" SelectedIndex="1" Height="55">
+                <ComboBox x:Name="control5" HorizontalAlignment="Right" FontSize="36" Margin="0,514,53,0" Width="300" SelectedIndex="1" Height="55" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot">
                     <TextBlock Text="Baja" TextWrapping="Wrap"/>
                     <TextBlock Text="Media" TextWrapping="Wrap"/>
                     <TextBlock Text="Alta" TextWrapping="Wrap"/>
@@ -59,7 +60,7 @@
                 <TextBlock x:Name="ControlesText" Text="Controles" TextWrapping="Wrap" TextDecorations="Underline" FontWeight="Bold" FontSize="48" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="52,574,0,0"/>
 
                 <TextBlock x:Name="text6"  Text="Control de giro" TextWrapping="Wrap" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="62,660,0,0"/>
-                <ComboBox x:Name="control6" Width="300" HorizontalAlignment="Right" FontSize="36" Margin="0,654,53,0" SelectedIndex="1" Height="55">
+                <ComboBox x:Name="control6" Width="300" HorizontalAlignment="Right" FontSize="36" Margin="0,654,53,0" SelectedIndex="1" Height="55" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot">
                     <TextBlock Text="Giroscopio" TextWrapping="Wrap"/>
                     <TextBlock Text="Volante" TextWrapping="Wrap"/>
                     <TextBlock Text="Flechas" TextWrapping="Wrap"/>
