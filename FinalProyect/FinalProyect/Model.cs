@@ -80,7 +80,7 @@ namespace FinalProyect
             {
                 new Mision()
                 {
-                    TextoDeMision = "Esquiva a 20 policías",
+                    TextoDeMision = "Evita a 20 policías",
                     Objetivo = 5,
                     Progreso = 1,
                 },
@@ -104,7 +104,7 @@ namespace FinalProyect
                 },
                 new Mision()
                 {
-                    TextoDeMision = "Juega 5 partidas con amigos",
+                    TextoDeMision = "Juega 5 partidas",
                     Objetivo = 5,
                     Progreso = 2,
                 },
@@ -122,13 +122,13 @@ namespace FinalProyect
                 },
                 new Mision()
                 {
-                    TextoDeMision = "Cambia de coche 3 veces",
+                    TextoDeMision = "Usa 3 coches",
                     Objetivo = 5,
                     Progreso = 4,
                 },
                 new Mision()
                 {
-                    TextoDeMision = "Participa en 5 eventos",
+                    TextoDeMision = "Juega 5 eventos",
                     Objetivo = 5,
                     Progreso = 2,
                 },
@@ -140,7 +140,7 @@ namespace FinalProyect
                 },
                 new Mision()
                 {
-                    TextoDeMision = "Consigue que tu bando gane",
+                    TextoDeMision = "Victoria de bando",
                     Objetivo = 1,
                     Progreso = 0,
                 },

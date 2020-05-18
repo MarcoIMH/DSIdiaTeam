@@ -72,8 +72,8 @@ namespace FinalProyect
 
             botonJugar.Height = mainGrid.RowDefinitions.ElementAt(1).ActualHeight * 0.25;
             botonJugar.Width = ((Frame)Window.Current.Content).ActualWidth * 0.15;
-            botonJugar.MinWidth = textoJugar.ActualWidth + 20;
-            botonJugar.MinHeight = textoJugar.ActualHeight + 20;
+            botonJugar.MinWidth = textoJugar.ActualWidth + 30;
+            botonJugar.MinHeight = textoJugar.ActualHeight + 30;
 
             listaEventos.Width = ((Frame)Window.Current.Content).ActualWidth * 0.85;
 

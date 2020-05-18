@@ -13,14 +13,14 @@
 
         <!--TemplateReward-->
         <DataTemplate x:Key="MisionTemplate" x:DataType="local:Mision">
-            <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Height="25" Width ="200">
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal" MaxHeight="100" Width ="200">
                 <Image x:Name="ImagenMision" Width="25" Height="25" Source="{x:Bind Imagen, Mode=OneWay}"
                        HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                    <TextBlock x:Name="TextoMision" Text="{x:Bind TextoDeMision, Mode=OneWay}" FontSize="12" 
-                               FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot"/>
+                    <TextBlock x:Name="TextoMision" Text="{x:Bind TextoDeMision, Mode=OneWay}" FontSize="16" 
+                               FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" TextWrapping="WrapWholeWords"/>
                     <ProgressBar x:Name="BarraMision" Maximum="{x:Bind Objetivo, Mode=OneWay}" Value="{x:Bind Progreso, Mode=OneWay}" 
-                                  Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
+                                  Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D" HorizontalAlignment="Left"/>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
@@ -30,16 +30,16 @@
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image Source="{x:Bind Imagen, Mode=OneWay}" Width="25" Height="25" Margin="0,0,0,10" HorizontalAlignment="Center"/>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="FECHA: " FontSize="12"/>
-                    <TextBlock Text="{x:Bind Fecha, Mode=OneWay}" FontSize="12"/>
+                    <TextBlock Text="FECHA: " FontSize="14" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" TextWrapping="WrapWholeWords"/>
+                    <TextBlock Text="{x:Bind Fecha, Mode=OneWay}" FontSize="14" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" TextWrapping="WrapWholeWords"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="EVENTO: " FontSize="12"/>
-                    <TextBlock Text="{x:Bind Tipo, Mode=OneWay}" FontSize="12"/>
+                    <TextBlock Text="EVENTO: " FontSize="14" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" TextWrapping="WrapWholeWords"/>
+                    <TextBlock Text="{x:Bind Tipo, Mode=OneWay}" FontSize="14" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" TextWrapping="WrapWholeWords"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="MAPA: " FontSize="12"/>
-                    <TextBlock Text="{x:Bind Mapa, Mode=OneWay}" FontSize="12"/>
+                    <TextBlock Text="MAPA: " FontSize="14" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" TextWrapping="WrapWholeWords"/>
+                    <TextBlock Text="{x:Bind Mapa, Mode=OneWay}" FontSize="14" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" TextWrapping="WrapWholeWords"/>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
@@ -107,12 +107,12 @@
             </Border>
         </StackPanel>
 
-        <ListView x:Name="ImageListView"
+        <ListView x:Name="ImageListView" Width ="200"
                         Margin="5,90,0,20"
                         IsItemClickEnabled="False"
                         RelativePanel.Below="TitleTextBlock"
                         SelectionMode="None"
-                        HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Width="200"
+                        HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1"
                   ItemsSource="{x:Bind ListaMisiones}"
                   ItemTemplate="{StaticResource MisionTemplate}">
             <ListView.ItemContainerStyle>
@@ -196,7 +196,8 @@
             </StackPanel.Background>
             <Button x:Name="botonJugar" Width="250" Height="125" Background="#00000000" Click="botonJugar_Click">
                 <StackPanel Width="200" HorizontalAlignment="Center">
-                    <TextBlock x:Name="textoJugar" Text="JUGAR" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock x:Name="textoJugar" Text="JUGAR" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"
+                               FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot"/>
                 </StackPanel>
             </Button>
         </StackPanel>
