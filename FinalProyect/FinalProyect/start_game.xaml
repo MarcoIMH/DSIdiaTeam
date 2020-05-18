@@ -84,9 +84,10 @@
             <StackPanel.Background>
                 <ImageBrush ImageSource="ms-appx:///Assets/Imagenes/Botones/botonGris.png"/>
             </StackPanel.Background>
-            <Button Width="150" Height="100" x:Name="play" Click="play_Click" >
+            <Button Width="150" Height="100" x:Name="play" Click="play_Click">
                 <StackPanel Width="200" HorizontalAlignment="Center">
-                    <TextBlock x:Name="textoJugar" Text="JUGAR" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock x:Name="textoJugar" Text="JUGAR" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"
+                               FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" TextWrapping="WrapWholeWords"/>
                 </StackPanel>
             </Button>
         </StackPanel>
