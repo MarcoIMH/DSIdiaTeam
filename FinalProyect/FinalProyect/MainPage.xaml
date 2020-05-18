@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" 
+    FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot">
 
     <Grid x:Name="main_grid" SizeChanged="Grid_SizeChanged">
         <Grid.ColumnDefinitions>
@@ -52,12 +53,12 @@
                 </Grid.RowDefinitions>
 
                 <Border x:Name="border_title" Grid.Column="1" Background="#FF21090d" CornerRadius="20" >
-                    <TextBlock x:Name="info_title" Text="ROBBER" TextAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="Bahnschrift Light" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock x:Name="info_title" Text="ROBBER" TextAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="30" FontWeight="Bold"/>
                 </Border>
 
                 <TextBlock x:Name="info_resumen" Grid.ColumnSpan="3" Grid.Row="1" TextWrapping="WrapWholeWords" 
                            Text="Steal, escape, and dont let the cops take you. Run away in an epic display of talent. But look out, they've got some tricks . . ." 
-                           TextAlignment="Justify" Margin="40, 20" Foreground="White" FontFamily="Bahnschrift Light" FontSize="20" VerticalAlignment="Center" />
+                           TextAlignment="Justify" Margin="40, 20" Foreground="White"  FontSize="24" VerticalAlignment="Center" />
 
                 <StackPanel x:Name="stackpanel_joinButton" Margin="0, 0, 0, 10" Width="60" Height="20" Grid.Column="1" Grid.Row="2" >
                     <StackPanel.Background>
@@ -84,14 +85,14 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.ColumnSpan="3" TextWrapping="WrapWholeWords" Text="Hold on!" TextAlignment="Center" Margin="20"
-                    FontFamily="Bahnschrift Light" FontSize="24" FontWeight="Bold" VerticalAlignment="Top" />
+                     FontSize="36" FontWeight="Bold" VerticalAlignment="Top" />
                 <TextBlock Grid.ColumnSpan="3" Grid.Row="1" TextWrapping="WrapWholeWords" Text="You are about to choose a band. This cannot be changed until the season ends, so be wise..." 
-                        TextAlignment="Justify" Margin="40, 20" FontFamily="Bahnschrift Light" FontSize="20" VerticalAlignment="Top" />
+                        TextAlignment="Justify" Margin="40, 20" FontSize="30" VerticalAlignment="Top" />
 
                 <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Right">
                     <StackPanel x:Name="stackPanel_checkButton" Orientation="Horizontal" HorizontalAlignment="Center">
-                        <CheckBox x:Name="check" >
-                            <TextBlock Text="Do not show this again" FontFamily="Bahnschrift Light" FontSize="14" FontStyle="Italic" TextWrapping="WrapWholeWords"/>
+                        <CheckBox x:Name="check">
+                            <TextBlock Text="Do not show this again" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" FontSize="16" TextWrapping="WrapWholeWords"/>
                         </CheckBox>
                     </StackPanel>
                 </StackPanel>
