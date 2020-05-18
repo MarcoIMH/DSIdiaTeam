@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot">
 
     <Page.Resources>
 
@@ -16,7 +17,8 @@
                 <Image x:Name="ImagenMision" Width="25" Height="25" Source="{x:Bind Imagen, Mode=OneWay}"
                        HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="5,0,0,0">
-                    <TextBlock x:Name="TextoMision" Text="{x:Bind TextoDeMision, Mode=OneWay}" FontSize="12"/>
+                    <TextBlock x:Name="TextoMision" Text="{x:Bind TextoDeMision, Mode=OneWay}" FontSize="12" 
+                               FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot"/>
                     <ProgressBar x:Name="BarraMision" Maximum="{x:Bind Objetivo, Mode=OneWay}" Value="{x:Bind Progreso, Mode=OneWay}" 
                                   Width="150" Height="15" Background="#F7FFF7" Foreground="#21090D"/>
                 </StackPanel>

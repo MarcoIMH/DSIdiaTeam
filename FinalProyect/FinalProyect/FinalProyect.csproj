@@ -320,6 +320,9 @@
   <ItemGroup>
     <Content Include="Assets\Fuentes\ClassicRobotItalic.otf" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fuentes\Classic Robot.otf" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

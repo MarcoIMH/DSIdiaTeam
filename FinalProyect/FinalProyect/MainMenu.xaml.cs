@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -52,6 +53,9 @@ namespace FinalProyect
             PlayerBand.Text = player.Bando;
             playerPlayed.Text = player.PartidasJugadas.ToString();
             playerWined.Text = player.PartidasGanadas.ToString();
+
+            //textoMisiones.Foreground = new SolidColorBrush(Colors.Red);
+            //<NombreStackPanel>.Background = new SolidColorBrush(Colors.Black);
         }
 
         private void gridSizeChanged(object sender, SizeChangedEventArgs e)
