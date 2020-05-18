@@ -49,10 +49,12 @@
         </Button>
         
         <!-- Row 2 -->
-        <Button Grid.Column="0" Grid.Row="2"
+        <Button Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Left"
-                Margin="20">
+                Width="500"
+                Margin="20"
+                Padding="15">
             <Image Source="/Assets/Page7/wheel.png"/>
         </Button>
 
