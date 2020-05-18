@@ -7,6 +7,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.Imaging;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -103,7 +104,8 @@ namespace FinalProyect
             StackPanel h = (e.OriginalSource as Button).Parent as StackPanel;
             h.Visibility = Visibility.Collapsed;
             StackPanel s = h.Parent as StackPanel;
-            (s.Children.ElementAt(2) as TextBlock).Text = "in group";
+            (s.Children.ElementAt(2) as TextBlock).Text = "In group";
+            (s.Children.ElementAt(2) as TextBlock).Foreground = new SolidColorBrush(Colors.Blue);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot">
 
     <Page.Resources>
         <DataTemplate x:Name="amigoConecTemplate" x:DataType="local:Amigo" >
@@ -20,23 +21,23 @@
                     </Button>
                 </StackPanel>
                 <TextBlock Margin="20, 0" Text="{x:Bind name, Mode=OneTime}"
-                           FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold" />
+                           FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" FontSize="20" FontWeight="Bold" />
                 <TextBlock Text="{x:Bind contectedState, Mode=OneTime}" Foreground="{x:Bind color, Mode=OneTime}" 
-                           FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold"/>
+                           FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" FontSize="20" FontWeight="Bold"/>
             </StackPanel>
         </DataTemplate>
 
         <DataTemplate x:Name="amigoDesconectTemplate" x:DataType="local:Amigo" >
             <StackPanel Orientation="Horizontal">
                 <TextBlock Margin="20, 0" Text="{x:Bind name, Mode=OneTime}"
-                           FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold" />
+                           FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" FontSize="20" />
                 <TextBlock Text="{x:Bind contectedState, Mode=OneTime}" Foreground="{x:Bind color, Mode=OneTime}" 
-                           FontFamily="Bahnschrift Light" FontSize="16" FontWeight="Bold"/>
+                           FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" FontSize="20" />
             </StackPanel>
         </DataTemplate>
 
         <DataTemplate x:Name="chatTemplate" x:DataType="local:Chat" >
-            <TextBlock Text="{x:Bind text, Mode=OneWay}" TextWrapping="WrapWholeWords" />
+            <TextBlock Text="{x:Bind text, Mode=OneWay}" TextWrapping="WrapWholeWords" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" FontSize="20"/>
         </DataTemplate>
 
     </Page.Resources>
@@ -109,8 +110,10 @@
 
         <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Bottom" >
             <StackPanel Orientation="Horizontal" x:Name="chat_buttons">
-                <Button Margin="10, 0, 10, 0" Content="Chat general" Background="#FF60CCB4" Click="Button_Click_1" />
-                <Button Margin="10, 0" Content="Chat de amigos" Background="#FF3D675A" Click="Button_Click_2"/>
+                <Button Margin="10, 0, 10, 0" Content="Chat general" Background="#FF60CCB4" 
+                        FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" Click="Button_Click_1" FontSize="16" />
+                <Button Margin="10, 0" Content="Chat de amigos" Background="#FF3D675A" 
+                        FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" Click="Button_Click_2" FontSize="16"/>
             </StackPanel>
             <Border >
                 <Border.Background>
