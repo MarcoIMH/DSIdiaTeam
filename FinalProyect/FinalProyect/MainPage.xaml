@@ -64,7 +64,7 @@
                     <StackPanel.Background>
                         <ImageBrush ImageSource="Assets/join.png" />
                     </StackPanel.Background>
-                    <Button x:Name="join_button" Width="60" Height="20" Click="join_button_Click"/>
+                    <Button x:Name="join_button" Width="60" Height="20" Click="join_button_Click" Background="#00000000"/>
                 </StackPanel>
 
             </Grid>
@@ -102,7 +102,7 @@
                         <StackPanel.Background>
                             <ImageBrush ImageSource="Assets/accept.png" />
                         </StackPanel.Background>
-                        <Button  x:Name="accept" Click="accept_Click"/>
+                        <Button  x:Name="accept" Click="accept_Click" Background="#00000000"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>
