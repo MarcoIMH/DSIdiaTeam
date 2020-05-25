@@ -37,14 +37,17 @@ namespace FinalProyect
 
         private void popUp_grid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            //stackPanel_checkButton.Width = stackPanel_checkButton.Height = check.Width = check.Height = popUp_grid.RowDefinitions.ElementAt(2).ActualHeight / 5;
-            stackPanel_acceptButton.Width =  stackPanel_acceptButton.Height = accept.Width = accept.Height = popUp_grid.RowDefinitions.ElementAt(2).ActualHeight / 2.5; 
+            stackPanel_acceptButton.Width =  stackPanel_acceptButton.Height = accept.Width = accept.Height = popUp_grid.RowDefinitions.ElementAt(2).ActualHeight / 2.5;
+            infoText.FontSize = popUp_grid.RowDefinitions.ElementAt(1).ActualHeight / 6;
+            doNotShowText.FontSize = popUp_grid.RowDefinitions.ElementAt(2).ActualHeight / 7;
         }
 
         private void info_grid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             stackpanel_joinButton.Width = join_button.Width = info_grid.ColumnDefinitions.ElementAt(1).ActualWidth * 4 / 5;
             stackpanel_joinButton.Height = join_button.Height = info_grid.RowDefinitions.ElementAt(2).ActualHeight * 3 / 5;
+
+            info_resumen.FontSize = info_grid.RowDefinitions.ElementAt(1).ActualHeight / 6;
         }
 
         private void accept_Click(object sender, RoutedEventArgs e)

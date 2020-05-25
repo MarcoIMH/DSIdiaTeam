@@ -86,13 +86,13 @@
 
                 <TextBlock Grid.ColumnSpan="3" TextWrapping="WrapWholeWords" Text="Hold on!" TextAlignment="Center" Margin="20"
                      FontSize="36" FontWeight="Bold" VerticalAlignment="Top" />
-                <TextBlock Grid.ColumnSpan="3" Grid.Row="1" TextWrapping="WrapWholeWords" Text="You are about to choose a band. This cannot be changed until the season ends, so be wise..." 
+                <TextBlock x:Name="infoText" Grid.ColumnSpan="3" Grid.Row="1" TextWrapping="WrapWholeWords" Text="You are about to choose a band. This cannot be changed until the season ends, so be wise..." 
                         TextAlignment="Justify" Margin="40, 20" FontSize="30" VerticalAlignment="Top" />
 
                 <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Right">
                     <StackPanel x:Name="stackPanel_checkButton" Orientation="Horizontal" HorizontalAlignment="Center">
                         <CheckBox x:Name="check">
-                            <TextBlock Text="Do not show this again" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" FontSize="16" TextWrapping="WrapWholeWords"/>
+                            <TextBlock x:Name="doNotShowText" Text="Do not show this again" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot" FontSize="16" TextWrapping="WrapWholeWords"/>
                         </CheckBox>
                     </StackPanel>
                 </StackPanel>
