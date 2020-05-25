@@ -10,10 +10,10 @@
     FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot">
     <Page.Resources>
         <DataTemplate x:Key="PoliceTemplate" x:DataType="local:Policia">
-            <TextBlock Text="{x:Bind Nombre, Mode=OneWay}" TextWrapping="Wrap" FontSize="36" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot"/>
+            <TextBlock Text="{x:Bind Nombre, Mode=OneWay}" TextWrapping="Wrap" FontSize="{Binding FontSize, ElementName=policeText}" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot"/>
         </DataTemplate>
         <DataTemplate x:Key="RobberTemplate" x:DataType="local:Ladron">
-            <TextBlock Text="{x:Bind Nombre, Mode=OneWay}" TextWrapping="Wrap" FontSize="36" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot"/>
+            <TextBlock Text="{x:Bind Nombre, Mode=OneWay}" TextWrapping="Wrap" FontSize="{Binding FontSize, ElementName=robberText}" FontFamily="ms-appx:///Assets/Fuentes/Classic Robot.otf#Classic Robot"/>
         </DataTemplate>
     </Page.Resources>
     
