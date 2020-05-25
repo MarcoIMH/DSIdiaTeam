@@ -260,7 +260,7 @@ namespace FinalProyect
 
         private void BuyButton_Click(object sender, RoutedEventArgs e)
         {
-            if(itemClicked.State != ItemStates.purchased &&  itemClicked.Price <= goldRemaining)
+            if(itemClicked != null && itemClicked.State != ItemStates.purchased &&  itemClicked.Price <= goldRemaining)
             {
                 UserGold.Text = (goldRemaining - itemClicked.Price).ToString();
                 goldRemaining = goldRemaining - itemClicked.Price;
