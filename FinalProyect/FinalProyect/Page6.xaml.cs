@@ -31,6 +31,7 @@ namespace FinalProyect
         DateTimeOffset stopTime;
         int timesTicked = 1;
         int timesToTick = 100;
+        bool loading = false;
         public Page6()
         {
             this.InitializeComponent();
@@ -48,11 +49,13 @@ namespace FinalProyect
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            loading = false;
             this.Frame.Navigate(typeof(start_game));
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            loading = true;
             DispatcherTimerSetup();
         }
         public void DispatcherTimerSetup()
@@ -72,21 +75,25 @@ namespace FinalProyect
 
         void dispatcherTimer_Tick(object sender, object e)
         {
-            DateTimeOffset time = DateTimeOffset.Now;
-            TimeSpan span = time - lastTime;
-            lastTime = time;
-            //Time since last tick should be very very close to Interval
-            LoadingBar.Value += 1;
-            timesTicked++;
-            if (timesTicked > timesToTick)
+
+            if (loading)
             {
-                stopTime = time;
+                DateTimeOffset time = DateTimeOffset.Now;
+                TimeSpan span = time - lastTime;
+                lastTime = time;
+                //Time since last tick should be very very close to Interval
+                LoadingBar.Value += 1;
+                timesTicked++;
+                if (timesTicked > timesToTick)
+                {
+                    stopTime = time;
 
-                dispatcherTimer.Stop();
-                //IsEnabled should now be false after calling stop
-                this.Frame.Navigate(typeof(Page7));
-                span = stopTime - startTime;
+                    dispatcherTimer.Stop();
+                    //IsEnabled should now be false after calling stop
+                    this.Frame.Navigate(typeof(Page7));
+                    span = stopTime - startTime;
 
+                }
             }
         }
 
